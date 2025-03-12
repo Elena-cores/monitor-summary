@@ -6,5 +6,5 @@ class CTF(models.Model):
     defocusv = models.FloatField()
 
     def __str__(self):
-        return f"CTF(defocusu={self.defocusu}, defocusv={self.defocusv})"
+        return f"CTF(defocusU={self.defocusu}, defocusV={self.defocusv})"
     

@@ -1,5 +1,6 @@
 import React from 'react';
-import CTFList from '../components/CTFChart';
+import CTFList from '../components/CTFList';
+import CTFGraph from '../components/CTFChart';
 
 // show components in page
 const CTFPage = () => {
@@ -7,6 +8,7 @@ const CTFPage = () => {
     <div>
       <h1>CTF Data</h1>
       <CTFList />
+      <CTFGraph />
     </div>
   );
 };

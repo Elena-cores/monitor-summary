@@ -1,22 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import getCTFData from '../api/ctfApi';
+import HighChartsReact from 'highcharts-react-official'
 
-const CTFList = () => {
-  const [ctfData, setCtfData] = useState([]);
+const CTFGraph = () => {
+    return (
+        <figure class="highcharts-figure">
+            <div id="container"></div>
+            <p class="highcharts-description">
+                Basic line chart showing trends in a dataset. This chart includes the
+                <code>series-label</code> module, which adds a label to each line for
+                enhanced readability.
+            </p>
+        </figure>
+    );
+}
 
-  useEffect(() => {
-    getCTFData().then(setCtfData);
-  }, []);
-
-  return (
-    <ul>
-      {ctfData.map((ctf) => (
-        <li key={ctf.id}>
-          DefocusU: {ctf.defocusu}, DefocusV: {ctf.defocusv}
-        </li>
-      ))}
-    </ul>
-  );
-};
-
-export default CTFList;
+export default CTFGraph;

@@ -10,5 +10,6 @@ router.register(r'ctf', views.CTFViewSet)
 # include all routes from router 
 urlpatterns = [
     path('api/', include(router.urls)),
-    path('docs/', include_docs_urls(title="Cyroem API"))    # automatic API documentation and associated routes
+    path('docs/', include_docs_urls(title="Cyroem API"))    # automatic API documentation and find routes: http://127.0.0.1:8000/docs/
+    
 ] 

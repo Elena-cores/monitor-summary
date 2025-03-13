@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "daphne",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -71,6 +72,10 @@ TEMPLATES = [
         },
     },
 ]
+
+
+# Daphne maybe for later use of channels (ignore for now)
+ASGI_APPLICATION = "cryoem_api.asgi.application"
 
 WSGI_APPLICATION = "cryoem_api.wsgi.application"
 

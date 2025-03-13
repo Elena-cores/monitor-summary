@@ -4,8 +4,20 @@ import getCTFData from '../api/ctfApi';
 const CTFList = () => {
   const [ctfData, setCtfData] = useState([]);
 
+  const loadData = async () => {
+    const data = await getCTFData();
+    setCtfData(data);
+  };
+
   useEffect(() => {
-    getCTFData().then(setCtfData);
+    loadData(); // initially load data
+
+    const interval = setInterval(() => {
+      loadData();
+    }, 3000);  //every 3 seconds update
+    
+    return () => clearInterval(interval);
+    //getCTFData().then(setCtfData);
   }, []);
 
   return (

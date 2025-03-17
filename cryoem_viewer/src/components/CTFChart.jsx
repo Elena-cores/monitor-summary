@@ -1,8 +1,11 @@
 import React from 'react';
-import Highcharts from 'highcharts'
-import HighchartsReact from 'highcharts-react-official'
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
 
 const CTFGraph = ({graphData}) => {
+    // recibir graphData prop
+    const defocusuData = graphData.map(ctf => [new Date(ctf.datetime).getTime(), ctf.defocusu]);
+    const defocusvData = graphData.map(ctf => [new Date(ctf.datetime).getTime(), ctf.defocusv]);
 
     const myOptions =  {
         chart: {
@@ -11,7 +14,7 @@ const CTFGraph = ({graphData}) => {
             }
         },
         title: {
-            text: 'USD to EUR exchange rate over time'
+            text: 'CTF values over time'
         },
         subtitle: {
             text: document.ontouchstart === undefined ?
@@ -23,7 +26,7 @@ const CTFGraph = ({graphData}) => {
         },
         yAxis: {
             title: {
-                text: 'Exchange rate'
+                text: 'Defocus'
             }
         },
         legend: {
@@ -58,21 +61,26 @@ const CTFGraph = ({graphData}) => {
 
         series: [{
             type: 'area',
-            name: 'USD to EUR',
-            data: graphData
-        }]
-    }
+            name: 'DefocusU',
+            data: defocusuData,
+        },
+        {
+            type:'area',
+            name: 'DefocusV',
+            data: defocusvData,
+        },],
+    };
 
     return (
-        <figure class="highcharts-figure">
+        <figure className="highcharts-figure">
             <div id="container">
-            <HighchartsReact
-                highcharts={Highcharts}
+            <HighchartsReact highcharts={Highcharts}
                 options={myOptions}
+                key={graphData.length} //force update when data changes
             />
             </div>
-            <p class="highcharts-description">
-                Basic line chart showing trends in a dataset. This chart includes the
+            <p className="highcharts-description">
+                Basic line chart showing defocus of CTF. This chart includes the
                 <code>series-label</code> module, which adds a label to each line for
                 enhanced readability.
             </p>

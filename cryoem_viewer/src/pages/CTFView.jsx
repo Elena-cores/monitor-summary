@@ -6,10 +6,17 @@ import getCTFData from '../api/ctfApi';
 // show components in page
 const CTFPage = () => {
   const [ctfData, setCtfData] = useState([]);
+  const [error, setError] = useState(null); // error false to begin
 
   const loadData = async () => {
-    const data = await getCTFData();
-    setCtfData(data);
+    try {
+      const data = await getCTFData();
+      setCtfData(data);
+      setError(null); // clean previous errors
+    } catch (err) {
+      console.error("Error fetching CTF data", err);
+      setError("Failed to load the data");
+    }
   };
 
   useEffect(() => {
@@ -22,39 +29,13 @@ const CTFPage = () => {
     return () => clearInterval(interval);
   }, []);
 
-
+  // render data from components AND conditionally render if there is an error (true)
   return (
     <div>
       <h1>CTF Data</h1>
+      {error && <p style={{ color: 'red' }}>{error}</p>}  
       <CTFList ctfData={ctfData} />
-      <CTFGraph graphData={
-        [
-          [
-            1264550400000,
-            0.7107
-          ],
-          [
-            1264636800000,
-            0.7144
-          ],
-          [
-            1264723200000,
-            0.7161
-          ],
-          [
-            1264982400000,
-            0.7189
-          ],
-          [
-            1265068800000,
-            0.7176
-          ],
-          [
-            1265155200000,
-            0.7152
-          ],
-        ]
-      }/>
+      <CTFGraph graphData={ctfData} />
     </div>
   );
 };

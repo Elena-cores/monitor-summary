@@ -15,7 +15,7 @@ const CTFPage = () => {
       setError(null); // clean previous errors
     } catch (err) {
       console.error("Error fetching CTF data", err);
-      setError("Failed to load the data");
+      setError("* Failed to load the data *");
     }
   };
 
@@ -33,9 +33,9 @@ const CTFPage = () => {
   return (
     <div>
       <h1>CTF Data</h1>
-      {error && <p style={{ color: 'red' }}>{error}</p>}  
       <CTFList ctfData={ctfData} />
       <CTFGraph graphData={ctfData} />
+      {error && <p style={{ color: 'red' }}>{error}</p>}  
     </div>
   );
 };

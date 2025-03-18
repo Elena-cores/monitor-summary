@@ -55,6 +55,7 @@ The goal is to provide a structured summary of the acquisition status, allowing 
 This project was inspired by and developed in collaboration with the **Scipion team** and the **cryo-EM facility** at the Spanish National Centre for Biotechnology (CNB-CSIC) where I worked at.
 
 **Scipion GitHub**
+
 You can find the last built docs on https://scipion-em.github.io/docs/
 
 ## License

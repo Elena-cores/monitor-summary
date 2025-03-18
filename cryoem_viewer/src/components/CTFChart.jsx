@@ -1,8 +1,13 @@
 import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import HighchartsExport from "highcharts/modules/exporting";
 
-const CTFGraph = ({graphData}) => {
+export const CTFGraph = ({graphData}) => {
+    if (!graphData || graphData.length === 0) {
+        return <p> No data available</p>
+    }
+
     // recibir graphData prop
     const defocusuData = graphData.map(ctf => [new Date(ctf.datetime).getTime(), ctf.defocusu]);
     const defocusvData = graphData.map(ctf => [new Date(ctf.datetime).getTime(), ctf.defocusv]);
@@ -30,7 +35,9 @@ const CTFGraph = ({graphData}) => {
             }
         },
         legend: {
-            enabled: false
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
         },
         plotOptions: {
             area: {
@@ -58,7 +65,6 @@ const CTFGraph = ({graphData}) => {
                 threshold: null
             }
         },
-
         series: [{
             type: 'area',
             name: 'DefocusU',
@@ -69,6 +75,35 @@ const CTFGraph = ({graphData}) => {
             name: 'DefocusV',
             data: defocusvData,
         },],
+        exporting: {
+            enabled: true,
+            buttons: {
+                contextButton: {
+                    menuItems: [
+                        "viewFullscreen",
+                        "printChart", 
+                        "separator", 
+                        "downloadPNG", 
+                        "downloadJPEG", 
+                        "downloadSVG"
+                    ],
+                },
+            }   ,
+        },
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500,
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
     };
 
     return (

@@ -2,6 +2,7 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import HighchartsExport from "highcharts/modules/exporting";
+import HighchartsOfflineExporting from 'highcharts/modules/offline-exporting'; // export charts without sending data to external server
 
 export const CTFGraph = ({graphData}) => {
     if (!graphData || graphData.length === 0) {

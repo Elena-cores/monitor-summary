@@ -13,6 +13,7 @@ const CTFPage = () => {
       const data = await getCTFData();
       setCtfData(data);
       setError(null); // clean previous errors
+      
     } catch (err) {
       console.error("Error fetching CTF data", err);
       setError("* Failed to load the data *");

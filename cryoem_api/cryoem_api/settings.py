@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "daphne",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -73,9 +72,6 @@ TEMPLATES = [
     },
 ]
 
-
-# Daphne maybe for later use of channels (ignore for now)
-ASGI_APPLICATION = "cryoem_api.asgi.application"
 
 WSGI_APPLICATION = "cryoem_api.wsgi.application"
 
@@ -133,7 +129,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Cors authorization
-CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
+CORS_ALLOWED_ORIGINS = ['http://localhost:5173', ]
 
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema",

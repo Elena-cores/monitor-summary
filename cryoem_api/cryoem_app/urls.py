@@ -5,7 +5,8 @@ from cryoem_app import views
 
 # generate routes automatically
 router = routers.DefaultRouter()
-router.register(r'ctf', views.CTFViewSet)
+router.register(r'ctf', views.CTFViewSet)  # Route for CTF
+router.register(r'micrograph', views.MicrographViewSet) # Route for micrograph
 
 # include all routes from router 
 urlpatterns = [

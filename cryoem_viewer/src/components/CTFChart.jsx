@@ -3,6 +3,7 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import HighchartsExport from "highcharts/modules/exporting";
 import HighchartsOfflineExporting from 'highcharts/modules/offline-exporting'; // export charts without sending data to external server
+import highchartsExportData from 'highcharts/modules/export-data'; // for exporting in xls and csv format
 
 export const CTFGraph = ({graphData}) => {
     if (!graphData || graphData.length === 0) {
@@ -10,8 +11,8 @@ export const CTFGraph = ({graphData}) => {
     }
 
     // recibir graphData prop
-    const defocusuData = graphData.map(ctf => [new Date(ctf.datetime).getTime(), ctf.defocusu]);
-    const defocusvData = graphData.map(ctf => [new Date(ctf.datetime).getTime(), ctf.defocusv]);
+    const defocusuData = graphData.map(ctf => [new Date(ctf.datetime_ctf).getTime(), ctf.defocusu]);
+    const defocusvData = graphData.map(ctf => [new Date(ctf.datetime_ctf).getTime(), ctf.defocusv]);
 
     const myOptions =  {
         chart: {
@@ -77,7 +78,6 @@ export const CTFGraph = ({graphData}) => {
             data: defocusvData,
         },],
         exporting: {
-            enabled: true,
             buttons: {
                 contextButton: {
                     menuItems: [
@@ -86,7 +86,10 @@ export const CTFGraph = ({graphData}) => {
                         "separator", 
                         "downloadPNG", 
                         "downloadJPEG", 
-                        "downloadSVG"
+                        "downloadSVG",
+                        "separator",
+                        "downloadXLS",
+                        "downloadCSV"
                     ],
                 },
             }   ,

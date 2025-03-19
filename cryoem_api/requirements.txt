@@ -4,3 +4,4 @@ djangorestframework
 python-dotenv
 coverage
 coreapi
+Pillow

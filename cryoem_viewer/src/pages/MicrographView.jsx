@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 const MicrographPage = () => {
     return (
         <div className='MicrographView'>
+            <p>some data here</p>
         </div>
     )
 }

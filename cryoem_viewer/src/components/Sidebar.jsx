@@ -2,18 +2,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/sidebar.css';
+import logo from '../assets/logo.png';
 
 const Sidebar = () => {
     return (
       <div className="sidebar">
-        <h2>Navegación</h2>
+        <div className="sidebar-header"> 
+          <img src={logo} alt="Logo" className="sidebar-logo" /> 
+        </div>
         <nav>
           <ul>
             <li>
-              <Link to="/">CTF</Link>
+              <Link to="/ctf">CTF</Link>
             </li>
             <li>
-              <Link to="/movie">Movie</Link>
+              <Link to="/movie">MOVIE</Link>
+            </li>
+            <li>
+              <Link to="/coord">COORDINATES</Link>
+            </li>
+            <li>
+              <Link to="/">ALL</Link>
             </li>
           </ul>
         </nav>

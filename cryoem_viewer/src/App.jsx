@@ -10,8 +10,8 @@ const App = () => {
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<CTFPage />} />
-          <Route path="/list" element={<MicrographPage />} />
+          <Route path="/ctf" element={<CTFPage />} />
+          <Route path="/movie" element={<MicrographPage />} />
         </Routes>
       </Layout>
     </Router>

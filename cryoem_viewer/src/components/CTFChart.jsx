@@ -13,6 +13,7 @@ export const CTFGraph = ({graphData}) => {
     // recibir graphData prop
     const defocusuData = graphData.map(ctf => [new Date(ctf.datetime_ctf).getTime(), ctf.defocusu]);
     const defocusvData = graphData.map(ctf => [new Date(ctf.datetime_ctf).getTime(), ctf.defocusv]);
+    // const phaseShiftData = graphData.map(ctf => [new Date(ctf.datetime_ctf).getTime(), ctf.phaseShift]);
 
     const myOptions =  {
         chart: {
@@ -92,7 +93,7 @@ export const CTFGraph = ({graphData}) => {
                         "downloadCSV"
                     ],
                 },
-            }   ,
+            },
         },
         responsive: {
             rules: [{

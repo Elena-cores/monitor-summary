@@ -4,8 +4,7 @@
     width: 360px;
     background-color: rgb(154, 171, 213);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.411);
+    box-shadow: 0 2px 4px rgba(31, 90, 193, 0.644);
     display: flex;
     flex-direction: column;
     align-items: center;

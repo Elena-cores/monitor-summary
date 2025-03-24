@@ -13,12 +13,6 @@
     color: white;
 }
 
-.sidebar-logo {
-    width: 300px; 
-    height: 300px;
-    border-radius: 50%; 
-}
-
 .sidebar nav {
     width: 100%; 
 }

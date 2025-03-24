@@ -1,0 +1,1706 @@
+{
+    "micrographs": [
+        {
+            "id": 1,
+            "filename": "micrograph_0.png",
+            "sampling": 1.03,
+            "dose": 0.59,
+            "datetime_micro": "2024-05-31T12:48:09.286392"
+        },
+        {
+            "id": 2,
+            "filename": "micrograph_1.png",
+            "sampling": 1.75,
+            "dose": 0.39,
+            "datetime_micro": "2024-06-07T12:48:09.286392"
+        },
+        {
+            "id": 3,
+            "filename": "micrograph_2.png",
+            "sampling": 1.34,
+            "dose": 0.89,
+            "datetime_micro": "2024-11-01T12:48:09.286392"
+        },
+        {
+            "id": 4,
+            "filename": "micrograph_3.png",
+            "sampling": 1.59,
+            "dose": 0.5,
+            "datetime_micro": "2024-05-03T12:48:09.286392"
+        },
+        {
+            "id": 5,
+            "filename": "micrograph_4.png",
+            "sampling": 1.2,
+            "dose": 0.68,
+            "datetime_micro": "2024-07-23T12:48:09.286392"
+        },
+        {
+            "id": 6,
+            "filename": "micrograph_5.png",
+            "sampling": 1.29,
+            "dose": 0.37,
+            "datetime_micro": "2024-07-26T12:48:09.286392"
+        },
+        {
+            "id": 7,
+            "filename": "micrograph_6.png",
+            "sampling": 1.06,
+            "dose": 0.97,
+            "datetime_micro": "2024-06-08T12:48:09.286392"
+        },
+        {
+            "id": 8,
+            "filename": "micrograph_7.png",
+            "sampling": 1.82,
+            "dose": 0.14,
+            "datetime_micro": "2024-06-11T12:48:09.286392"
+        },
+        {
+            "id": 9,
+            "filename": "micrograph_8.png",
+            "sampling": 1.26,
+            "dose": 0.95,
+            "datetime_micro": "2025-01-07T12:48:09.286392"
+        },
+        {
+            "id": 10,
+            "filename": "micrograph_9.png",
+            "sampling": 1.29,
+            "dose": 0.94,
+            "datetime_micro": "2024-04-04T12:48:09.286392"
+        },
+        {
+            "id": 11,
+            "filename": "micrograph_10.png",
+            "sampling": 1.44,
+            "dose": 0.81,
+            "datetime_micro": "2024-10-26T12:48:09.286392"
+        },
+        {
+            "id": 12,
+            "filename": "micrograph_11.png",
+            "sampling": 1.27,
+            "dose": 0.85,
+            "datetime_micro": "2024-09-15T12:48:09.286392"
+        },
+        {
+            "id": 13,
+            "filename": "micrograph_12.png",
+            "sampling": 1.7,
+            "dose": 0.6,
+            "datetime_micro": "2025-02-19T12:48:09.286392"
+        },
+        {
+            "id": 14,
+            "filename": "micrograph_13.png",
+            "sampling": 1.35,
+            "dose": 0.3,
+            "datetime_micro": "2024-11-25T12:48:09.286392"
+        },
+        {
+            "id": 15,
+            "filename": "micrograph_14.png",
+            "sampling": 1.78,
+            "dose": 0.26,
+            "datetime_micro": "2025-03-15T12:48:09.286392"
+        },
+        {
+            "id": 16,
+            "filename": "micrograph_15.png",
+            "sampling": 1.5,
+            "dose": 0.8,
+            "datetime_micro": "2024-11-08T12:48:09.286392"
+        },
+        {
+            "id": 17,
+            "filename": "micrograph_16.png",
+            "sampling": 1.62,
+            "dose": 0.97,
+            "datetime_micro": "2025-02-10T12:48:09.286392"
+        },
+        {
+            "id": 18,
+            "filename": "micrograph_17.png",
+            "sampling": 1.86,
+            "dose": 0.97,
+            "datetime_micro": "2024-05-03T12:48:09.286392"
+        },
+        {
+            "id": 19,
+            "filename": "micrograph_18.png",
+            "sampling": 1.17,
+            "dose": 0.89,
+            "datetime_micro": "2024-11-17T12:48:09.286392"
+        },
+        {
+            "id": 20,
+            "filename": "micrograph_19.png",
+            "sampling": 1.28,
+            "dose": 0.12,
+            "datetime_micro": "2024-07-30T12:48:09.286392"
+        },
+        {
+            "id": 21,
+            "filename": "micrograph_20.png",
+            "sampling": 1.78,
+            "dose": 0.5,
+            "datetime_micro": "2024-09-11T12:48:09.286392"
+        },
+        {
+            "id": 22,
+            "filename": "micrograph_21.png",
+            "sampling": 1.1,
+            "dose": 0.74,
+            "datetime_micro": "2025-01-19T12:48:09.286392"
+        },
+        {
+            "id": 23,
+            "filename": "micrograph_22.png",
+            "sampling": 1.35,
+            "dose": 0.45,
+            "datetime_micro": "2025-02-04T12:48:09.286392"
+        },
+        {
+            "id": 24,
+            "filename": "micrograph_23.png",
+            "sampling": 1.75,
+            "dose": 0.39,
+            "datetime_micro": "2025-02-21T12:48:09.286392"
+        },
+        {
+            "id": 25,
+            "filename": "micrograph_24.png",
+            "sampling": 1.64,
+            "dose": 0.49,
+            "datetime_micro": "2024-04-09T12:48:09.286392"
+        },
+        {
+            "id": 26,
+            "filename": "micrograph_25.png",
+            "sampling": 1.32,
+            "dose": 0.48,
+            "datetime_micro": "2024-05-26T12:48:09.286392"
+        },
+        {
+            "id": 27,
+            "filename": "micrograph_26.png",
+            "sampling": 1.19,
+            "dose": 0.72,
+            "datetime_micro": "2024-07-25T12:48:09.286392"
+        },
+        {
+            "id": 28,
+            "filename": "micrograph_27.png",
+            "sampling": 1.35,
+            "dose": 0.71,
+            "datetime_micro": "2024-04-24T12:48:09.286392"
+        },
+        {
+            "id": 29,
+            "filename": "micrograph_28.png",
+            "sampling": 1.18,
+            "dose": 0.71,
+            "datetime_micro": "2024-11-30T12:48:09.286392"
+        },
+        {
+            "id": 30,
+            "filename": "micrograph_29.png",
+            "sampling": 1.05,
+            "dose": 0.77,
+            "datetime_micro": "2024-07-16T12:48:09.286392"
+        },
+        {
+            "id": 31,
+            "filename": "micrograph_30.png",
+            "sampling": 1.43,
+            "dose": 0.54,
+            "datetime_micro": "2025-01-31T12:48:09.286392"
+        },
+        {
+            "id": 32,
+            "filename": "micrograph_31.png",
+            "sampling": 1.51,
+            "dose": 0.4,
+            "datetime_micro": "2024-12-09T12:48:09.286392"
+        },
+        {
+            "id": 33,
+            "filename": "micrograph_32.png",
+            "sampling": 1.66,
+            "dose": 0.56,
+            "datetime_micro": "2024-07-01T12:48:09.286392"
+        },
+        {
+            "id": 34,
+            "filename": "micrograph_33.png",
+            "sampling": 1.17,
+            "dose": 0.18,
+            "datetime_micro": "2025-02-23T12:48:09.286392"
+        },
+        {
+            "id": 35,
+            "filename": "micrograph_34.png",
+            "sampling": 1.32,
+            "dose": 0.61,
+            "datetime_micro": "2025-01-16T12:48:09.286392"
+        },
+        {
+            "id": 36,
+            "filename": "micrograph_35.png",
+            "sampling": 1.26,
+            "dose": 0.89,
+            "datetime_micro": "2024-11-23T12:48:09.286392"
+        },
+        {
+            "id": 37,
+            "filename": "micrograph_36.png",
+            "sampling": 1.99,
+            "dose": 0.94,
+            "datetime_micro": "2025-02-06T12:48:09.286392"
+        },
+        {
+            "id": 38,
+            "filename": "micrograph_37.png",
+            "sampling": 1.44,
+            "dose": 0.92,
+            "datetime_micro": "2025-02-14T12:48:09.286392"
+        },
+        {
+            "id": 39,
+            "filename": "micrograph_38.png",
+            "sampling": 1.51,
+            "dose": 0.94,
+            "datetime_micro": "2024-12-17T12:48:09.286392"
+        },
+        {
+            "id": 40,
+            "filename": "micrograph_39.png",
+            "sampling": 1.68,
+            "dose": 0.24,
+            "datetime_micro": "2024-11-22T12:48:09.286392"
+        },
+        {
+            "id": 41,
+            "filename": "micrograph_40.png",
+            "sampling": 1.75,
+            "dose": 0.67,
+            "datetime_micro": "2024-11-13T12:48:09.286392"
+        },
+        {
+            "id": 42,
+            "filename": "micrograph_41.png",
+            "sampling": 1.31,
+            "dose": 0.36,
+            "datetime_micro": "2024-08-07T12:48:09.286392"
+        },
+        {
+            "id": 43,
+            "filename": "micrograph_42.png",
+            "sampling": 1.18,
+            "dose": 0.68,
+            "datetime_micro": "2024-05-14T12:48:09.286392"
+        },
+        {
+            "id": 44,
+            "filename": "micrograph_43.png",
+            "sampling": 1.17,
+            "dose": 0.23,
+            "datetime_micro": "2024-04-13T12:48:09.286392"
+        },
+        {
+            "id": 45,
+            "filename": "micrograph_44.png",
+            "sampling": 1.07,
+            "dose": 0.72,
+            "datetime_micro": "2025-01-19T12:48:09.286392"
+        },
+        {
+            "id": 46,
+            "filename": "micrograph_45.png",
+            "sampling": 1.02,
+            "dose": 0.69,
+            "datetime_micro": "2025-02-17T12:48:09.286392"
+        },
+        {
+            "id": 47,
+            "filename": "micrograph_46.png",
+            "sampling": 1.92,
+            "dose": 0.19,
+            "datetime_micro": "2024-04-30T12:48:09.286392"
+        },
+        {
+            "id": 48,
+            "filename": "micrograph_47.png",
+            "sampling": 1.6,
+            "dose": 0.98,
+            "datetime_micro": "2024-07-29T12:48:09.286392"
+        },
+        {
+            "id": 49,
+            "filename": "micrograph_48.png",
+            "sampling": 1.08,
+            "dose": 0.11,
+            "datetime_micro": "2024-11-07T12:48:09.286392"
+        },
+        {
+            "id": 50,
+            "filename": "micrograph_49.png",
+            "sampling": 1.12,
+            "dose": 0.55,
+            "datetime_micro": "2024-11-04T12:48:09.286392"
+        }
+    ],
+    "ctfs": [
+        {
+            "id": 1,
+            "micrographId": 40,
+            "defocusu": 3.18,
+            "defocusv": 3.73,
+            "datetime_ctf": "2025-01-29T12:48:09.293793",
+            "resolution": 4.67,
+            "psd": "psd_0.png"
+        },
+        {
+            "id": 2,
+            "micrographId": 24,
+            "defocusu": 2.1,
+            "defocusv": 2.46,
+            "datetime_ctf": "2025-03-03T12:48:09.293793",
+            "resolution": 5.9,
+            "psd": "psd_1.png"
+        },
+        {
+            "id": 3,
+            "micrographId": 1,
+            "defocusu": 1.62,
+            "defocusv": 4.91,
+            "datetime_ctf": "2024-08-21T12:48:09.293793",
+            "resolution": 3.59,
+            "psd": "psd_2.png"
+        },
+        {
+            "id": 4,
+            "micrographId": 4,
+            "defocusu": 2.31,
+            "defocusv": 3.46,
+            "datetime_ctf": "2025-01-18T12:48:09.293793",
+            "resolution": 6.72,
+            "psd": "psd_3.png"
+        },
+        {
+            "id": 5,
+            "micrographId": 23,
+            "defocusu": 4.11,
+            "defocusv": 2.0,
+            "datetime_ctf": "2025-02-16T12:48:09.293793",
+            "resolution": 4.45,
+            "psd": "psd_4.png"
+        },
+        {
+            "id": 6,
+            "micrographId": 35,
+            "defocusu": 4.29,
+            "defocusv": 4.15,
+            "datetime_ctf": "2024-04-05T12:48:09.293793",
+            "resolution": 3.7,
+            "psd": "psd_5.png"
+        },
+        {
+            "id": 7,
+            "micrographId": 31,
+            "defocusu": 2.03,
+            "defocusv": 3.86,
+            "datetime_ctf": "2024-12-12T12:48:09.293793",
+            "resolution": 7.04,
+            "psd": "psd_6.png"
+        },
+        {
+            "id": 8,
+            "micrographId": 38,
+            "defocusu": 4.01,
+            "defocusv": 2.0,
+            "datetime_ctf": "2024-12-08T12:48:09.293793",
+            "resolution": 7.33,
+            "psd": "psd_7.png"
+        },
+        {
+            "id": 9,
+            "micrographId": 17,
+            "defocusu": 3.85,
+            "defocusv": 2.21,
+            "datetime_ctf": "2025-03-18T12:48:09.293793",
+            "resolution": 4.17,
+            "psd": "psd_8.png"
+        },
+        {
+            "id": 10,
+            "micrographId": 43,
+            "defocusu": 2.83,
+            "defocusv": 3.41,
+            "datetime_ctf": "2025-02-08T12:48:09.293793",
+            "resolution": 2.95,
+            "psd": "psd_9.png"
+        },
+        {
+            "id": 11,
+            "micrographId": 34,
+            "defocusu": 2.18,
+            "defocusv": 3.08,
+            "datetime_ctf": "2024-09-03T12:48:09.293793",
+            "resolution": 4.22,
+            "psd": "psd_10.png"
+        },
+        {
+            "id": 12,
+            "micrographId": 9,
+            "defocusu": 1.65,
+            "defocusv": 1.71,
+            "datetime_ctf": "2024-08-27T12:48:09.293793",
+            "resolution": 3.68,
+            "psd": "psd_11.png"
+        },
+        {
+            "id": 13,
+            "micrographId": 49,
+            "defocusu": 2.72,
+            "defocusv": 4.63,
+            "datetime_ctf": "2024-07-03T12:48:09.293793",
+            "resolution": 8.12,
+            "psd": "psd_12.png"
+        },
+        {
+            "id": 14,
+            "micrographId": 4,
+            "defocusu": 1.05,
+            "defocusv": 3.93,
+            "datetime_ctf": "2024-06-29T12:48:09.293793",
+            "resolution": 3.34,
+            "psd": "psd_13.png"
+        },
+        {
+            "id": 15,
+            "micrographId": 42,
+            "defocusu": 2.18,
+            "defocusv": 3.63,
+            "datetime_ctf": "2024-06-18T12:48:09.293793",
+            "resolution": 8.87,
+            "psd": "psd_14.png"
+        },
+        {
+            "id": 16,
+            "micrographId": 50,
+            "defocusu": 1.43,
+            "defocusv": 2.02,
+            "datetime_ctf": "2024-07-31T12:48:09.293793",
+            "resolution": 8.25,
+            "psd": "psd_15.png"
+        },
+        {
+            "id": 17,
+            "micrographId": 37,
+            "defocusu": 4.95,
+            "defocusv": 4.66,
+            "datetime_ctf": "2024-05-13T12:48:09.293793",
+            "resolution": 2.05,
+            "psd": "psd_16.png"
+        },
+        {
+            "id": 18,
+            "micrographId": 9,
+            "defocusu": 1.41,
+            "defocusv": 1.71,
+            "datetime_ctf": "2024-09-02T12:48:09.293793",
+            "resolution": 3.89,
+            "psd": "psd_17.png"
+        },
+        {
+            "id": 19,
+            "micrographId": 22,
+            "defocusu": 4.87,
+            "defocusv": 2.11,
+            "datetime_ctf": "2024-09-20T12:48:09.293793",
+            "resolution": 3.3,
+            "psd": "psd_18.png"
+        },
+        {
+            "id": 20,
+            "micrographId": 45,
+            "defocusu": 3.2,
+            "defocusv": 1.34,
+            "datetime_ctf": "2024-08-10T12:48:09.293793",
+            "resolution": 9.79,
+            "psd": "psd_19.png"
+        },
+        {
+            "id": 21,
+            "micrographId": 49,
+            "defocusu": 4.65,
+            "defocusv": 4.85,
+            "datetime_ctf": "2024-10-22T12:48:09.293793",
+            "resolution": 3.34,
+            "psd": "psd_20.png"
+        },
+        {
+            "id": 22,
+            "micrographId": 33,
+            "defocusu": 4.3,
+            "defocusv": 4.09,
+            "datetime_ctf": "2025-02-05T12:48:09.293793",
+            "resolution": 3.79,
+            "psd": "psd_21.png"
+        },
+        {
+            "id": 23,
+            "micrographId": 4,
+            "defocusu": 1.86,
+            "defocusv": 2.73,
+            "datetime_ctf": "2024-08-04T12:48:09.293793",
+            "resolution": 5.74,
+            "psd": "psd_22.png"
+        },
+        {
+            "id": 24,
+            "micrographId": 41,
+            "defocusu": 3.47,
+            "defocusv": 3.64,
+            "datetime_ctf": "2025-01-17T12:48:09.293793",
+            "resolution": 2.94,
+            "psd": "psd_23.png"
+        },
+        {
+            "id": 25,
+            "micrographId": 20,
+            "defocusu": 2.93,
+            "defocusv": 4.86,
+            "datetime_ctf": "2024-11-16T12:48:09.293793",
+            "resolution": 6.63,
+            "psd": "psd_24.png"
+        },
+        {
+            "id": 26,
+            "micrographId": 8,
+            "defocusu": 3.31,
+            "defocusv": 2.74,
+            "datetime_ctf": "2024-07-02T12:48:09.293793",
+            "resolution": 3.79,
+            "psd": "psd_25.png"
+        },
+        {
+            "id": 27,
+            "micrographId": 2,
+            "defocusu": 4.73,
+            "defocusv": 4.61,
+            "datetime_ctf": "2024-05-01T12:48:09.293793",
+            "resolution": 3.26,
+            "psd": "psd_26.png"
+        },
+        {
+            "id": 28,
+            "micrographId": 4,
+            "defocusu": 1.27,
+            "defocusv": 3.04,
+            "datetime_ctf": "2024-09-22T12:48:09.293793",
+            "resolution": 7.01,
+            "psd": "psd_27.png"
+        },
+        {
+            "id": 29,
+            "micrographId": 32,
+            "defocusu": 2.47,
+            "defocusv": 3.53,
+            "datetime_ctf": "2024-10-01T12:48:09.293793",
+            "resolution": 4.0,
+            "psd": "psd_28.png"
+        },
+        {
+            "id": 30,
+            "micrographId": 2,
+            "defocusu": 2.19,
+            "defocusv": 1.61,
+            "datetime_ctf": "2025-03-24T12:48:09.293793",
+            "resolution": 3.08,
+            "psd": "psd_29.png"
+        },
+        {
+            "id": 31,
+            "micrographId": 11,
+            "defocusu": 1.6,
+            "defocusv": 1.65,
+            "datetime_ctf": "2024-08-13T12:48:09.293793",
+            "resolution": 3.93,
+            "psd": "psd_30.png"
+        },
+        {
+            "id": 32,
+            "micrographId": 18,
+            "defocusu": 1.82,
+            "defocusv": 4.91,
+            "datetime_ctf": "2024-04-14T12:48:09.293793",
+            "resolution": 3.59,
+            "psd": "psd_31.png"
+        },
+        {
+            "id": 33,
+            "micrographId": 31,
+            "defocusu": 2.67,
+            "defocusv": 1.62,
+            "datetime_ctf": "2024-05-27T12:48:09.293793",
+            "resolution": 2.62,
+            "psd": "psd_32.png"
+        },
+        {
+            "id": 34,
+            "micrographId": 8,
+            "defocusu": 3.49,
+            "defocusv": 2.63,
+            "datetime_ctf": "2024-07-07T12:48:09.293793",
+            "resolution": 2.72,
+            "psd": "psd_33.png"
+        },
+        {
+            "id": 35,
+            "micrographId": 5,
+            "defocusu": 1.99,
+            "defocusv": 2.48,
+            "datetime_ctf": "2024-04-27T12:48:09.293793",
+            "resolution": 5.23,
+            "psd": "psd_34.png"
+        },
+        {
+            "id": 36,
+            "micrographId": 47,
+            "defocusu": 2.4,
+            "defocusv": 4.94,
+            "datetime_ctf": "2024-06-14T12:48:09.293793",
+            "resolution": 9.73,
+            "psd": "psd_35.png"
+        },
+        {
+            "id": 37,
+            "micrographId": 22,
+            "defocusu": 3.22,
+            "defocusv": 4.15,
+            "datetime_ctf": "2025-02-25T12:48:09.293793",
+            "resolution": 9.64,
+            "psd": "psd_36.png"
+        },
+        {
+            "id": 38,
+            "micrographId": 4,
+            "defocusu": 4.89,
+            "defocusv": 1.46,
+            "datetime_ctf": "2025-01-15T12:48:09.293793",
+            "resolution": 9.31,
+            "psd": "psd_37.png"
+        },
+        {
+            "id": 39,
+            "micrographId": 30,
+            "defocusu": 1.13,
+            "defocusv": 1.74,
+            "datetime_ctf": "2024-05-12T12:48:09.293793",
+            "resolution": 3.69,
+            "psd": "psd_38.png"
+        },
+        {
+            "id": 40,
+            "micrographId": 24,
+            "defocusu": 3.48,
+            "defocusv": 1.71,
+            "datetime_ctf": "2025-01-01T12:48:09.293793",
+            "resolution": 3.92,
+            "psd": "psd_39.png"
+        },
+        {
+            "id": 41,
+            "micrographId": 18,
+            "defocusu": 4.24,
+            "defocusv": 4.63,
+            "datetime_ctf": "2024-09-22T12:48:09.293793",
+            "resolution": 8.66,
+            "psd": "psd_40.png"
+        },
+        {
+            "id": 42,
+            "micrographId": 32,
+            "defocusu": 2.92,
+            "defocusv": 4.15,
+            "datetime_ctf": "2024-06-28T12:48:09.293793",
+            "resolution": 7.26,
+            "psd": "psd_41.png"
+        },
+        {
+            "id": 43,
+            "micrographId": 12,
+            "defocusu": 3.84,
+            "defocusv": 3.83,
+            "datetime_ctf": "2024-05-04T12:48:09.293793",
+            "resolution": 3.0,
+            "psd": "psd_42.png"
+        },
+        {
+            "id": 44,
+            "micrographId": 27,
+            "defocusu": 3.88,
+            "defocusv": 4.11,
+            "datetime_ctf": "2024-05-11T12:48:09.293793",
+            "resolution": 4.74,
+            "psd": "psd_43.png"
+        },
+        {
+            "id": 45,
+            "micrographId": 48,
+            "defocusu": 2.29,
+            "defocusv": 2.01,
+            "datetime_ctf": "2024-08-16T12:48:09.293793",
+            "resolution": 8.46,
+            "psd": "psd_44.png"
+        },
+        {
+            "id": 46,
+            "micrographId": 15,
+            "defocusu": 3.96,
+            "defocusv": 4.05,
+            "datetime_ctf": "2024-08-13T12:48:09.293793",
+            "resolution": 5.39,
+            "psd": "psd_45.png"
+        },
+        {
+            "id": 47,
+            "micrographId": 21,
+            "defocusu": 1.33,
+            "defocusv": 2.78,
+            "datetime_ctf": "2024-11-28T12:48:09.293793",
+            "resolution": 8.8,
+            "psd": "psd_46.png"
+        },
+        {
+            "id": 48,
+            "micrographId": 7,
+            "defocusu": 4.59,
+            "defocusv": 1.84,
+            "datetime_ctf": "2024-05-20T12:48:09.293793",
+            "resolution": 5.43,
+            "psd": "psd_47.png"
+        },
+        {
+            "id": 49,
+            "micrographId": 40,
+            "defocusu": 4.44,
+            "defocusv": 1.84,
+            "datetime_ctf": "2024-07-18T12:48:09.293793",
+            "resolution": 4.39,
+            "psd": "psd_48.png"
+        },
+        {
+            "id": 50,
+            "micrographId": 15,
+            "defocusu": 4.86,
+            "defocusv": 3.31,
+            "datetime_ctf": "2024-10-05T12:48:09.293793",
+            "resolution": 4.88,
+            "psd": "psd_49.png"
+        },
+        {
+            "id": 51,
+            "micrographId": 28,
+            "defocusu": 4.13,
+            "defocusv": 1.94,
+            "datetime_ctf": "2024-10-13T12:48:09.293793",
+            "resolution": 3.35,
+            "psd": "psd_50.png"
+        },
+        {
+            "id": 52,
+            "micrographId": 11,
+            "defocusu": 4.56,
+            "defocusv": 1.61,
+            "datetime_ctf": "2025-02-12T12:48:09.293793",
+            "resolution": 2.2,
+            "psd": "psd_51.png"
+        },
+        {
+            "id": 53,
+            "micrographId": 48,
+            "defocusu": 3.84,
+            "defocusv": 2.04,
+            "datetime_ctf": "2024-11-30T12:48:09.293793",
+            "resolution": 2.62,
+            "psd": "psd_52.png"
+        },
+        {
+            "id": 54,
+            "micrographId": 17,
+            "defocusu": 3.39,
+            "defocusv": 3.3,
+            "datetime_ctf": "2024-11-09T12:48:09.293793",
+            "resolution": 2.37,
+            "psd": "psd_53.png"
+        },
+        {
+            "id": 55,
+            "micrographId": 27,
+            "defocusu": 4.61,
+            "defocusv": 1.92,
+            "datetime_ctf": "2024-04-08T12:48:09.293793",
+            "resolution": 4.64,
+            "psd": "psd_54.png"
+        },
+        {
+            "id": 56,
+            "micrographId": 20,
+            "defocusu": 2.65,
+            "defocusv": 4.92,
+            "datetime_ctf": "2025-03-17T12:48:09.293793",
+            "resolution": 2.19,
+            "psd": "psd_55.png"
+        },
+        {
+            "id": 57,
+            "micrographId": 20,
+            "defocusu": 2.43,
+            "defocusv": 1.93,
+            "datetime_ctf": "2024-08-27T12:48:09.293793",
+            "resolution": 9.73,
+            "psd": "psd_56.png"
+        },
+        {
+            "id": 58,
+            "micrographId": 39,
+            "defocusu": 1.23,
+            "defocusv": 4.02,
+            "datetime_ctf": "2024-05-20T12:48:09.293793",
+            "resolution": 7.41,
+            "psd": "psd_57.png"
+        },
+        {
+            "id": 59,
+            "micrographId": 9,
+            "defocusu": 1.25,
+            "defocusv": 4.51,
+            "datetime_ctf": "2024-12-23T12:48:09.293793",
+            "resolution": 8.55,
+            "psd": "psd_58.png"
+        },
+        {
+            "id": 60,
+            "micrographId": 9,
+            "defocusu": 4.43,
+            "defocusv": 2.71,
+            "datetime_ctf": "2024-05-29T12:48:09.293793",
+            "resolution": 7.34,
+            "psd": "psd_59.png"
+        },
+        {
+            "id": 61,
+            "micrographId": 2,
+            "defocusu": 1.66,
+            "defocusv": 3.42,
+            "datetime_ctf": "2024-08-24T12:48:09.293793",
+            "resolution": 3.97,
+            "psd": "psd_60.png"
+        },
+        {
+            "id": 62,
+            "micrographId": 49,
+            "defocusu": 4.69,
+            "defocusv": 3.41,
+            "datetime_ctf": "2025-01-06T12:48:09.293793",
+            "resolution": 5.93,
+            "psd": "psd_61.png"
+        },
+        {
+            "id": 63,
+            "micrographId": 20,
+            "defocusu": 4.51,
+            "defocusv": 3.67,
+            "datetime_ctf": "2024-04-01T12:48:09.293793",
+            "resolution": 8.66,
+            "psd": "psd_62.png"
+        },
+        {
+            "id": 64,
+            "micrographId": 33,
+            "defocusu": 4.44,
+            "defocusv": 1.73,
+            "datetime_ctf": "2025-01-27T12:48:09.293793",
+            "resolution": 3.31,
+            "psd": "psd_63.png"
+        },
+        {
+            "id": 65,
+            "micrographId": 11,
+            "defocusu": 2.33,
+            "defocusv": 1.91,
+            "datetime_ctf": "2025-02-02T12:48:09.293793",
+            "resolution": 5.04,
+            "psd": "psd_64.png"
+        },
+        {
+            "id": 66,
+            "micrographId": 20,
+            "defocusu": 4.25,
+            "defocusv": 3.34,
+            "datetime_ctf": "2024-09-21T12:48:09.293793",
+            "resolution": 7.89,
+            "psd": "psd_65.png"
+        },
+        {
+            "id": 67,
+            "micrographId": 30,
+            "defocusu": 3.04,
+            "defocusv": 2.59,
+            "datetime_ctf": "2024-11-18T12:48:09.293793",
+            "resolution": 3.08,
+            "psd": "psd_66.png"
+        },
+        {
+            "id": 68,
+            "micrographId": 8,
+            "defocusu": 1.31,
+            "defocusv": 2.96,
+            "datetime_ctf": "2024-10-04T12:48:09.293793",
+            "resolution": 7.74,
+            "psd": "psd_67.png"
+        },
+        {
+            "id": 69,
+            "micrographId": 40,
+            "defocusu": 3.6,
+            "defocusv": 3.85,
+            "datetime_ctf": "2024-05-22T12:48:09.293793",
+            "resolution": 9.82,
+            "psd": "psd_68.png"
+        },
+        {
+            "id": 70,
+            "micrographId": 26,
+            "defocusu": 4.69,
+            "defocusv": 4.45,
+            "datetime_ctf": "2024-11-04T12:48:09.293793",
+            "resolution": 2.2,
+            "psd": "psd_69.png"
+        },
+        {
+            "id": 71,
+            "micrographId": 35,
+            "defocusu": 4.74,
+            "defocusv": 1.29,
+            "datetime_ctf": "2024-07-12T12:48:09.293793",
+            "resolution": 8.24,
+            "psd": "psd_70.png"
+        },
+        {
+            "id": 72,
+            "micrographId": 46,
+            "defocusu": 1.13,
+            "defocusv": 3.53,
+            "datetime_ctf": "2025-02-08T12:48:09.293793",
+            "resolution": 9.12,
+            "psd": "psd_71.png"
+        },
+        {
+            "id": 73,
+            "micrographId": 7,
+            "defocusu": 2.8,
+            "defocusv": 3.87,
+            "datetime_ctf": "2024-10-05T12:48:09.293793",
+            "resolution": 6.31,
+            "psd": "psd_72.png"
+        },
+        {
+            "id": 74,
+            "micrographId": 22,
+            "defocusu": 1.27,
+            "defocusv": 2.2,
+            "datetime_ctf": "2025-03-24T12:48:09.293793",
+            "resolution": 2.55,
+            "psd": "psd_73.png"
+        },
+        {
+            "id": 75,
+            "micrographId": 11,
+            "defocusu": 2.77,
+            "defocusv": 1.4,
+            "datetime_ctf": "2024-06-12T12:48:09.293793",
+            "resolution": 4.89,
+            "psd": "psd_74.png"
+        },
+        {
+            "id": 76,
+            "micrographId": 24,
+            "defocusu": 4.69,
+            "defocusv": 1.34,
+            "datetime_ctf": "2024-11-24T12:48:09.293793",
+            "resolution": 3.15,
+            "psd": "psd_75.png"
+        },
+        {
+            "id": 77,
+            "micrographId": 42,
+            "defocusu": 4.57,
+            "defocusv": 3.81,
+            "datetime_ctf": "2025-01-20T12:48:09.293793",
+            "resolution": 7.19,
+            "psd": "psd_76.png"
+        },
+        {
+            "id": 78,
+            "micrographId": 20,
+            "defocusu": 1.17,
+            "defocusv": 4.17,
+            "datetime_ctf": "2024-12-31T12:48:09.293793",
+            "resolution": 6.7,
+            "psd": "psd_77.png"
+        },
+        {
+            "id": 79,
+            "micrographId": 42,
+            "defocusu": 4.28,
+            "defocusv": 2.12,
+            "datetime_ctf": "2024-10-16T12:48:09.293793",
+            "resolution": 4.0,
+            "psd": "psd_78.png"
+        },
+        {
+            "id": 80,
+            "micrographId": 47,
+            "defocusu": 3.79,
+            "defocusv": 4.33,
+            "datetime_ctf": "2024-04-22T12:48:09.293793",
+            "resolution": 3.07,
+            "psd": "psd_79.png"
+        },
+        {
+            "id": 81,
+            "micrographId": 6,
+            "defocusu": 1.64,
+            "defocusv": 1.54,
+            "datetime_ctf": "2025-01-06T12:48:09.293793",
+            "resolution": 9.96,
+            "psd": "psd_80.png"
+        },
+        {
+            "id": 82,
+            "micrographId": 23,
+            "defocusu": 4.87,
+            "defocusv": 3.36,
+            "datetime_ctf": "2024-10-30T12:48:09.293793",
+            "resolution": 3.75,
+            "psd": "psd_81.png"
+        },
+        {
+            "id": 83,
+            "micrographId": 44,
+            "defocusu": 1.62,
+            "defocusv": 2.3,
+            "datetime_ctf": "2024-09-12T12:48:09.293793",
+            "resolution": 3.64,
+            "psd": "psd_82.png"
+        },
+        {
+            "id": 84,
+            "micrographId": 21,
+            "defocusu": 2.1,
+            "defocusv": 2.11,
+            "datetime_ctf": "2024-08-22T12:48:09.293793",
+            "resolution": 8.38,
+            "psd": "psd_83.png"
+        },
+        {
+            "id": 85,
+            "micrographId": 18,
+            "defocusu": 1.01,
+            "defocusv": 2.97,
+            "datetime_ctf": "2024-07-29T12:48:09.293793",
+            "resolution": 3.8,
+            "psd": "psd_84.png"
+        },
+        {
+            "id": 86,
+            "micrographId": 26,
+            "defocusu": 2.77,
+            "defocusv": 2.83,
+            "datetime_ctf": "2024-11-29T12:48:09.293793",
+            "resolution": 5.12,
+            "psd": "psd_85.png"
+        },
+        {
+            "id": 87,
+            "micrographId": 26,
+            "defocusu": 2.09,
+            "defocusv": 4.95,
+            "datetime_ctf": "2024-05-25T12:48:09.293793",
+            "resolution": 8.3,
+            "psd": "psd_86.png"
+        },
+        {
+            "id": 88,
+            "micrographId": 31,
+            "defocusu": 3.83,
+            "defocusv": 1.97,
+            "datetime_ctf": "2025-02-03T12:48:09.293793",
+            "resolution": 7.41,
+            "psd": "psd_87.png"
+        },
+        {
+            "id": 89,
+            "micrographId": 27,
+            "defocusu": 1.63,
+            "defocusv": 1.92,
+            "datetime_ctf": "2024-05-21T12:48:09.293793",
+            "resolution": 9.58,
+            "psd": "psd_88.png"
+        },
+        {
+            "id": 90,
+            "micrographId": 11,
+            "defocusu": 3.85,
+            "defocusv": 2.74,
+            "datetime_ctf": "2024-12-20T12:48:09.293793",
+            "resolution": 4.22,
+            "psd": "psd_89.png"
+        },
+        {
+            "id": 91,
+            "micrographId": 11,
+            "defocusu": 4.46,
+            "defocusv": 2.29,
+            "datetime_ctf": "2025-01-06T12:48:09.293793",
+            "resolution": 3.92,
+            "psd": "psd_90.png"
+        },
+        {
+            "id": 92,
+            "micrographId": 25,
+            "defocusu": 1.46,
+            "defocusv": 1.73,
+            "datetime_ctf": "2024-04-23T12:48:09.293793",
+            "resolution": 8.35,
+            "psd": "psd_91.png"
+        },
+        {
+            "id": 93,
+            "micrographId": 3,
+            "defocusu": 3.56,
+            "defocusv": 4.07,
+            "datetime_ctf": "2024-11-05T12:48:09.293793",
+            "resolution": 9.96,
+            "psd": "psd_92.png"
+        },
+        {
+            "id": 94,
+            "micrographId": 15,
+            "defocusu": 2.38,
+            "defocusv": 4.82,
+            "datetime_ctf": "2024-11-01T12:48:09.293793",
+            "resolution": 7.93,
+            "psd": "psd_93.png"
+        },
+        {
+            "id": 95,
+            "micrographId": 5,
+            "defocusu": 1.76,
+            "defocusv": 1.11,
+            "datetime_ctf": "2024-10-16T12:48:09.293793",
+            "resolution": 7.65,
+            "psd": "psd_94.png"
+        },
+        {
+            "id": 96,
+            "micrographId": 36,
+            "defocusu": 3.74,
+            "defocusv": 2.56,
+            "datetime_ctf": "2024-09-27T12:48:09.293793",
+            "resolution": 9.13,
+            "psd": "psd_95.png"
+        },
+        {
+            "id": 97,
+            "micrographId": 32,
+            "defocusu": 4.81,
+            "defocusv": 4.81,
+            "datetime_ctf": "2024-09-04T12:48:09.293793",
+            "resolution": 8.92,
+            "psd": "psd_96.png"
+        },
+        {
+            "id": 98,
+            "micrographId": 26,
+            "defocusu": 3.48,
+            "defocusv": 3.29,
+            "datetime_ctf": "2024-08-01T12:48:09.293793",
+            "resolution": 9.87,
+            "psd": "psd_97.png"
+        },
+        {
+            "id": 99,
+            "micrographId": 21,
+            "defocusu": 4.77,
+            "defocusv": 3.1,
+            "datetime_ctf": "2024-04-05T12:48:09.293793",
+            "resolution": 4.95,
+            "psd": "psd_98.png"
+        },
+        {
+            "id": 100,
+            "micrographId": 8,
+            "defocusu": 1.03,
+            "defocusv": 4.26,
+            "datetime_ctf": "2025-01-16T12:48:09.293793",
+            "resolution": 2.46,
+            "psd": "psd_99.png"
+        },
+        {
+            "id": 101,
+            "micrographId": 12,
+            "defocusu": 2.02,
+            "defocusv": 2.97,
+            "datetime_ctf": "2024-10-21T12:48:09.293793",
+            "resolution": 9.67,
+            "psd": "psd_100.png"
+        },
+        {
+            "id": 102,
+            "micrographId": 49,
+            "defocusu": 2.18,
+            "defocusv": 4.84,
+            "datetime_ctf": "2024-08-05T12:48:09.293793",
+            "resolution": 3.39,
+            "psd": "psd_101.png"
+        },
+        {
+            "id": 103,
+            "micrographId": 5,
+            "defocusu": 3.5,
+            "defocusv": 4.57,
+            "datetime_ctf": "2024-05-27T12:48:09.293793",
+            "resolution": 9.42,
+            "psd": "psd_102.png"
+        },
+        {
+            "id": 104,
+            "micrographId": 34,
+            "defocusu": 2.03,
+            "defocusv": 3.51,
+            "datetime_ctf": "2024-06-23T12:48:09.293793",
+            "resolution": 8.23,
+            "psd": "psd_103.png"
+        },
+        {
+            "id": 105,
+            "micrographId": 6,
+            "defocusu": 2.6,
+            "defocusv": 1.82,
+            "datetime_ctf": "2024-10-24T12:48:09.293793",
+            "resolution": 2.58,
+            "psd": "psd_104.png"
+        },
+        {
+            "id": 106,
+            "micrographId": 12,
+            "defocusu": 3.33,
+            "defocusv": 2.65,
+            "datetime_ctf": "2025-01-05T12:48:09.293793",
+            "resolution": 2.47,
+            "psd": "psd_105.png"
+        },
+        {
+            "id": 107,
+            "micrographId": 8,
+            "defocusu": 4.49,
+            "defocusv": 4.71,
+            "datetime_ctf": "2024-04-05T12:48:09.293793",
+            "resolution": 7.09,
+            "psd": "psd_106.png"
+        },
+        {
+            "id": 108,
+            "micrographId": 42,
+            "defocusu": 1.38,
+            "defocusv": 2.76,
+            "datetime_ctf": "2025-02-10T12:48:09.293793",
+            "resolution": 4.84,
+            "psd": "psd_107.png"
+        },
+        {
+            "id": 109,
+            "micrographId": 14,
+            "defocusu": 2.78,
+            "defocusv": 2.84,
+            "datetime_ctf": "2024-07-30T12:48:09.293793",
+            "resolution": 5.26,
+            "psd": "psd_108.png"
+        },
+        {
+            "id": 110,
+            "micrographId": 37,
+            "defocusu": 2.84,
+            "defocusv": 1.32,
+            "datetime_ctf": "2024-12-03T12:48:09.293793",
+            "resolution": 4.38,
+            "psd": "psd_109.png"
+        },
+        {
+            "id": 111,
+            "micrographId": 12,
+            "defocusu": 2.51,
+            "defocusv": 3.88,
+            "datetime_ctf": "2024-08-29T12:48:09.293793",
+            "resolution": 2.54,
+            "psd": "psd_110.png"
+        },
+        {
+            "id": 112,
+            "micrographId": 32,
+            "defocusu": 2.37,
+            "defocusv": 2.09,
+            "datetime_ctf": "2025-02-13T12:48:09.294795",
+            "resolution": 7.38,
+            "psd": "psd_111.png"
+        },
+        {
+            "id": 113,
+            "micrographId": 47,
+            "defocusu": 2.58,
+            "defocusv": 4.3,
+            "datetime_ctf": "2025-03-14T12:48:09.294795",
+            "resolution": 4.22,
+            "psd": "psd_112.png"
+        },
+        {
+            "id": 114,
+            "micrographId": 1,
+            "defocusu": 2.71,
+            "defocusv": 4.22,
+            "datetime_ctf": "2024-10-12T12:48:09.294795",
+            "resolution": 3.93,
+            "psd": "psd_113.png"
+        },
+        {
+            "id": 115,
+            "micrographId": 31,
+            "defocusu": 4.21,
+            "defocusv": 1.16,
+            "datetime_ctf": "2025-02-11T12:48:09.294795",
+            "resolution": 2.4,
+            "psd": "psd_114.png"
+        },
+        {
+            "id": 116,
+            "micrographId": 38,
+            "defocusu": 3.67,
+            "defocusv": 1.27,
+            "datetime_ctf": "2025-02-13T12:48:09.294795",
+            "resolution": 3.74,
+            "psd": "psd_115.png"
+        },
+        {
+            "id": 117,
+            "micrographId": 32,
+            "defocusu": 4.52,
+            "defocusv": 1.23,
+            "datetime_ctf": "2025-01-02T12:48:09.294795",
+            "resolution": 7.78,
+            "psd": "psd_116.png"
+        },
+        {
+            "id": 118,
+            "micrographId": 2,
+            "defocusu": 3.79,
+            "defocusv": 2.95,
+            "datetime_ctf": "2024-05-12T12:48:09.294795",
+            "resolution": 7.81,
+            "psd": "psd_117.png"
+        },
+        {
+            "id": 119,
+            "micrographId": 26,
+            "defocusu": 3.46,
+            "defocusv": 4.48,
+            "datetime_ctf": "2024-08-17T12:48:09.294795",
+            "resolution": 2.88,
+            "psd": "psd_118.png"
+        },
+        {
+            "id": 120,
+            "micrographId": 7,
+            "defocusu": 4.62,
+            "defocusv": 1.11,
+            "datetime_ctf": "2025-03-20T12:48:09.294795",
+            "resolution": 6.55,
+            "psd": "psd_119.png"
+        },
+        {
+            "id": 121,
+            "micrographId": 11,
+            "defocusu": 3.2,
+            "defocusv": 3.62,
+            "datetime_ctf": "2024-10-22T12:48:09.294795",
+            "resolution": 7.38,
+            "psd": "psd_120.png"
+        },
+        {
+            "id": 122,
+            "micrographId": 44,
+            "defocusu": 1.73,
+            "defocusv": 2.65,
+            "datetime_ctf": "2024-11-26T12:48:09.294795",
+            "resolution": 9.24,
+            "psd": "psd_121.png"
+        },
+        {
+            "id": 123,
+            "micrographId": 5,
+            "defocusu": 1.07,
+            "defocusv": 4.17,
+            "datetime_ctf": "2024-05-15T12:48:09.294795",
+            "resolution": 9.92,
+            "psd": "psd_122.png"
+        },
+        {
+            "id": 124,
+            "micrographId": 46,
+            "defocusu": 2.62,
+            "defocusv": 3.22,
+            "datetime_ctf": "2025-02-10T12:48:09.294795",
+            "resolution": 9.24,
+            "psd": "psd_123.png"
+        },
+        {
+            "id": 125,
+            "micrographId": 43,
+            "defocusu": 4.55,
+            "defocusv": 1.44,
+            "datetime_ctf": "2024-11-17T12:48:09.294795",
+            "resolution": 9.59,
+            "psd": "psd_124.png"
+        },
+        {
+            "id": 126,
+            "micrographId": 3,
+            "defocusu": 2.72,
+            "defocusv": 2.03,
+            "datetime_ctf": "2024-10-04T12:48:09.294795",
+            "resolution": 9.66,
+            "psd": "psd_125.png"
+        },
+        {
+            "id": 127,
+            "micrographId": 33,
+            "defocusu": 4.67,
+            "defocusv": 3.94,
+            "datetime_ctf": "2025-03-07T12:48:09.294795",
+            "resolution": 2.63,
+            "psd": "psd_126.png"
+        },
+        {
+            "id": 128,
+            "micrographId": 12,
+            "defocusu": 4.28,
+            "defocusv": 3.24,
+            "datetime_ctf": "2024-04-22T12:48:09.294795",
+            "resolution": 9.59,
+            "psd": "psd_127.png"
+        },
+        {
+            "id": 129,
+            "micrographId": 34,
+            "defocusu": 4.52,
+            "defocusv": 4.04,
+            "datetime_ctf": "2024-12-31T12:48:09.294795",
+            "resolution": 3.64,
+            "psd": "psd_128.png"
+        },
+        {
+            "id": 130,
+            "micrographId": 35,
+            "defocusu": 1.62,
+            "defocusv": 2.35,
+            "datetime_ctf": "2025-02-18T12:48:09.294795",
+            "resolution": 5.32,
+            "psd": "psd_129.png"
+        },
+        {
+            "id": 131,
+            "micrographId": 11,
+            "defocusu": 4.31,
+            "defocusv": 4.97,
+            "datetime_ctf": "2024-06-13T12:48:09.294795",
+            "resolution": 2.26,
+            "psd": "psd_130.png"
+        },
+        {
+            "id": 132,
+            "micrographId": 41,
+            "defocusu": 1.66,
+            "defocusv": 3.84,
+            "datetime_ctf": "2024-12-06T12:48:09.294795",
+            "resolution": 4.89,
+            "psd": "psd_131.png"
+        },
+        {
+            "id": 133,
+            "micrographId": 10,
+            "defocusu": 3.65,
+            "defocusv": 2.05,
+            "datetime_ctf": "2024-10-28T12:48:09.294795",
+            "resolution": 6.46,
+            "psd": "psd_132.png"
+        },
+        {
+            "id": 134,
+            "micrographId": 50,
+            "defocusu": 4.23,
+            "defocusv": 1.62,
+            "datetime_ctf": "2024-08-14T12:48:09.294795",
+            "resolution": 8.97,
+            "psd": "psd_133.png"
+        },
+        {
+            "id": 135,
+            "micrographId": 49,
+            "defocusu": 2.37,
+            "defocusv": 2.95,
+            "datetime_ctf": "2024-11-16T12:48:09.294795",
+            "resolution": 2.58,
+            "psd": "psd_134.png"
+        },
+        {
+            "id": 136,
+            "micrographId": 48,
+            "defocusu": 4.67,
+            "defocusv": 2.96,
+            "datetime_ctf": "2025-02-28T12:48:09.294795",
+            "resolution": 7.21,
+            "psd": "psd_135.png"
+        },
+        {
+            "id": 137,
+            "micrographId": 25,
+            "defocusu": 1.05,
+            "defocusv": 2.49,
+            "datetime_ctf": "2025-02-17T12:48:09.294795",
+            "resolution": 3.08,
+            "psd": "psd_136.png"
+        },
+        {
+            "id": 138,
+            "micrographId": 4,
+            "defocusu": 3.0,
+            "defocusv": 3.04,
+            "datetime_ctf": "2024-08-06T12:48:09.294795",
+            "resolution": 2.46,
+            "psd": "psd_137.png"
+        },
+        {
+            "id": 139,
+            "micrographId": 1,
+            "defocusu": 1.8,
+            "defocusv": 3.17,
+            "datetime_ctf": "2024-07-25T12:48:09.294795",
+            "resolution": 6.42,
+            "psd": "psd_138.png"
+        },
+        {
+            "id": 140,
+            "micrographId": 3,
+            "defocusu": 3.35,
+            "defocusv": 2.2,
+            "datetime_ctf": "2025-01-21T12:48:09.294795",
+            "resolution": 2.39,
+            "psd": "psd_139.png"
+        },
+        {
+            "id": 141,
+            "micrographId": 4,
+            "defocusu": 3.29,
+            "defocusv": 2.99,
+            "datetime_ctf": "2024-11-03T12:48:09.294795",
+            "resolution": 8.22,
+            "psd": "psd_140.png"
+        },
+        {
+            "id": 142,
+            "micrographId": 1,
+            "defocusu": 4.26,
+            "defocusv": 2.62,
+            "datetime_ctf": "2024-12-23T12:48:09.294795",
+            "resolution": 8.85,
+            "psd": "psd_141.png"
+        },
+        {
+            "id": 143,
+            "micrographId": 16,
+            "defocusu": 2.55,
+            "defocusv": 3.73,
+            "datetime_ctf": "2024-05-23T12:48:09.294795",
+            "resolution": 9.62,
+            "psd": "psd_142.png"
+        },
+        {
+            "id": 144,
+            "micrographId": 33,
+            "defocusu": 2.33,
+            "defocusv": 1.47,
+            "datetime_ctf": "2025-02-15T12:48:09.294795",
+            "resolution": 4.65,
+            "psd": "psd_143.png"
+        },
+        {
+            "id": 145,
+            "micrographId": 47,
+            "defocusu": 2.24,
+            "defocusv": 4.46,
+            "datetime_ctf": "2024-06-23T12:48:09.294795",
+            "resolution": 2.43,
+            "psd": "psd_144.png"
+        },
+        {
+            "id": 146,
+            "micrographId": 42,
+            "defocusu": 1.66,
+            "defocusv": 2.27,
+            "datetime_ctf": "2024-09-19T12:48:09.294795",
+            "resolution": 5.51,
+            "psd": "psd_145.png"
+        },
+        {
+            "id": 147,
+            "micrographId": 11,
+            "defocusu": 4.39,
+            "defocusv": 3.4,
+            "datetime_ctf": "2024-05-21T12:48:09.294795",
+            "resolution": 9.71,
+            "psd": "psd_146.png"
+        },
+        {
+            "id": 148,
+            "micrographId": 15,
+            "defocusu": 4.73,
+            "defocusv": 1.75,
+            "datetime_ctf": "2024-10-28T12:48:09.294795",
+            "resolution": 9.67,
+            "psd": "psd_147.png"
+        },
+        {
+            "id": 149,
+            "micrographId": 36,
+            "defocusu": 2.72,
+            "defocusv": 4.88,
+            "datetime_ctf": "2024-07-29T12:48:09.294795",
+            "resolution": 7.18,
+            "psd": "psd_148.png"
+        },
+        {
+            "id": 150,
+            "micrographId": 11,
+            "defocusu": 1.54,
+            "defocusv": 3.53,
+            "datetime_ctf": "2024-04-13T12:48:09.294795",
+            "resolution": 3.58,
+            "psd": "psd_149.png"
+        }
+    ]
+}

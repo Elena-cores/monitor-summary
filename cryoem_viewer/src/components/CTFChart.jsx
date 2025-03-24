@@ -69,12 +69,10 @@ export const CTFGraph = ({graphData}) => {
             }
         },
         series: [{
-            type: 'area',
             name: 'DefocusU',
             data: defocusuData,
         },
         {
-            type:'area',
             name: 'DefocusV',
             data: defocusvData,
         },],

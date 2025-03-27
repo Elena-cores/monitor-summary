@@ -6,8 +6,11 @@ const Layout = ({ children }) => {
       <div className="app-container">
         <Sidebar />
         <div className="main-content">
-          <header className="header">
+         <div className='header'>
             <h1>Monitor summary</h1>
+         </div>
+          <header className="customize-bar">
+            <h1> custom bar</h1>
           </header>
           <main>
             {children}

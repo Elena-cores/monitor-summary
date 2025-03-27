@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CTFList from '../components/CTFList';
 import CTFGraph from '../components/CTFChart';
+import CTFHistogram from '../components/CTFHistogram';
 import getCTFData from '../api/ctfApi';
 
 // show components in page
@@ -25,7 +26,7 @@ const CTFPage = () => {
 
     const interval = setInterval(() => {
       loadData();
-    }, 3000);  //every 3 seconds update
+    }, 6000);  //every 6 seconds update
 
     return () => clearInterval(interval);
   }, []);
@@ -36,6 +37,7 @@ const CTFPage = () => {
       <h1>CTF Data</h1>
       <CTFList ctfData={ctfData} />
       <CTFGraph graphData={ctfData} />
+      <CTFHistogram graphData={ctfData} />
       {error && <p style={{ color: 'red' }}>{error}</p>}  
     </div>
   );

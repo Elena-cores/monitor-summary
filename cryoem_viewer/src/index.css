@@ -46,7 +46,6 @@ h1 {
 
 /* Main container */
 .main-content {
-  margin-left: 10px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -58,6 +57,13 @@ h1 {
   padding: 1rem;
   background-color: #f0f0f0;
   border-bottom: 1px solid #ddd;
+}
+
+.customize-bar {
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* main content page with scroll */

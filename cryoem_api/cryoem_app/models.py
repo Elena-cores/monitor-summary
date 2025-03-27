@@ -31,6 +31,7 @@ class CTF(models.Model):
     micrograph = models.ForeignKey(Micrograph, on_delete=models.CASCADE, related_name='ctfs') # in case of micrography elimination, all related ctfs will be deleted 
     defocusu = models.FloatField()
     defocusv = models.FloatField()
+    phaseshift = models.FloatField()  # degrees 
     datetime_ctf = models.DateTimeField(default=datetime.now)
     resolution = models.FloatField()
     psd = models.ImageField(upload_to='psds/')

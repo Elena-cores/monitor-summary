@@ -6,12 +6,12 @@ const Layout = ({ children }) => {
       <div className="app-container">
         <Sidebar />
         <div className="main-content">
-         <div className='header'>
+         <header className='header'>
             <h1>Monitor summary</h1>
-         </div>
-          <header className="customize-bar">
-            <h1> custom bar</h1>
           </header>
+          <div className="customize-bar">
+            <h1>------- custom bar -------</h1>
+          </div>
           <main>
             {children}
           </main>

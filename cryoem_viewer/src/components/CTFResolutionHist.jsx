@@ -1,8 +1,9 @@
 import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import { withChartTheme } from '../hocs/withChartTheme'; // import the HOC for theming
 
-const CTFHistogram = ({ graphData }) => {
+const CTFResolutionHist = ({ graphData, isDark, getThemeOptions }) => {
     // verify if data exists
     if (!graphData || graphData.length === 0) {
         return <p>No data available for histogram</p>;
@@ -12,7 +13,7 @@ const CTFHistogram = ({ graphData }) => {
     const resolutionBins = {};
     graphData.forEach(ctf => {
         const resolution = ctf.resolution;
-        const binKey = resolution.toFixed(2);  // group by resolution with 2 decimals
+        const binKey = resolution.toFixed(2);  // group by resolution to 2 decimals
         resolutionBins[binKey] = (resolutionBins[binKey] || 0) + 1;
     });
 
@@ -24,7 +25,7 @@ const CTFHistogram = ({ graphData }) => {
     })).sort((a, b) => a.resolution - b.resolution); // order by resolution
 
     // configuration of histogram
-    const options = {
+    const options = getThemeOptions(isDark, {
         chart: {
             type: 'column', // column histogram
         },
@@ -51,7 +52,7 @@ const CTFHistogram = ({ graphData }) => {
             headerFormat: '<span style="font-size:10px">Resolution: {point.key}</span><br/>',
             pointFormat: '<b>{point.y}</b> micrograph(s)',
         },
-    };
+    });
 
     return (
         <div className="histogram-container">
@@ -63,4 +64,4 @@ const CTFHistogram = ({ graphData }) => {
     );
 };
 
-export default CTFHistogram;
+export default withChartTheme(CTFResolutionHist);   // HOC to apply theme

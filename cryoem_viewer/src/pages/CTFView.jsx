@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import CTFList from '../components/CTFList';
 import CTFGraph from '../components/CTFChart';
-import CTFHistogram from '../components/CTFHistogram';
+import CTFResolutionHist from '../components/CTFResolutionHist';
+import DefocusHist from '../components/DefocusHist';
 import getCTFData from '../api/ctfApi';
+import '../assets/histogram.css'; 
 
 // show components in page
 const CTFPage = () => {
@@ -34,11 +36,16 @@ const CTFPage = () => {
   // render data from components AND conditionally render if there is an error (true)
   return (
     <div>
-      <h1>CTF Data</h1>
-      <CTFList ctfData={ctfData} />
+      {error && <p style={{ color: 'red' }}>{error}</p>}
+      <div className="histograms-container">
+        <div className="histogram-wrapper">
+          <CTFResolutionHist graphData={ctfData} />
+        </div>
+        <div className="histogram-wrapper">
+          <DefocusHist graphData={ctfData} />
+        </div>
+      </div>
       <CTFGraph graphData={ctfData} />
-      <CTFHistogram graphData={ctfData} />
-      {error && <p style={{ color: 'red' }}>{error}</p>}  
     </div>
   );
 };

@@ -12,6 +12,8 @@
     font-family: 'Lora', serif;
     overflow-y: auto;
     color: white;
+    justify-content: space-between; /* Para que el toggle quede abajo */
+    height: 100%;
 }
 
 .sidebar nav {

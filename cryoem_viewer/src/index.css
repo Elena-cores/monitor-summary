@@ -60,8 +60,7 @@ h1 {
 }
 
 .customize-bar {
-  background-color: aqua;
-  display: flex;
+  border:1px solid rgb(0, 0, 0);
   justify-content: space-between;
   align-items: center;
 }
@@ -98,4 +97,97 @@ footer {
 
 .sidebar li {
   margin: 0.5rem 0;
+}
+
+/* Dark mode styles */
+.dark {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+.dark .main-content {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+.dark .header,
+.dark .footer {
+  background-color: #1a1a1a;
+  border-color: #343a40;
+}
+
+.dark .highcharts-figure,
+.dark .highcharts-description {
+  background-color: #1e1e1e;
+  color: #adb5bd;
+}
+
+/* Dark mode for sidebar */
+/* transition */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 1rem;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+  background-color: #3180cf;
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(26px);
+}
+
+.toggle-label {
+  margin-left: 10px;
+  color: inherit;
+  font-size: 16px;
+}
+
+/* transition for specific elements */
+.header, .footer, .highcharts-figure, .highcharts-description {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }

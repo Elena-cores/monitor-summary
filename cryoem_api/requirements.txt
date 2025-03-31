@@ -6,3 +6,5 @@ coverage
 coreapi
 Pillow
 Faker
+setuptools
+

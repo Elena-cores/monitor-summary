@@ -13,27 +13,33 @@ const CTFResolutionHist = ({ graphData, isDark, getThemeOptions }) => {
     const resolutionBins = {};
     graphData.forEach(ctf => {
         const resolution = ctf.resolution;
-        const binKey = resolution.toFixed(2);  // group by resolution to 2 decimals
+        const binKey = (Math.ceil(resolution / 0.5) * 0.5).toFixed(1);  // group by resolution and round to nearest 0.5 Å
         resolutionBins[binKey] = (resolutionBins[binKey] || 0) + 1;
     });
 
+    // Generate categories from 0-10 Å with intervals of 0.5
+    const categories = [] 
+    for (let i = 0; i <= 10; i += 0.5) {
+        categories.push(i.toFixed(1));
+    }
+
     // convert to Highcharts format
-    const histogramData = Object.entries(resolutionBins).map(([bin, count]) => ({
-        name: `${bin} Å`, // add unit (Angstroms)
-        y: count,
-        resolution: parseFloat(bin),
-    })).sort((a, b) => a.resolution - b.resolution); // order by resolution
+    const histogramData = categories.map(bin => ({  // Turn the object into an array of [key, value] pairs
+        name: `${bin} Å`,  
+        y: resolutionBins[bin] || 0, // count of micrographs in this bin
+    }));
 
     // configuration of histogram
     const options = getThemeOptions(isDark, {
         chart: {
-            type: 'column', // column histogram
+            type: 'column', 
         },
         title: {
-            text: 'Micrographs by CTF Resolution',
+            text: 'Max. Resolution',
         },
         xAxis: {
-            type: 'category', // use categories (resolution ranges)
+            type: 'category', 
+            categories, // resolution ranges
             title: {
                 text: 'Resolution (Å)',
             },
@@ -44,9 +50,9 @@ const CTFResolutionHist = ({ graphData, isDark, getThemeOptions }) => {
             },
         },
         series: [{
-            name: 'Micrographs',
-            data: histogramData,
-            color: '#7cb5ec', // blue
+            name: 'Resolution',
+            data: histogramData.map(({ resolution, y}) => [resolution, y]), // Use [x, y] pairs
+            color: '#7cb5ec', // // Blue color for resolution
         }],
         tooltip: {
             headerFormat: '<span style="font-size:10px">Resolution: {point.key}</span><br/>',
@@ -64,4 +70,4 @@ const CTFResolutionHist = ({ graphData, isDark, getThemeOptions }) => {
     );
 };
 
-export default withChartTheme(CTFResolutionHist);   // HOC to apply theme
+export default withChartTheme(CTFResolutionHist);   

@@ -15,9 +15,6 @@ const Layout = ({ children }) => {
           <main>
             {children}
           </main>
-          <footer>
-            © 2025 Mi Aplicación Monitor Summary
-          </footer>
         </div>
       </div>
     );

@@ -4,23 +4,25 @@ import HighchartsReact from 'highcharts-react-official';
 import { withChartTheme } from '../hocs/withChartTheme';
 
 const DefocusHistogram = ({ graphData, isDark, getThemeOptions }) => {
+    // verify if data exists
     if (!graphData || graphData.length === 0) {
         return <p>No data available for defocus histogram</p>;
     }
 
-    // process data: group by range of defocusU and count micrographs
+    // process data: group by range of defocusu and count micrographs
     const defocusBins = {};
     graphData.forEach(ctf => {
-        const binKey = ctf.defocusu.toFixed(2); // Group by defocusU to 2 decimales
+        const defocusu = ctf.defocusu;
+        const binKey = defocusu.toFixed(1); // Group by defocusU to 1 decimal place
         defocusBins[binKey] = (defocusBins[binKey] || 0) + 1;
     });
 
-    // Convert to Highcharts format and sort
-    const histogramData = Object.entries(defocusBins).map(([bin, count]) => ({
+    // Convert to Highcharts format 
+    const histogramData = Object.entries(defocusBins).map(([bin, count]) => ({  // Turn the object into an array of [key, value] pairs
         name: `${bin} μm`,
         y: count,
-        defocus: parseFloat(bin),
-    })).sort((a, b) => a.defocus - b.defocus);
+        defocusU: parseFloat(bin),
+    })).sort((a, b) => a.defocusU - b.defocusU); // order by defocusU
 
     const options = getThemeOptions(isDark, {
         chart: {
@@ -30,7 +32,7 @@ const DefocusHistogram = ({ graphData, isDark, getThemeOptions }) => {
             text: 'Defocus Coverage',
         },
         xAxis: {
-            type: 'category',
+            type: 'category', // use categories (defocusu ranges)
             title: {
                 text: 'Defocus U (μm)',
             },

@@ -2,13 +2,15 @@ import React from 'react';
 import Sidebar from './Sidebar';
 
 const Layout = ({ children }) => {
-    return (
-      <div className="app-container">
+  return (
+    <div className="app-container">
+      <header className='header'>
+        <h1>Monitor summary</h1>
+      </header>
+      
+      <div className="main-layout">
         <Sidebar />
         <div className="main-content">
-         <header className='header'>
-            <h1>Monitor summary</h1>
-          </header>
           <div className="customize-bar">
             <h1>------- custom bar -------</h1>
           </div>
@@ -17,7 +19,8 @@ const Layout = ({ children }) => {
           </main>
         </div>
       </div>
-    );
+    </div>
+  );
 };
   
 export default Layout;

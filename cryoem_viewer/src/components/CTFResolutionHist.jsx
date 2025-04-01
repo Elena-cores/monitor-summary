@@ -13,7 +13,8 @@ const CTFResolutionHist = ({ graphData, isDark, getThemeOptions }) => {
     const resolutionBins = {};
     graphData.forEach(ctf => {
         const resolution = ctf.resolution;
-        const binKey = (Math.ceil(resolution / 0.5) * 0.5).toFixed(1);  // group by resolution and round to nearest 0.5 Å
+        // use Math.floor here if you want to round down to the nearest 0.5 Å
+        const binKey = (Math.round(resolution / 0.5) * 0.5).toFixed(1);  // group by resolution and round to nearest 0.5 Å
         resolutionBins[binKey] = (resolutionBins[binKey] || 0) + 1;
     });
 

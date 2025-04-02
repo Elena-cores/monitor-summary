@@ -3,7 +3,7 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { withChartTheme } from '../hocs/withChartTheme';
 
-const DefocusHistogram = ({ graphData, isDark, getThemeOptions }) => {
+const DefocusHistogram = ({ graphData, parameter, isDark, getThemeOptions }) => {
     // verify if data exists
     if (!graphData || graphData.length === 0) {
         return <p>No data available for defocus histogram</p>;
@@ -31,15 +31,15 @@ const DefocusHistogram = ({ graphData, isDark, getThemeOptions }) => {
 
     const defocusRanges = generateDefocusRanges();  // object array of ranges
 
-    // Convert to Highcharts format 
-    const histogramData = defocusRanges.map(range => {  // Turn the object into an array of [key, value] pairs
+    // Convert to Highcharts format and count micrgraphs in each range depending on parameter selected 
+    const histogramData = defocusRanges.map(range => {  
         const count = graphData.filter(ctf => {
-            const defocusu = ctf.defocusu;
-            return defocusu >= range.min && defocusu < range.max;
+            const defocusValue = ctf[parameter.toLowerCase()]; 
+            return defocusValue >= range.min && defocusValue < range.max;
         }).length; // count of micrographs in this bin. 
         
         return {
-            name: range.label, //ex. '0-0.1'
+            name: range.label, 
             y: count,
             range: `${range.min}-${range.max}` //ex. ['0-0.1', 25] (25 micrographs in this range)
         };
@@ -55,7 +55,7 @@ const DefocusHistogram = ({ graphData, isDark, getThemeOptions }) => {
         xAxis: {
             type: 'category', // use categories (defocusu ranges)
             title: {
-                text: 'Defocus U (μm)',
+                text: `Defocus ${parameter === 'DefocusU' ? 'U' : 'V'} (μm)`, 
             },
             labels: {
                 rotation: -45, 
@@ -67,7 +67,7 @@ const DefocusHistogram = ({ graphData, isDark, getThemeOptions }) => {
             },
         },
         series: [{
-            name: 'Defocus',
+            name: parameter, // dynamic name
             data: histogramData,
             color: '#90ed7d', // Green color for defocus
         }],

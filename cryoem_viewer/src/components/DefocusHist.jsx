@@ -69,7 +69,7 @@ const DefocusHistogram = ({ graphData, parameter, isDark, getThemeOptions }) => 
         series: [{
             name: parameter, // dynamic name
             data: histogramData,
-            color: '#90ed7d', // Green color for defocus
+            color: '#00e272', // Green color for defocus
         }],
         tooltip: {
             headerFormat: '<span style="font-size:10px">Defocus: {point.key}</span><br/>',

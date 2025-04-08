@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import CTFGraph from '../components/CTFChart';
+import CTFGraph from '../components/CTFTimeChart';
 import CTFResolutionHist from '../components/CTFResolutionHist';
 import DefocusHist from '../components/DefocusHist';
 import getCTFData from '../api/ctfApi';

@@ -1,4 +1,4 @@
-// src/components/CTFChart.jsx
+// src/components/CTFTimeChart.jsx
 import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
@@ -10,10 +10,12 @@ const CTFGraph = ({ graphData, isDark, getThemeOptions }) => {
     }
 
     const defocusuData = graphData.map(ctf => [new Date(ctf.datetime_ctf).getTime(), ctf.defocusu]);
-    const defocusvData = graphData.map(ctf => [new Date(ctf.datetime_ctf).getTime(), ctf.defocusv]);
+    const pahseShiftData = graphData.map(ctf => [new Date(ctf.datetime_ctf).getTime(), ctf.phaseshift]);
+    const resolutionData = graphData.map(ctf => [new Date(ctf.datetime_ctf).getTime(), ctf.resolution]);
 
     const myOptions = getThemeOptions(isDark, {
         chart: {
+            type: 'spline',
             zooming: { type: 'x' }
         },
         title: {
@@ -24,31 +26,65 @@ const CTFGraph = ({ graphData, isDark, getThemeOptions }) => {
                 'Click and drag in the plot area to zoom in' :
                 'Pinch the chart to zoom in'
         },
-        xAxis: { type: 'datetime' },
-        yAxis: { title: { text: 'Defocus' } },
+        xAxis: {
+            type: 'datetime' 
+        },
+        yAxis: [
+            {
+                title: { 
+                    text: 'Defocus (μm)' 
+                },
+                name: 'Defocus U',
+                opposite: false
+            },
+            {
+                title: {
+                    text: 'Phase Shift (deg)'
+                },
+                name: 'Phase Shift',
+                opposite: true // show on the right side
+            },
+            {
+                title: {
+                    text: 'Resolution (Å)'
+                },
+                name: 'Resolution',
+                opposite: true // show on the right side
+                }
+        ],
         legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle'
+            layout: 'horizontal',
+            align: 'center',
+            verticalAlign: 'bottom',
         },
         plotOptions: {
-            area: {
-                marker: { radius: 2 },
-                lineWidth: 1,
-                color: {
-                    linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
-                    stops: [
-                        [0, 'rgb(171, 216, 170)'],
-                        [0.7, 'rgb(76, 175, 254)']
-                    ]
-                },
-                states: { hover: { lineWidth: 1 } },
+            spline: {
+                marker: { radius: 5 },
+                lineWidth: 0,
+                states: { hover: { lineWidth: 1.5 } },
                 threshold: null
             }
         },
         series: [
-            { name: 'DefocusU', data: defocusuData },
-            { name: 'DefocusV', data: defocusvData }
+            {
+                name: 'DefocusU', 
+                data: defocusuData,
+                yAxis: 0, // specify which yAxis to use},
+                color: 'rgb(44,175,254)' // color for DefocusU
+            },
+            {
+                name: 'Resolution',
+                data: resolutionData,
+                yAxis: 2,
+                color: 'rgb(84,79,197)'
+            },
+            { 
+                name: 'Phase Shift',
+                data: pahseShiftData,
+                yAxis: 1, 
+                color: '#00e272'
+
+            },
         ],
         exporting: {
             buttons: {
@@ -85,7 +121,7 @@ const CTFGraph = ({ graphData, isDark, getThemeOptions }) => {
                 />
             </div>
             <p className="highcharts-description">
-                Basic line chart showing defocus of CTF.
+                Customize this line chart with the custom bar above.
             </p>
         </figure>
     );

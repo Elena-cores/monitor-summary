@@ -53,7 +53,7 @@ const CTFResolutionHist = ({ graphData, isDark, getThemeOptions }) => {
         series: [{
             name: 'Resolution',
             data: histogramData.map(({ resolution, y}) => [resolution, y]), // Use [x, y] pairs
-            color: '#7cb5ec', // // Blue color for resolution
+            color: 'rgb(44,175,254)', // // Blue color for resolution
         }],
         tooltip: {
             headerFormat: '<span style="font-size:10px">Resolution: {point.key}</span><br/>',

@@ -1,13 +1,6 @@
 import React from 'react';
 
 const CTFCustomBar = ({ value, onChange, options }) => {
-    const handleChange = (event) => {
-        if (onChange) {
-            onChange(event.target.value);
-        }
-    };
-
-
     return (
         <>
             <select

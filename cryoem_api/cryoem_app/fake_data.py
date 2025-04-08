@@ -11,7 +11,7 @@ for i in range(50):  # Generate 50 micrographs
     micrograph = {
         "id": i + 1,
         "filename": f"micrograph_{i}.png",
-        "sampling": round(random.uniform(1.0, 2.0), 2),
+        "sampling": round(random.uniform(0, 2.0), 2),
         "dose": round(random.uniform(0.1, 1.0), 2),
         "datetime_micro": (datetime.now() - timedelta(days=random.randint(0, 365))).isoformat()
     }
@@ -26,10 +26,11 @@ for i in range(150):  # generate 150 CTFs (some micrographs will have multiple C
     ctf = {
         "id": i + 1,
         "micrographId": micrograph["id"],  # foreign key
-        "defocusu": round(random.uniform(1.0, 5.0), 2),
-        "defocusv": round(random.uniform(1.0, 5.0), 2),
+        "defocusu": round(random.uniform(0, 5.0), 2),
+        "defocusv": round(random.uniform(0, 5.0), 2),
+        "phaseshift": round(random.uniform(0, 100), 2),
         "datetime_ctf": (datetime.now() - timedelta(days=random.randint(0, 365))).isoformat(),
-        "resolution": round(random.uniform(2.0, 10.0), 2),
+        "resolution": round(random.uniform(0, 200), 2),
         "psd": f"psd_{i}.png"
     }
     ctfs.append(ctf)

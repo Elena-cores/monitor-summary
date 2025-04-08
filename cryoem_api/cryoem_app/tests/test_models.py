@@ -23,6 +23,7 @@ class MicrographModelTest(TestCase):
         self.assertEqual(micrograph.sampling, 1.2)
         self.assertEqual(micrograph.dose, 2.3)
 
+    @override_settings(MEDIA_ROOT=(TEST_DIR + '/media'))
     def test_create_invalid_micrograph(self):
         # try creating micrograph with invalid data (sampling)
         with self.assertRaises(ValueError):
@@ -32,7 +33,8 @@ class MicrographModelTest(TestCase):
                 dose=2.3,
                 datetime_micro=datetime.now()
             )
-    
+            
+    @override_settings(MEDIA_ROOT=(TEST_DIR + '/media'))
     def test_create_micrograph_missing_requiredfield(self):
         # create micrograph with missing required field
         with self.assertRaises(Exception):
@@ -62,43 +64,50 @@ class CTFModelTest(TestCase):
             micrograph=self.micrograph,
             defocusu=1.2,
             defocusv=3.4,
+            phaseshift=5,
             datetime_ctf=datetime.now(),
             resolution=5.6,
             psd=SimpleUploadedFile("test_psd1.png", b"file_content")
         )
         self.assertEqual(ctf.defocusu, 1.2)
         self.assertEqual(ctf.defocusv, 3.4)
-    
+        
+    @override_settings(MEDIA_ROOT=(TEST_DIR + '/media'))
     def test_create_invalid_ctf(self):
         # invalid ctf data
         with self.assertRaises(ValueError):
             ctf = CTF.objects.create(
                 micrograph=self.micrograph,
                 defocusu="something wrong",
-                defocusv=SimpleUploadedFile("test_defocusInvalid1.png", b"file_content"),   
+                defocusv=SimpleUploadedFile("test_defocusInvalid1.png", b"file_content"),  
+                phaseshift=5, 
                 datetime_ctf=datetime.now(),
                 resolution=5.6,
                 psd=SimpleUploadedFile("test_psdInvalid2.png", b"file_content")
                 
             )
-        
+            
+    @override_settings(MEDIA_ROOT=(TEST_DIR + '/media'))
     def test_create_ctf_without_micrograph(self):
         # try create CTF object without micrograph 
         with self.assertRaises(Exception):
             CTF.objects.create(
                 defocusu=1.2,
                 defocusv=3.4,
+                phaseshift=5,
                 datetime_ctf=datetime.now(),
                 resolution=5.6,
                 psd=SimpleUploadedFile("test_invalidCTF_no_micro.jpg", b"file_content")
             )
             
+    @override_settings(MEDIA_ROOT=(TEST_DIR + '/media'))      
     def test_delete_micrograph_cascades_to_ctf(self):
         # Create CTF object associated to micrograph
         ctf = CTF.objects.create(
             micrograph=self.micrograph,
             defocusu=1.2,
             defocusv=3.4,
+            phaseshift=5,
             datetime_ctf=datetime.now(),
             resolution=5.6,
             psd=SimpleUploadedFile("test_delete_micro.jpg", b"file_content")

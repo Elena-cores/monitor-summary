@@ -4,7 +4,7 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { withChartTheme } from '../hocs/withChartTheme';
 
-const CTFGraph = ({ graphData, isDark, getThemeOptions }) => {
+const CTFTimeChart = ({ graphData, isDark, getThemeOptions }) => {
     if (!graphData || graphData.length === 0) {
         return <p>No data available</p>;
     }
@@ -127,4 +127,4 @@ const CTFGraph = ({ graphData, isDark, getThemeOptions }) => {
     );
 };
 
-export default withChartTheme(CTFGraph);
+export default withChartTheme(CTFTimeChart);

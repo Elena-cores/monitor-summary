@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import CTFGraph from '../components/CTFTimeChart';
+import CTFTimeChart from '../components/CTFTimeChart';
 import CTFResolutionHist from '../components/CTFResolutionHist';
 import DefocusHist from '../components/DefocusHist';
 import getCTFData from '../api/ctfApi';
@@ -97,7 +97,7 @@ const CTFPage = () => {
           <DefocusHist graphData={ctfData} parameter={defocusParameter} />
         </div>
       </div>
-      <CTFGraph graphData={ctfData} />
+      <CTFTimeChart graphData={ctfData} />
     </div>
   );
 };

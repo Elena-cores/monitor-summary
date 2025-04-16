@@ -45,6 +45,24 @@ const DefocusHistogram = ({ graphData, parameter, isDark, getThemeOptions }) => 
         };
     });
         
+    //  filter last 50 micrographs
+    //  If sort() method returns: a negative number, a goes before b
+    const recentDefocusData = [...graphData].sort((a, b) => new Date(b.datetime_ctf) - new Date(a.datetime_ctf)).slice(0, 50);
+
+    // data for last 50 mcirographs
+    const recentHistData = defocusRanges.map(range => { // create new array iterating over same ranges
+        const count = recentDefocusData.filter(ctf => { // filter last 50 micrographs 
+            const defocusValue = ctf[parameter.toLowerCase()];
+            return defocusValue >= range.min && defocusValue < range.max;
+        }).length; // count of micrographs in this bin.
+
+        return {
+            name: range.label,
+            y: count,
+            range: `${range.min}-${range.max}` //ex. ['0-0.1', 25] (25 micrographs in this range)	
+        };
+    });
+
     const options = getThemeOptions(isDark, {
         chart: {
             type: 'column',
@@ -70,7 +88,13 @@ const DefocusHistogram = ({ graphData, parameter, isDark, getThemeOptions }) => 
             name: parameter, // dynamic name
             data: histogramData,
             color: '#00e272', // Green color for defocus
-        }],
+        },
+        {
+            name: 'Defocus (last 50 mics)', 
+            data: recentHistData,
+            color: 'rgb(84,79,197)', // Red color for last 50 micrographs
+        }
+    ],
         tooltip: {
             headerFormat: '<span style="font-size:10px">Defocus: {point.key}</span><br/>',
             pointFormat: '<b>{point.y}</b> micrograph(s)',

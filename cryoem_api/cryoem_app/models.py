@@ -38,3 +38,19 @@ class CTF(models.Model):
     
     def __str__(self):
         return f"CTF(Micrograph={self.micrograph.id}, DefocusU={self.defocusu}, DefocusV={self.defocusv}, DateTime={self.datetime_ctf})"
+
+# class config() for graph customisation 
+class config(models.Model):
+    # range variables
+    min_range = models.FloatField(default=0.0)
+    max_range = models.FloatField(default=10.0)
+    interval = models.FloatField(default=0.5)
+    
+    # colours for data
+    color_defocusu = models.CharField(max_length=7, default="#00e272")  # green
+    color_defocusv = models.CharField(max_length=7, default= "#00e272") # green
+    color_resolution = models.CharField(max_length=7, default="#2CAFFE") # blue
+    color_phaseshift = models.CharField(max_length=7, default="#544FC5") # purple
+     
+    def __str__(self):
+        return f"Config(MinRange={self.min_range}, MaxRange={self.max_range}, Interval={self.interval})"

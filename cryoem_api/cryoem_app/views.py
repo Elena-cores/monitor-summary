@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from .serializers import CTFSerializer, MicrographSerializer
-from .models import CTF, Micrograph
+from .models import CTF, Micrograph, config
 
 
 # Create your views here.
@@ -11,3 +11,4 @@ class MicrographViewSet(viewsets.ModelViewSet):
 class CTFViewSet(viewsets.ModelViewSet):
     queryset = CTF.objects.all()
     serializer_class = CTFSerializer 
+

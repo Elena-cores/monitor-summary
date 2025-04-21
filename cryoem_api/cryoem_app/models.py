@@ -40,7 +40,7 @@ class CTF(models.Model):
         return f"CTF(Micrograph={self.micrograph.id}, DefocusU={self.defocusu}, DefocusV={self.defocusv}, DateTime={self.datetime_ctf})"
 
 # class config() for graph customisation 
-class config(models.Model):
+class Config(models.Model):
     # range variables
     min_range = models.FloatField(default=0.0)
     max_range = models.FloatField(default=10.0)

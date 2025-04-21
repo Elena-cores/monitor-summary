@@ -11,17 +11,17 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name='config',
+            model_name='Config',
             name='color_defocusv',
             field=models.CharField(default='#00e272', max_length=7),
         ),
         migrations.AlterField(
-            model_name='config',
+            model_name='Config',
             name='color_phaseshift',
             field=models.CharField(default='#544FC5', max_length=7),
         ),
         migrations.AlterField(
-            model_name='config',
+            model_name='Config',
             name='color_resolution',
             field=models.CharField(default='#2CAFFE', max_length=7),
         ),

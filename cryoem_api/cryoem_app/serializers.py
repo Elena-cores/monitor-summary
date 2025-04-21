@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import CTF, Micrograph
+from .models import CTF, Micrograph, Config
 
 # convert django objects into JSON and viceversa
 
@@ -13,4 +13,9 @@ class MicrographSerializer(serializers.ModelSerializer):
 class CTFSerializer(serializers.ModelSerializer):
     class Meta:
         model = CTF
+        fields = '__all__'
+
+class ConfigSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Config
         fields = '__all__'

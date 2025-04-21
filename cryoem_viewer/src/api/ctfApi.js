@@ -28,4 +28,15 @@ export const getCTFData = async () => {
     }
 };
 
+export const getConfig = async () => {
+    try {
+        const response = await fetch('http://localhost:8000/api/config/');
+        if (!response.ok) throw new Error('Failed to fetch config data');
+        return await response.json();
+    } catch (error) {
+        console.error('Error loading configuration data:', error);
+        return null;
+    }
+};
+
 export default getCTFData;

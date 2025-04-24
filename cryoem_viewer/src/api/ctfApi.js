@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const API_URL = 'http://localhost:8000/api/ctf/';
+const Config_URL = 'http://localhost:8000/api/config/';
 
 // GET all data from CTF
 export const getCTFData = async () => {
@@ -30,13 +31,12 @@ export const getCTFData = async () => {
 
 export const getConfig = async () => {
     try {
-        const response = await fetch('http://localhost:8000/api/config/');
-        if (!response.ok) throw new Error('Failed to fetch config data');
-        return await response.json();
+        const response = await axios.get(Config_URL);
+        return response.data;
     } catch (error) {
-        console.error('Error loading configuration data:', error);
-        return null;
+        throw new Error(`Failed to load config data: ${error.message}`);
     }
 };
 
 export default getCTFData;
+

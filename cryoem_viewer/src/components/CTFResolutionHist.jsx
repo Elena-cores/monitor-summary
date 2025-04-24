@@ -2,12 +2,17 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { withChartTheme } from '../hocs/withChartTheme'; // import the HOC for theming
+import { useConfig } from '../contexts/ConfigContext'; // import the context for configuration
 
 const CTFResolutionHist = ({ graphData, isDark, getThemeOptions }) => {
     // verify if data exists
     if (!graphData || graphData.length === 0) {
         return <p>No data available for histogram</p>;
     }
+
+    const config = useConfig();
+    console.log(config);
+    const color = config.color_resolution;  // default color for resolution histogram
 
     // process data: group by range of resolution and count micrographs
     const resolutionBins = {};
@@ -52,8 +57,8 @@ const CTFResolutionHist = ({ graphData, isDark, getThemeOptions }) => {
         },
         series: [{
             name: 'Resolution',
-            data: histogramData.map(({ resolution, y}) => [resolution, y]), // Use [x, y] pairs
-            color: 'rgb(44,175,254)', // // Blue color for resolution
+            data: histogramData,
+            color: color, // // Blue color for resolution
         }],
         tooltip: {
             headerFormat: '<span style="font-size:10px">Resolution: {point.key}</span><br/>',

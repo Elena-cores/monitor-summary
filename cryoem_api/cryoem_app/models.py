@@ -18,7 +18,7 @@ from datetime import datetime
 # Create your models here: 
 # Micrograph model
 class Micrograph(models.Model):
-    filename = models.ImageField(upload_to='micrographs/') # 'upload_to' specifies route inside directory MEDIA_ROOT (defined in settings.py), where these images will be stored
+    filename = models.CharField(max_length=255)   # filename = models.ImageField(upload_to='micrographs/') & 'upload_to' specifies route inside directory MEDIA_ROOT (defined in settings.py), where these images will be stored
     sampling = models.FloatField()
     dose = models.FloatField()
     datetime_micro = models.DateTimeField(default=datetime.now)
@@ -34,7 +34,7 @@ class CTF(models.Model):
     phaseshift = models.FloatField()  # degrees 
     datetime_ctf = models.DateTimeField(default=datetime.now)
     resolution = models.FloatField()
-    psd = models.ImageField(upload_to='psds/')
+    psd = models.CharField(max_length=255)      #psd = models.ImageField(upload_to='psds/')
     
     def __str__(self):
         return f"CTF(Micrograph={self.micrograph.id}, DefocusU={self.defocusu}, DefocusV={self.defocusv}, DateTime={self.datetime_ctf})"

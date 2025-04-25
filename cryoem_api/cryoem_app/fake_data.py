@@ -19,7 +19,7 @@ for i in range(50):  # Generate 50 micrographs
 
 # Generate data for CTF (associated to existing micrographs)
 ctfs = []
-for i in range(150):  # generate 150 CTFs (some micrographs will have multiple CTFs)
+for i in range(30):  # generate 150 CTFs (some micrographs will have multiple CTFs)
     # Select random micrograph 
     micrograph = random.choice(micrographs)
     
@@ -30,7 +30,7 @@ for i in range(150):  # generate 150 CTFs (some micrographs will have multiple C
         "defocusv": round(random.uniform(0, 5.0), 2),
         "phaseshift": round(random.uniform(0, 100), 2),
         "datetime_ctf": (datetime.now() - timedelta(days=random.randint(0, 365))).isoformat(),
-        "resolution": round(random.uniform(0, 200), 2),
+        "resolution": round(random.uniform(2, 5), 2),
         "psd": f"psd_{i}.png"
     }
     ctfs.append(ctf)

@@ -92,7 +92,7 @@ const DefocusHistogram = ({ graphData, parameter, isDark, getThemeOptions }) => 
         {
             name: 'Defocus (last 50 mics)', 
             data: recentHistData,
-            color: 'rgb(84,79,197)', // Red color for last 50 micrographs
+            color: 'rgb(84,79,197)', // Purple color for last 50 micrographs
         }
     ],
         tooltip: {

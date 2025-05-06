@@ -76,6 +76,9 @@ const CTFPage = () => {
         </div>
       </div>
       <CTFTimeChart graphData={ctfData} />
+      <p className="highcharts-description">
+        Customize graphs with the custom bar above.
+      </p>
     </div>
   );
 };

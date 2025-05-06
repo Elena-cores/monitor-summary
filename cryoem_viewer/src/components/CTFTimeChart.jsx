@@ -9,6 +9,8 @@ const CTFTimeChart = ({ graphData, isDark, getThemeOptions }) => {
         return <p>No data available</p>;
     }
 
+    // convert datetime_ctf to timestamp and map to [x, y] format 
+    // map over graphData to create arrays of [x, y] pairs for each parameter
     const defocusuData = graphData.map(ctf => [new Date(ctf.datetime_ctf).getTime(), ctf.defocusu]);
     const pahseShiftData = graphData.map(ctf => [new Date(ctf.datetime_ctf).getTime(), ctf.phaseshift]);
     const resolutionData = graphData.map(ctf => [new Date(ctf.datetime_ctf).getTime(), ctf.resolution]);
@@ -120,9 +122,6 @@ const CTFTimeChart = ({ graphData, isDark, getThemeOptions }) => {
                     key={graphData.length}
                 />
             </div>
-            <p className="highcharts-description">
-                Customize this line chart with the custom bar above.
-            </p>
         </figure>
     );
 };

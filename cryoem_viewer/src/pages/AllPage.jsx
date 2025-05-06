@@ -8,13 +8,16 @@ import '../assets/histogram.css';
 
 const AllPage = () => {
     const { ctfData, error } = useData();
-
+    
     return (
         <div className="AllView">
             {error && <p style={{ color: 'red' }}>{error}</p>}
             <CTFTimeChart graphData={ctfData} />
             <DefocusHist graphData={ctfData} parameter="DefocusU" />
             <CTFResolutionHist graphData={ctfData} parameter="Resolution" />
+            <p className="highcharts-description">
+                Customize graphs with the custom bar above.
+            </p>
         </div>
     );
 };

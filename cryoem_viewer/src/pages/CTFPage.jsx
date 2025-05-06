@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react';
 import CTFTimeChart from '../components/CTFTimeChart';
 import CTFResolutionHist from '../components/CTFResolutionHist';
 import DefocusHist from '../components/DefocusHist';
-import getCTFData from '../api/ctfApi';
-import '../assets/histogram.css';
 import CTFCustomBar from '../components/CTFCustomBar';
-import Layout from '../components/Layout';  
-// import CTFList from '../components/CTFList'; 
+import getCTFData from '../api/ctfApi';
+import Layout from '../components/Layout';
+import '../assets/histogram.css';
 
 // show components in page
 const CTFPage = () => {

@@ -11,8 +11,11 @@ const CTFResolutionHist = ({ graphData, isDark, getThemeOptions }) => {
     }
 
     const config = useConfig();
-    console.log(config);
-    const color = config.color_resolution;  // default color for resolution histogram
+    if (!config) {
+        return null;
+    }
+    // console.log(config); might be null if not loaded yet
+    const color = config.color_resolution || '#2CAFFE';  // default color for resolution histogram
 
     // process data: group by range of resolution and count micrographs
     const resolutionBins = {};

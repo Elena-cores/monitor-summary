@@ -5,12 +5,14 @@ import DefocusHist from '../components/DefocusHist';
 import CTFCustomBar from '../components/CTFCustomBar';
 import getCTFData from '../api/ctfApi';
 import Layout from '../components/Layout';
+import { useData } from '../contexts/DataContext';
+import { useConfig } from '../contexts/ConfigContext';
 import '../assets/histogram.css';
 
 // show components in page
 const CTFPage = () => {
-  const [ctfData, setCtfData] = useState([]);
-  const [error, setError] = useState(null); // error false to begin
+  const { ctfData, error } = useData();
+  const config = useConfig();
   // custom bar options
   const [selectedGraph, setSelectedGraph] = useState('defocusCoverage'); 
   const [selectedParameter, setSelectedParameter] = useState('DefocusU'); 
@@ -25,29 +27,6 @@ const CTFPage = () => {
       parameters: ['option4', 'option5'],
     }
   };
-
-  const loadData = async () => {
-    try {
-      const data = await getCTFData();
-      setCtfData(data);
-      setError(null); // clean previous errors
-
-    } catch (err) {
-      console.error("Error fetching CTF data", err);
-      setError("* Failed to load the data *");
-    }
-  };
-
-  useEffect(() => {
-    loadData(); // initially load data 
-
-    const interval = setInterval(() => {
-      loadData();
-    }, 6000);  //every 6 seconds update
-
-    return () => clearInterval(interval);
-
-  }, []);
 
   // reset selected parameter when graph changes
   useEffect(() => {

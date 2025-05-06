@@ -1,10 +1,12 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { getConfig } from '../api/ctfApi';
 
-const ConfigContext = createContext();
+const ConfigContext = createContext();  
 
-export const ConfigProvider = ({ children }) => { // use children prop to wrap around components
-    const [config, setConfig] = useState(null);
+// create context for config data (for graph customization)
+ // use children prop to wrap around components
+export const ConfigProvider = ({ children }) => {
+    const [config, setConfig] = useState() || {};
 
     useEffect(() => {
         const loadConfig = async () => {

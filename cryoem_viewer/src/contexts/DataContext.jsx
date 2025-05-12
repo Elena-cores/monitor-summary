@@ -27,7 +27,7 @@ export const DataProvider = ({ children }) => {
         loadCTFData();
         // set up interval to refresh data every 6 seconds
         const interval = setInterval(() => {
-            loadData();
+            loadCTFData();
         }, 6000);  //every 6 seconds update
 
         return () => clearInterval(interval);

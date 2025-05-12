@@ -12,59 +12,11 @@ import '../assets/histogram.css';
 // show components in page
 const CTFPage = () => {
   const { ctfData, error } = useData();
-  const config = useConfig();
-  // custom bar options
-  const [selectedGraph, setSelectedGraph] = useState('defocusCoverage'); 
-  const [selectedParameter, setSelectedParameter] = useState('DefocusU'); 
-  const [defocusParameter, setDefocusParameter] = useState('DefocusU'); 
-
-  
-  const graphOptions = {
-    defocusCoverage: {
-      parameters: ['DefocusU', 'DefocusV'],
-    },
-    other: {
-      parameters: ['option4', 'option5'],
-    }
-  };
-
-  // reset selected parameter when graph changes
-  useEffect(() => {
-    setSelectedParameter(graphOptions[selectedGraph].parameters[0]);
-  }, [selectedGraph]);
-
-  // synch defocus parameter with selected parameter
-  useEffect(() => {
-    if (selectedGraph === 'defocusCoverage') {
-      setDefocusParameter(selectedParameter);
-    }
-  }, [selectedParameter, selectedGraph]);
-
+  const { defocusParameter } = useConfig(); // obtaining the defocus parameter from the context
 
   // render data from components AND conditionally render if there is an error (true)
   return (
     <div>
-      {/* combo 1: selecting graph */}
-
-      <select
-        value={selectedGraph}
-        onChange={(e) => setSelectedGraph(e.target.value)}
-      >
-        <option value="defocusCoverage">Defocus coverage</option>
-        <option value="other">other</option>
-      </select>
-
-      {/* combo 2: specific options of selected graphs */}
-      <CTFCustomBar
-        value={selectedParameter} // default value of combo2
-        onChange={setSelectedParameter} // pass the function to handle changes
-        options={graphOptions[selectedGraph].parameters} // options of combo2
-      />
-
-      <p>Selected graph: {selectedGraph}</p>
-      <p>Selected parameter: {selectedParameter}</p>
-
-
       {/*graphs*/}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <div className="histograms-container">
@@ -75,7 +27,9 @@ const CTFPage = () => {
           <DefocusHist graphData={ctfData} parameter={defocusParameter} />
         </div>
       </div>
-      <CTFTimeChart graphData={ctfData} />
+      <div className="histogram-wrapper">
+        <CTFTimeChart graphData={ctfData} />
+      </div>
       <p className="highcharts-description">
         Customize graphs with the custom bar above.
       </p>

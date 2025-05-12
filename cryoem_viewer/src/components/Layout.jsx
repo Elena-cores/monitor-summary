@@ -1,18 +1,20 @@
 import React from 'react';
 import Sidebar from './Sidebar';
+import { useConfig } from '../contexts/ConfigContext';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, customBar }) => {
   return (
     <div className="app-container">
       <header className='header'>
         <h1>Monitor summary</h1>
       </header>
-      
+
       <div className="main-layout">
         <Sidebar />
         <div className="main-content">
           <div className="customize-bar">
-            <h1>------- custom bar -------</h1>
+            <h3> Customize defocus coverage histogram:</h3>
+            { customBar }
           </div>
           <main>
             {children}

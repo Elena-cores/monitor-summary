@@ -30,6 +30,9 @@ const Sidebar = () => {
           <li>
             <Link to="/">ALL</Link>
           </li>
+          <li>
+            <Link to="/config">CONFIGURE</Link>
+          </li>
         </ul>
       </nav>
       

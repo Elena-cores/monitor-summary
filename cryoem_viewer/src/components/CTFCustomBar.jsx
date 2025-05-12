@@ -1,11 +1,15 @@
 import React from 'react';
+import { useConfig } from '../contexts/ConfigContext';
 
-const CTFCustomBar = ({ value, onChange, options }) => {
+const CTFCustomBar = ({ value, options }) => {
+    // useConfig() is a custom hook that provides access to the config context
+    const { defocusParameter, setDefocusParameter } = useConfig();
+
     return (
-        <>
+        <div className="custom-bar">
             <select
-                value={value}
-                onChange={(e) => onChange(e.target.value)}
+                value={defocusParameter}
+                onChange={(e) => setDefocusParameter(e.target.value)}
             >
                 {options.map((option) => (
                     <option key={option} value={option}>
@@ -13,7 +17,8 @@ const CTFCustomBar = ({ value, onChange, options }) => {
                     </option>
                 ))}
             </select>
-        </>
+            <p>Selected parameter: {defocusParameter}</p>
+        </div>
     );
 };
 

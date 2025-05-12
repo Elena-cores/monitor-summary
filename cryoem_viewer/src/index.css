@@ -52,10 +52,13 @@ body, html {
 
 .customize-bar {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  justify-content: space-between;
+  border-bottom: 1.5px solid #c1bfbf;
   text-align: center;
+  justify-content: center;
   flex-shrink: 0; 
-  height: 50px; 
+  height: 70px; 
+  display: flex;
+  padding: 1rem;
 }
 
 /* main content page with scroll */

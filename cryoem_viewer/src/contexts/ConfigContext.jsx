@@ -7,6 +7,7 @@ const ConfigContext = createContext();
  // use children prop to wrap around components
 export const ConfigProvider = ({ children }) => {
     const [config, setConfig] = useState() || {};
+    const [defocusParameter, setDefocusParameter] = useState('DefocusU');
 
     useEffect(() => {
         const loadConfig = async () => {
@@ -17,11 +18,12 @@ export const ConfigProvider = ({ children }) => {
     }, []);
 
     return (
-        <ConfigContext.Provider value={config}>
+        <ConfigContext.Provider value={{config, defocusParameter, setDefocusParameter}}>
             {children}
         </ConfigContext.Provider>
     );
 };
 
+// personalized hook to use the config context
 export const useConfig = () => useContext(ConfigContext);
 

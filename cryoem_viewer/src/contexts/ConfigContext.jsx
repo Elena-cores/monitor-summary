@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { getConfig } from '../api/configApi';
+import { getConfig, patchConfig } from '../api/configApi';
 
 const ConfigContext = createContext();  
 

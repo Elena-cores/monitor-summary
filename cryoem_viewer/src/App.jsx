@@ -1,6 +1,7 @@
 import React from 'react';
 import CTFPage from './pages/CTFPage';
 import AllPage from './pages/AllPage';
+import ConfigPage from './pages/ConfigPage';
 import Layout from './components/Layout';
 import CTFCustomBar from './components/CTFCustomBar'; 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -21,6 +22,7 @@ const App = () => {
             <Routes>
               <Route path="/ctf" element={<CTFPage />} />
               <Route path="/" element={<AllPage />} />
+              <Route path="/config" element={<ConfigPage />} />
             </Routes>
           </Layout>
         </ConfigProvider>

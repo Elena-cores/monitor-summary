@@ -29,17 +29,19 @@ const CTFTimeChart = ({ graphData, isDark, getThemeOptions }) => {
                 'Pinch the chart to zoom in'
         },
         xAxis: {
-            type: 'datetime' 
+            type: 'datetime'
         },
         yAxis: [
             {
-                title: { 
-                    text: 'Defocus (μm)' 
+                id: 'defocus-axis',
+                title: {
+                    text: 'Defocus (μm)'
                 },
                 name: 'Defocus U',
                 opposite: false
             },
             {
+                id: 'phase-axis',
                 title: {
                     text: 'Phase Shift (deg)'
                 },
@@ -47,12 +49,13 @@ const CTFTimeChart = ({ graphData, isDark, getThemeOptions }) => {
                 opposite: true // show on the right side
             },
             {
+                id: 'resolution-axis',
                 title: {
                     text: 'Resolution (Å)'
                 },
                 name: 'Resolution',
                 opposite: true // show on the right side
-                }
+            }
         ],
         legend: {
             layout: 'horizontal',
@@ -69,21 +72,21 @@ const CTFTimeChart = ({ graphData, isDark, getThemeOptions }) => {
         },
         series: [
             {
-                name: 'DefocusU', 
+                name: 'DefocusU',
                 data: defocusuData,
-                yAxis: 0, // specify which yAxis to use},
+                yAxis: 'defocus-axis', // specify which yAxis to use},
                 color: 'rgb(44,175,254)' // color for DefocusU
             },
             {
                 name: 'Resolution',
                 data: resolutionData,
-                yAxis: 2,
+                yAxis: 'resolution-axis',
                 color: 'rgb(84,79,197)'
             },
-            { 
+            {
                 name: 'Phase Shift',
                 data: pahseShiftData,
-                yAxis: 1, 
+                yAxis: 'phase-axis',
                 color: '#00e272'
 
             },
@@ -116,7 +119,7 @@ const CTFTimeChart = ({ graphData, isDark, getThemeOptions }) => {
     return (
         <figure className="highcharts-figure">
             <div id="container">
-                <HighchartsReact 
+                <HighchartsReact
                     highcharts={Highcharts}
                     options={myOptions}
                     key={graphData.length}

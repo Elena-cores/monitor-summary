@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { getCTFData } from '../api/ctfApi'; // import API functions to fetch data
+import getCTFData from '../api/ctfApi'; // import API functions to fetch data
 
 
 const DataContext = createContext(); 

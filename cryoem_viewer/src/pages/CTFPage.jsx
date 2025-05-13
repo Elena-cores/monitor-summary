@@ -4,6 +4,7 @@ import CTFResolutionHist from '../components/CTFResolutionHist';
 import DefocusHist from '../components/DefocusHist';
 import CTFCustomBar from '../components/CTFCustomBar';
 import getCTFData from '../api/ctfApi';
+import { getConfig } from '../api/configApi';
 import Layout from '../components/Layout';
 import { useData } from '../contexts/DataContext';
 import { useConfig } from '../contexts/ConfigContext';

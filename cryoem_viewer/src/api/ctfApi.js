@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 const API_URL = 'http://localhost:8000/api/ctf/';
-const Config_URL = 'http://localhost:8000/api/config/';
 
 // GET all data from CTF
 export const getCTFData = async () => {
@@ -26,15 +25,6 @@ export const getCTFData = async () => {
             });
             throw new Error('Failed to create API request');
         }
-    }
-};
-
-export const getConfig = async () => {
-    try {
-        const response = await axios.get(Config_URL);
-        return response.data;
-    } catch (error) {
-        throw new Error(`Failed to load config data: ${error.message}`);
     }
 };
 

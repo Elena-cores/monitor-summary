@@ -10,6 +10,7 @@ import './index.css'  // global format
 
 const App = () => {
   // custom bar options
+  // <Route path="/config" element={<ConfigPage />} />
   const defocusParameters = ['DefocusU', 'DefocusV'];
 
   return (

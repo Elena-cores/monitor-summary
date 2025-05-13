@@ -4,7 +4,7 @@ import { useConfig } from "../contexts/ConfigContext";
 const ConfigPage = () => {
     const { config, updateConfig } = useConfig(); // use updateConfig from context
     const [error, setError] = useState("");
-     const [success, setSuccess] = useState("");
+    const [success, setSuccess] = useState("");
     const [localConfig, setLocalConfig] = useState({}); // local state for form inputs
 
     // synchronize local state with context config
@@ -37,7 +37,7 @@ const ConfigPage = () => {
             await updateConfig(localConfig);
             setSuccess("Configuration saved successfully!"); // set success message
 
-             setTimeout(() => setSuccess(""), 3000); // clear success message after 3 seconds
+            setTimeout(() => setSuccess(""), 3000); // clear success message after 3 seconds
 
         } catch (err) {
             setError(err.message);
@@ -47,12 +47,13 @@ const ConfigPage = () => {
 
     if (!config) return <p>Loading configuration...</p>;
 
+    // render the configuration form with current values
     return (
         <div className="config-page">
             <h1>Graph Configuration</h1>
             {error && <p className="error">{error}</p>}
-            {success && <p className="success">{success}</p>} 
-            
+            {success && <p className="success">{success}</p>}
+
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label>Max Resolution Range (Å):</label>
@@ -62,14 +63,14 @@ const ConfigPage = () => {
                             name="maxres_min"
                             value={localConfig.maxres_min ?? ""}
                             onChange={handleChange}
-                            step="0.1"  
+                            step="0.1"
                             min="0"
                             required
                         />
                         <span>to</span>
                         <input
                             type="number"
-                            name= "maxres_max"
+                            name="maxres_max"
                             value={localConfig.maxres_max ?? ""}
                             onChange={handleChange}
                             step="0.1"
@@ -100,7 +101,34 @@ const ConfigPage = () => {
                         <input
                             type="color"
                             name="color_resolution"
-                            value={localConfig.color_resolution ?? "#2CAFFE"} // default color
+                            value={localConfig.color_resolution ?? "#2CAFFE"} // default blue
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Defocus U Color:</label>
+                        <input
+                            type="color"
+                            name="color_defocusu"
+                            value={localConfig.color_defocusu ?? "#00e272"} // default green
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Defocus V Color:</label>
+                        <input
+                            type="color"
+                            name="color_defocusv"
+                            value={localConfig.color_defocusv ?? "#00e272"} // default green
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Phase Shift Color:</label>
+                        <input
+                            type="color"
+                            name="color_phaseshift"
+                            value={localConfig.color_phaseshift ?? "#544FC5"} // default purple
                             onChange={handleChange}
                         />
                     </div>

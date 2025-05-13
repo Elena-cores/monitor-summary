@@ -2,12 +2,24 @@
 import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import { withChartTheme } from '../hocs/withChartTheme';
+import { withChartTheme } from '../hocs/withChartTheme';    // import the HOC for theming
+import { useConfig } from '../contexts/ConfigContext'; // import the context for configuration
 
 const CTFTimeChart = ({ graphData, isDark, getThemeOptions }) => {
     if (!graphData || graphData.length === 0) {
         return <p>No data available</p>;
     }
+
+    // get the configuration from context
+    const { config, loading, error } = useConfig();
+    if (loading) return <p>Loading configuration...</p>;
+    if (error) return <p>Error loading configuration: {error}</p>;
+    if (!config) return <p>No configuration available</p>;
+
+    // get the configuration from context
+    const colorResolution = config.color_resolution;
+    const colorDefocus = config.color_defocusu;
+    const colorPhase = config.color_phaseshift;
 
     // convert datetime_ctf to timestamp and map to [x, y] format 
     // map over graphData to create arrays of [x, y] pairs for each parameter
@@ -75,19 +87,19 @@ const CTFTimeChart = ({ graphData, isDark, getThemeOptions }) => {
                 name: 'DefocusU',
                 data: defocusuData,
                 yAxis: 'defocus-axis', // specify which yAxis to use},
-                color: 'rgb(44,175,254)' // color for DefocusU
+                color: colorDefocus //'rgb(44,175,254)' // color for DefocusU
             },
             {
                 name: 'Resolution',
                 data: resolutionData,
                 yAxis: 'resolution-axis',
-                color: 'rgb(84,79,197)'
+                color: colorResolution //'rgb(84,79,197)'
             },
             {
                 name: 'Phase Shift',
                 data: pahseShiftData,
                 yAxis: 'phase-axis',
-                color: '#00e272'
+                color: colorPhase  //'#00e272'
 
             },
         ],

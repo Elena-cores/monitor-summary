@@ -9,7 +9,7 @@ const CTFResolutionHist = ({ graphData, isDark, getThemeOptions }) => {
     if (!graphData || graphData.length === 0) {
         return <p>No data available for histogram</p>;
     }
-
+    
     // get the configuration from context
     const { config, loading, error } = useConfig();
     if (loading) return <p>Loading configuration...</p>;
@@ -17,19 +17,22 @@ const CTFResolutionHist = ({ graphData, isDark, getThemeOptions }) => {
     if (!config) return <p>No configuration available</p>;
 
     const color = config.color_resolution;  // default color for resolution histogram
+    const interval = config.maxres_interval; // interval for resolution histogram
+    const minRange = config.maxres_min; // minimum range for resolution histogram
+    const maxRange = config.maxres_max; // maximum range for resolution histogram
 
     // process data: group by range of resolution and count micrographs
     const resolutionBins = {};
     graphData.forEach(ctf => {
         const resolution = ctf.resolution;
         // use Math.floor here if you want to round down to the nearest 0.5 Å
-        const binKey = (Math.round(resolution / 0.5) * 0.5).toFixed(1);  // group by resolution and round to nearest 0.5 Å
+        const binKey = (Math.round(resolution / interval) * interval).toFixed(1);  // group by resolution and round to nearest 0.5 Å
         resolutionBins[binKey] = (resolutionBins[binKey] || 0) + 1;
     });
 
     // Generate categories from 0-10 Å with intervals of 0.5
     const categories = [] 
-    for (let i = 0; i <= 10; i += 0.5) {
+    for (let i = minRange; i <= maxRange; i += interval) {
         categories.push(i.toFixed(1));
     }
 

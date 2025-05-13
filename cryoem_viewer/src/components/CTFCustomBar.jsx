@@ -15,9 +15,8 @@ const CTFCustomBar = ({ value, options }) => {
                     <option key={option} value={option}>
                         {option}
                     </option>
-                ))}
+                ))} 
             </select>
-            <p>Selected parameter: {defocusParameter}</p>
         </div>
     );
 };

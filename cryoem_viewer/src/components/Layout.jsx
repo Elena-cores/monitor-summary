@@ -13,7 +13,7 @@ const Layout = ({ children, customBar }) => {
         <Sidebar />
         <div className="main-content">
           <div className="customize-bar">
-            <h3> Customize defocus coverage histogram:</h3>
+            <h3>Select defocus variable to display in Defocus Coverage histogram:&nbsp;</h3>
             { customBar }
           </div>
           <main>

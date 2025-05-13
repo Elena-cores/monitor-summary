@@ -58,7 +58,7 @@ body, html {
   flex-shrink: 0; 
   height: 70px; 
   display: flex;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 /* main content page with scroll */

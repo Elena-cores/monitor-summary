@@ -42,9 +42,9 @@ class CTF(models.Model):
 # class config() for graph customisation 
 class Config(models.Model):
     # range variables
-    min_range = models.FloatField(default=0.0)
-    max_range = models.FloatField(default=10.0)
-    interval = models.FloatField(default=0.5)
+    maxres_min = models.FloatField(default=0.0)
+    maxres_max = models.FloatField(default=10.0)
+    maxres_interval = models.FloatField(default=0.5)
     
     # colours for data
     color_defocusu = models.CharField(max_length=7, default="#00e272")  # green

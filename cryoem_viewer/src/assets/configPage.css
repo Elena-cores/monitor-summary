@@ -1,0 +1,115 @@
+/* Config Page Styling */
+.config-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.config-page h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.config-page h2 {
+    color: #3498db;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #eee; /* underline to separate sections */
+    padding-bottom: 0.5rem; /* spacing between text and the bottom border */
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block; /* block display for labels & force label to occupy full width */
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.range-inputs {
+    display: flex;      /* allows input and span to appear in a row */
+    align-items: center;
+    gap: 1rem;
+}
+
+.range-inputs input {
+    flex: 1;    /* allows input to take up remaining space */
+}
+
+.range-inputs span {
+    color: #7f8c8d;
+}
+
+input[type="number"], input[type="color"] {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="number"] {
+    width: 100%;
+    max-width: 150px;
+}
+
+input[type="color"] {
+    height: 40px;
+    width: 60px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.color-pickers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* responsive grid */
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 2rem;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+.error {
+    color: #e74c3c;
+    padding: 0.75rem;
+    background-color: #fadbd8;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.success {
+    color: #27ae60;
+    padding: 0.75rem;
+    background-color: #d5f5e3;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.hint {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-top: 0.5rem;
+    font-style: italic;
+}

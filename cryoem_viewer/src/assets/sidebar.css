@@ -5,15 +5,15 @@
     min-width: 150px;
     background: #0e1720;
     box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
-    display: flex;
+    display: flex;  
     flex-direction: column; 
     align-items: flex-start; /* content aligns to the left and expands to the full width.*/
-    overflow-y: auto;
+    overflow-y: auto;   /* Enables vertical scrolling if content exceeds height */
     color: white;
     justify-content: space-between; /* space between the nav and the theme toggle button */
     height: 100%;
     padding: 1rem;
-    flex-shrink: 0
+    flex-shrink: 0   /* Prevents sidebar from shrinking when container resizes */
 }
 
 .sidebar nav {
@@ -24,7 +24,7 @@
     width: 100%;
     padding: 0;
     margin: 0;
-    list-style-type: none;
+    list-style-type: none;  /* Removes bullet points from list items */
 }
 
 .sidebar nav ul li {
@@ -52,7 +52,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: auto;
+    margin-top: auto;      /* Pushes the toggle to the bottom of the sidebar */
     padding: 1rem;
 }
 
@@ -89,16 +89,16 @@
     left: 4px;
     bottom: 4px;
     background-color: white;
-    transition: .4s;
+    transition: .4s;    /* Smooth movement of slider circle */
     border-radius: 50%;
 }
 
 input:checked+.toggle-slider {
-    background-color: #3180cf;
+    background-color: #3180cf;  /* Change color when checked */
 }
 
 input:checked+.toggle-slider:before {
-    transform: translateX(26px);
+    transform: translateX(26px);    /* Moves the toggle handle to the right */
 }
 
 .toggle-label {

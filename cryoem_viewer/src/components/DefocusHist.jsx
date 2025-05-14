@@ -1,7 +1,8 @@
 import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import { withChartTheme } from '../hocs/withChartTheme';
+import { withChartTheme } from '../hocs/withChartTheme'; // import the HOC for theming
+import { useConfig } from '../contexts/ConfigContext'; // import the context for configuration
 
 const DefocusHistogram = ({ graphData, parameter, isDark, getThemeOptions }) => {
     // verify if data exists
@@ -9,27 +10,42 @@ const DefocusHistogram = ({ graphData, parameter, isDark, getThemeOptions }) => 
         return <p>No data available for defocus histogram</p>;
     }
 
-    // generate interval ranges
-    const generateDefocusRanges = () =>{
+    // Get config from context
+    const { config } = useConfig();
+
+    // generate interval ranges using config values with defaults
+    const generateDefocusRanges = () => {
         const ranges = [];
-        //first specific range (0-0.1)
-        ranges.push({ min: 0, max: 0.1, label: '0-0.1' });
-        // intermediate ranges (0.1-0.5)
-        ranges.push({ min: 0.1, max: 0.5, label: '0.1-0.5' });
-        // generate ranges from 0.5-4.0
-        for (let i = 0.5; i < 4.0; i += 0.5) {
-            ranges.push({ 
-                min: i, 
-                max: i + 0.5, 
-                label: `${i.toFixed(1)}-${(i + 0.5).toFixed(1)}`
+        // default values for defocus coverage
+        const {
+            defocuscov_min = 0.0,
+            defocuscov_max = 4.0,
+            defocuscov_interval = 0.5
+        } = config || {};
+
+        // Generate ranges from min to max
+        for (let i = defocuscov_min; i < defocuscov_max; i += defocuscov_interval) {
+            const max = Math.min(i + defocuscov_interval, defocuscov_max);
+            ranges.push({
+                min: i,
+                max: max,
+                label: `${i.toFixed(1)}-${max.toFixed(1)}`
             });
-        };
-        // last range (>4.0)
-        ranges.push({ min: 4.0, max: Infinity, label: '>4.0' });
+        }
+
+        // Add final overflow range
+        ranges.push({
+            min: defocuscov_max,
+            max: Infinity,
+            label: `>${defocuscov_max.toFixed(1)}`
+        });
+
         return ranges;
     };
 
     const defocusRanges = generateDefocusRanges();  // object array of ranges
+    const recentCount = config?.defocuscov_recent_micrographs_count || 50;
+
 
     // Convert to Highcharts format and count micrgraphs in each range depending on parameter selected 
     const histogramData = defocusRanges.map(range => {  
@@ -45,13 +61,15 @@ const DefocusHistogram = ({ graphData, parameter, isDark, getThemeOptions }) => 
         };
     });
         
-    //  filter last 50 micrographs
+    //  filter recent micrographs
     //  If sort() method returns: a negative number, a goes before b
-    const recentDefocusData = [...graphData].sort((a, b) => new Date(b.datetime_ctf) - new Date(a.datetime_ctf)).slice(0, 50);
+    const recentDefocusData = [...graphData]
+        .sort((a, b) => new Date(b.datetime_ctf) - new Date(a.datetime_ctf))
+        .slice(0, recentCount);
 
-    // data for last 50 mcirographs
+    // data for recent mcirographs
     const recentHistData = defocusRanges.map(range => { // create new array iterating over same ranges
-        const count = recentDefocusData.filter(ctf => { // filter last 50 micrographs 
+        const count = recentDefocusData.filter(ctf => { // filter recent micrographs 
             const defocusValue = ctf[parameter.toLowerCase()];
             return defocusValue >= range.min && defocusValue < range.max;
         }).length; // count of micrographs in this bin.
@@ -63,9 +81,21 @@ const DefocusHistogram = ({ graphData, parameter, isDark, getThemeOptions }) => 
         };
     });
 
+     // Get colors from config or use default colors
+    const defocusColor = parameter === 'DefocusU' 
+        ? config?.color_defocusu || '#00e272'
+        : config?.color_defocusv || '#00e272';
+
+    // default color for defocus histogram
+     const recentColor = config?.color_recent_defocuscov || '#544FC5';
+
     const options = getThemeOptions(isDark, {
         chart: {
             type: 'column',
+             zooming: {
+                type: 'x',
+                mouseWheel: true
+            }
         },
         title: {
             text: 'Defocus Coverage',
@@ -85,16 +115,15 @@ const DefocusHistogram = ({ graphData, parameter, isDark, getThemeOptions }) => 
             },
         },
         series: [{
-            name: parameter, // dynamic name
+            name: parameter, // dynamic name & color
             data: histogramData,
-            color: '#00e272', // Green color for defocus
+            color: defocusColor, 
         },
         {
-            name: 'Defocus (last 50 mics)', 
+            name: `Defocus (last ${recentCount} mics)`, 
             data: recentHistData,
-            color: 'rgb(84,79,197)', // Purple color for last 50 micrographs
-        }
-    ],
+            color: recentColor, //'rgb(84,79,197)', // Purple color for last 50 micrographs
+        }],
         tooltip: {
             headerFormat: '<span style="font-size:10px">Defocus: {point.key}</span><br/>',
             pointFormat: '<b>{point.y}</b> micrograph(s)',

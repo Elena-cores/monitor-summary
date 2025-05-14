@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useConfig } from "../contexts/ConfigContext";
+import "../assets/configPage.css"; 
 
 const ConfigPage = () => {
     const { config, updateConfig } = useConfig(); // use updateConfig from context
@@ -8,13 +9,14 @@ const ConfigPage = () => {
     const [localConfig, setLocalConfig] = useState({}); // local state for form inputs
 
     // synchronize local state with context config
-    // useEffect to set localConfig when config changes
+    // When global config updates, sync it into localConfig
     useEffect(() => {
         if (config) {
             setLocalConfig({ ...config });
         }
     }, [config]);
-    // set localConfig to config when it changes
+
+    // Handle standard input changes (both numbers and colors)
     const handleChange = (e) => {
         const { name, value } = e.target;
         setLocalConfig(prev => ({
@@ -24,13 +26,13 @@ const ConfigPage = () => {
         }));
     };
 
-    // handle form submission and update config
+     // Submit updated config to context and show success/error messages
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError(""); // reset error message
         setSuccess(""); // reset success message
         try {
-            // basic validation
+            // Validation: min value must be less than max value
             if (localConfig.maxres_min >= localConfig.maxres_max) {       // check if min is less than max
                 throw new Error("The minimum value must be less than maximum velue for resolution range.");
             }
@@ -44,17 +46,17 @@ const ConfigPage = () => {
         }
     };
 
-
     if (!config) return <p>Loading configuration...</p>;
 
     // render the configuration form with current values
     return (
         <div className="config-page">
-            <h1>Graph Configuration</h1>
+            <h2>Max Resolution settings</h2>
             {error && <p className="error">{error}</p>}
             {success && <p className="success">{success}</p>}
 
             <form onSubmit={handleSubmit}>
+                 {/* Range for Max Resolution */}
                 <div className="form-group">
                     <label>Max Resolution Range (Å):</label>
                     <div className="range-inputs">
@@ -94,7 +96,62 @@ const ConfigPage = () => {
                         required
                     />
                 </div>
+                {/* Range for Defocus Coverage */}
+                <h2>Defocus Coverage settings</h2>
+                
+                <div className="form-group">
+                    <label>Defocus Range (μm):</label>
+                    <div className="range-inputs">
+                        <input
+                            type="number"
+                            name="defocuscov_min"
+                            value={localConfig.defocuscov_min ?? 0.0}
+                            onChange={handleChange}
+                            step="0.1"
+                            min="0"
+                            required
+                        />
+                        <span>to</span>
+                        <input
+                            type="number"
+                            name="defocuscov_max"
+                            value={localConfig.defocuscov_max ?? 4.0}
+                            onChange={handleChange}
+                            step="0.1"
+                            min={(localConfig.defocuscov_min ?? 0) + 0.1}
+                            required
+                        />
+                    </div>
+                </div>
 
+                <div className="form-group">
+                    <label>Interval (μm):</label>
+                    <input
+                        type="number"
+                        name="defocuscov_interval"
+                        value={localConfig.defocuscov_interval ?? 0.5}
+                        onChange={handleChange}
+                        step="0.1"
+                        min="0.1"
+                        required
+                    />
+                </div>
+
+                <div className="form-group">
+                    <label>Recent Micrographs Count:</label>
+                    <input
+                        type="number"
+                        name="defocuscov_recent_micrographs_count"
+                        value={localConfig.defocuscov_recent_micrographs_count ?? 50}
+                        onChange={handleChange}
+                        min="1"
+                        max="1000"
+                        required
+                    />
+                </div>
+                
+                {/* Section Colors config*/}
+                <h2>Color settings</h2>
                 <div className="color-pickers">
                     <div className="form-group">
                         <label>Resolution Color:</label>
@@ -129,6 +186,15 @@ const ConfigPage = () => {
                             type="color"
                             name="color_phaseshift"
                             value={localConfig.color_phaseshift ?? "#544FC5"} // default purple
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Recent Defocus Coverage Color:</label>
+                        <input
+                            type="color"
+                            name="color_recent_defocuscov"
+                            value={localConfig.color_recent_defocuscov ?? "#544FC5"}
                             onChange={handleChange}
                         />
                     </div>

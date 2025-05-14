@@ -41,16 +41,23 @@ class CTF(models.Model):
 
 # class config() for graph customisation 
 class Config(models.Model):
-    # range variables
+    # range variables for max resolution
     maxres_min = models.FloatField(default=0.0)
     maxres_max = models.FloatField(default=10.0)
     maxres_interval = models.FloatField(default=0.5)
+    
+    # range variables for defocus coverage
+    defocuscov_min = models.FloatField(default=0.0)  
+    defocuscov_max = models.FloatField(default=4.0)
+    defocuscov_interval = models.FloatField(default=0.5)
+    defocuscov_recent_micrographs_count = models.IntegerField(default=50) 
     
     # colours for data
     color_defocusu = models.CharField(max_length=7, default="#00e272")  # green
     color_defocusv = models.CharField(max_length=7, default= "#00e272") # green
     color_resolution = models.CharField(max_length=7, default="#2CAFFE") # blue
     color_phaseshift = models.CharField(max_length=7, default="#544FC5") # purple
+    color_recent_defocuscov = models.CharField(max_length=7, default="#544FC5")  # purple
      
     def __str__(self):
-        return f"Config(MinRange={self.min_range}, MaxRange={self.max_range}, Interval={self.interval})"
+        return f"Config(MinRange={self.maxres_min}, MaxRange={self.maxres_max}, Interval={self.maxres_interval})"

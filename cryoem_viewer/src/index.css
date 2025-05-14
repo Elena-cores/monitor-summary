@@ -94,3 +94,11 @@ main {
 .dark .customize-bar {
   box-shadow: 0 2px 4px rgba(71, 71, 71, 0.3);
 }
+
+.dark .config-page h1,
+.dark .config-page h2,
+.dark .form-group label,
+.dark .range-inputs span,
+.dark .hint {
+  color: #f8f9fa;  /* Override text color in dark mode */
+}

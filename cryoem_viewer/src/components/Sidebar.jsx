@@ -4,12 +4,12 @@ import '../assets/sidebar.css';
 
 const Sidebar = () => {
   const [darkMode, setDarkMode] = useState(() => {
-    // Leer del localStorage si existe preferencia
+    // Initialize dark mode based on user's saved preference in localStorage
     return localStorage.getItem('darkMode') === 'true';
   });
 
   useEffect(() => {
-    // Aplicar el modo y guardar preferencia
+    // Apply or remove dark mode class on body, and persist preference to localStorage
     document.body.classList.toggle('dark', darkMode);
     localStorage.setItem('darkMode', darkMode);
   }, [darkMode]);
@@ -21,12 +21,16 @@ const Sidebar = () => {
           <li>
             <Link to="/ctf">CTF</Link>
           </li>
-          <li>
+          {/*  Future navigation links can be added here as new pages are implemented */}
+          {/* 
+           <li>
             <Link to="/movie">MOVIE</Link>
           </li>
           <li>
             <Link to="/coord">COORDINATES</Link>
           </li>
+          */}
+         
           <li>
             <Link to="/">ALL</Link>
           </li>
@@ -36,12 +40,13 @@ const Sidebar = () => {
         </ul>
       </nav>
       
+      {/* Theme toggle switch for dark/light mode */}
       <div className="theme-toggle">
         <label className="toggle-switch">
           <input 
             type="checkbox" 
-            checked={darkMode}
-            onChange={() => setDarkMode(!darkMode)}
+            checked={darkMode}  
+            onChange={() => setDarkMode(!darkMode)} 
           />
           <span className="toggle-slider"></span>
         </label>

@@ -45,7 +45,11 @@ const CTFResolutionHist = ({ graphData, isDark, getThemeOptions }) => {
     // configuration of histogram
     const options = getThemeOptions(isDark, {
         chart: {
-            type: 'column', 
+            type: 'column',
+             zooming: {
+                type: 'x',
+                mouseWheel: true
+            }
         },
         title: {
             text: 'Max. Resolution',

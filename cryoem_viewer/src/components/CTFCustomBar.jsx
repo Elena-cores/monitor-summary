@@ -1,7 +1,7 @@
 import React from 'react';
 import { useConfig } from '../contexts/ConfigContext';
 
-const CTFCustomBar = ({ value, options }) => {
+const CTFCustomBar = ({ options }) => {
     // useConfig() is a custom hook that provides access to the config context
     const { defocusParameter, setDefocusParameter } = useConfig();
 

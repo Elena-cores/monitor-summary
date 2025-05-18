@@ -9,7 +9,7 @@ The models are designed to handle the following entities of Single Particle Anal
 
 Relationships:
 - Micrograph has a one-to-many relationship with CTF, Coordinate2D, and Particle.
-- Class2D and Particle have a one-to-many relationship.
+- Class2D and Particle have a one-to-many relationship. (Although not implemented in this version, it is planned to be added in the future).
 """
 
 from django.db import models

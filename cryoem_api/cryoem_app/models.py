@@ -14,13 +14,14 @@ Relationships:
 
 from django.db import models
 from datetime import datetime
+from django.core.validators import MinValueValidator
 
 # Create your models here: 
 # Micrograph model
 class Micrograph(models.Model):
     filename = models.CharField(max_length=255) # filename = models.ImageField(upload_to='micrographs/') & 'upload_to' specifies route inside directory MEDIA_ROOT (defined in settings.py), where these images will be stored
-    sampling = models.FloatField()
-    dose = models.FloatField()
+    sampling = models.FloatField(validators=[MinValueValidator(0.0)]) # avoid negative values
+    dose = models.FloatField(validators=[MinValueValidator(0.0)]) 
     datetime_micro = models.DateTimeField(default=datetime.now)
     
     def __str__(self):
@@ -29,11 +30,11 @@ class Micrograph(models.Model):
 # CTF model
 class CTF(models.Model):
     micrograph = models.ForeignKey(Micrograph, on_delete=models.CASCADE, related_name='ctfs') # in case of micrography elimination, all related ctfs will be deleted 
-    defocusu = models.FloatField()
-    defocusv = models.FloatField()
+    defocusu = models.FloatField(validators=[MinValueValidator(0.0)]) # avoid negative values
+    defocusv = models.FloatField(validators=[MinValueValidator(0.0)]) 
     phaseshift = models.FloatField()  # degrees 
     datetime_ctf = models.DateTimeField(default=datetime.now)
-    resolution = models.FloatField()
+    resolution = models.FloatField(validators=[MinValueValidator(0.0)]) 
     psd = models.CharField(max_length=255) #psd = models.ImageField(upload_to='psds/')
     
     def __str__(self):

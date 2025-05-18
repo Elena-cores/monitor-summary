@@ -1,656 +1,656 @@
 {
     "micrographs": [
         {
-            "id": 1,
-            "filename": "micrograph_0.png",
-            "sampling": 0.86,
-            "dose": 0.94,
-            "datetime_micro": "2025-03-25T13:19:49.030069"
+            "id": 34,
+            "filename": "micrograph_33.png",
+            "sampling": 0.24,
+            "dose": 0.89,
+            "datetime_micro": "2025-03-06T04:14:23"
         },
         {
-            "id": 2,
-            "filename": "micrograph_1.png",
-            "sampling": 0.82,
-            "dose": 0.38,
-            "datetime_micro": "2025-01-08T13:19:49.030088"
+            "id": 41,
+            "filename": "micrograph_40.png",
+            "sampling": 0.9,
+            "dose": 0.11,
+            "datetime_micro": "2025-03-06T04:16:42"
         },
         {
-            "id": 3,
-            "filename": "micrograph_2.png",
-            "sampling": 1.51,
-            "dose": 0.17,
-            "datetime_micro": "2024-10-07T13:19:49.030095"
-        },
-        {
-            "id": 4,
-            "filename": "micrograph_3.png",
-            "sampling": 1.49,
-            "dose": 0.35,
-            "datetime_micro": "2025-03-03T13:19:49.030100"
-        },
-        {
-            "id": 5,
-            "filename": "micrograph_4.png",
-            "sampling": 1.73,
-            "dose": 0.99,
-            "datetime_micro": "2024-12-05T13:19:49.030103"
-        },
-        {
-            "id": 6,
-            "filename": "micrograph_5.png",
-            "sampling": 1.8,
-            "dose": 0.19,
-            "datetime_micro": "2024-08-29T13:19:49.030107"
-        },
-        {
-            "id": 7,
-            "filename": "micrograph_6.png",
-            "sampling": 1.35,
-            "dose": 0.22,
-            "datetime_micro": "2024-06-15T13:19:49.030110"
-        },
-        {
-            "id": 8,
-            "filename": "micrograph_7.png",
-            "sampling": 0.44,
-            "dose": 0.29,
-            "datetime_micro": "2024-12-01T13:19:49.030113"
-        },
-        {
-            "id": 9,
-            "filename": "micrograph_8.png",
-            "sampling": 1.54,
-            "dose": 0.48,
-            "datetime_micro": "2024-04-25T13:19:49.030116"
-        },
-        {
-            "id": 10,
-            "filename": "micrograph_9.png",
-            "sampling": 0.43,
-            "dose": 0.92,
-            "datetime_micro": "2024-11-01T13:19:49.030120"
-        },
-        {
-            "id": 11,
-            "filename": "micrograph_10.png",
-            "sampling": 0.25,
-            "dose": 0.4,
-            "datetime_micro": "2024-10-15T13:19:49.030123"
+            "id": 23,
+            "filename": "micrograph_22.png",
+            "sampling": 0.94,
+            "dose": 0.33,
+            "datetime_micro": "2025-03-06T04:21:38"
         },
         {
             "id": 12,
             "filename": "micrograph_11.png",
-            "sampling": 1.01,
-            "dose": 0.74,
-            "datetime_micro": "2024-09-21T13:19:49.030128"
+            "sampling": 0.85,
+            "dose": 0.15,
+            "datetime_micro": "2025-03-06T04:25:23"
         },
         {
-            "id": 13,
-            "filename": "micrograph_12.png",
-            "sampling": 0.52,
+            "id": 4,
+            "filename": "micrograph_3.png",
+            "sampling": 0.24,
+            "dose": 0.35,
+            "datetime_micro": "2025-03-06T04:25:55"
+        },
+        {
+            "id": 24,
+            "filename": "micrograph_23.png",
+            "sampling": 1.36,
+            "dose": 0.28,
+            "datetime_micro": "2025-03-06T04:27:04"
+        },
+        {
+            "id": 11,
+            "filename": "micrograph_10.png",
+            "sampling": 1.65,
+            "dose": 0.87,
+            "datetime_micro": "2025-03-06T04:32:07"
+        },
+        {
+            "id": 31,
+            "filename": "micrograph_30.png",
+            "sampling": 0.57,
+            "dose": 0.43,
+            "datetime_micro": "2025-03-06T04:41:10"
+        },
+        {
+            "id": 39,
+            "filename": "micrograph_38.png",
+            "sampling": 1.5,
+            "dose": 0.41,
+            "datetime_micro": "2025-03-06T04:44:22"
+        },
+        {
+            "id": 33,
+            "filename": "micrograph_32.png",
+            "sampling": 0.33,
+            "dose": 0.98,
+            "datetime_micro": "2025-03-06T04:48:30"
+        },
+        {
+            "id": 46,
+            "filename": "micrograph_45.png",
+            "sampling": 0.62,
+            "dose": 0.82,
+            "datetime_micro": "2025-03-06T04:58:55"
+        },
+        {
+            "id": 36,
+            "filename": "micrograph_35.png",
+            "sampling": 1.55,
+            "dose": 0.24,
+            "datetime_micro": "2025-03-06T05:02:59"
+        },
+        {
+            "id": 44,
+            "filename": "micrograph_43.png",
+            "sampling": 1.23,
+            "dose": 0.55,
+            "datetime_micro": "2025-03-06T05:08:00"
+        },
+        {
+            "id": 25,
+            "filename": "micrograph_24.png",
+            "sampling": 0.73,
             "dose": 0.37,
-            "datetime_micro": "2024-10-19T13:19:49.030131"
+            "datetime_micro": "2025-03-06T05:12:41"
         },
         {
-            "id": 14,
-            "filename": "micrograph_13.png",
-            "sampling": 1.82,
-            "dose": 0.85,
-            "datetime_micro": "2025-03-10T13:19:49.030135"
+            "id": 50,
+            "filename": "micrograph_49.png",
+            "sampling": 1.25,
+            "dose": 0.14,
+            "datetime_micro": "2025-03-06T05:12:48"
+        },
+        {
+            "id": 3,
+            "filename": "micrograph_2.png",
+            "sampling": 1.3,
+            "dose": 0.48,
+            "datetime_micro": "2025-03-06T05:12:54"
+        },
+        {
+            "id": 2,
+            "filename": "micrograph_1.png",
+            "sampling": 1.52,
+            "dose": 0.63,
+            "datetime_micro": "2025-03-06T05:13:57"
+        },
+        {
+            "id": 7,
+            "filename": "micrograph_6.png",
+            "sampling": 1.71,
+            "dose": 0.34,
+            "datetime_micro": "2025-03-06T05:14:18"
+        },
+        {
+            "id": 30,
+            "filename": "micrograph_29.png",
+            "sampling": 1.15,
+            "dose": 0.94,
+            "datetime_micro": "2025-03-06T05:19:53"
+        },
+        {
+            "id": 9,
+            "filename": "micrograph_8.png",
+            "sampling": 0.86,
+            "dose": 0.46,
+            "datetime_micro": "2025-03-06T05:20:46"
+        },
+        {
+            "id": 40,
+            "filename": "micrograph_39.png",
+            "sampling": 0.67,
+            "dose": 0.47,
+            "datetime_micro": "2025-03-06T05:27:45"
         },
         {
             "id": 15,
             "filename": "micrograph_14.png",
-            "sampling": 1.73,
-            "dose": 0.67,
-            "datetime_micro": "2024-10-13T13:19:49.030138"
+            "sampling": 1.27,
+            "dose": 0.22,
+            "datetime_micro": "2025-03-06T05:33:18"
+        },
+        {
+            "id": 19,
+            "filename": "micrograph_18.png",
+            "sampling": 1.0,
+            "dose": 0.72,
+            "datetime_micro": "2025-03-06T05:40:15"
+        },
+        {
+            "id": 42,
+            "filename": "micrograph_41.png",
+            "sampling": 0.22,
+            "dose": 0.68,
+            "datetime_micro": "2025-03-06T05:43:21"
+        },
+        {
+            "id": 17,
+            "filename": "micrograph_16.png",
+            "sampling": 0.66,
+            "dose": 0.68,
+            "datetime_micro": "2025-03-06T05:45:22"
+        },
+        {
+            "id": 48,
+            "filename": "micrograph_47.png",
+            "sampling": 0.05,
+            "dose": 0.26,
+            "datetime_micro": "2025-03-06T05:45:46"
+        },
+        {
+            "id": 45,
+            "filename": "micrograph_44.png",
+            "sampling": 0.85,
+            "dose": 0.83,
+            "datetime_micro": "2025-03-06T05:46:35"
+        },
+        {
+            "id": 43,
+            "filename": "micrograph_42.png",
+            "sampling": 0.51,
+            "dose": 0.51,
+            "datetime_micro": "2025-03-06T05:50:04"
+        },
+        {
+            "id": 18,
+            "filename": "micrograph_17.png",
+            "sampling": 2.0,
+            "dose": 0.21,
+            "datetime_micro": "2025-03-06T05:50:06"
+        },
+        {
+            "id": 38,
+            "filename": "micrograph_37.png",
+            "sampling": 1.51,
+            "dose": 0.32,
+            "datetime_micro": "2025-03-06T05:51:23"
+        },
+        {
+            "id": 8,
+            "filename": "micrograph_7.png",
+            "sampling": 1.17,
+            "dose": 0.16,
+            "datetime_micro": "2025-03-06T05:52:59"
         },
         {
             "id": 16,
             "filename": "micrograph_15.png",
             "sampling": 0.82,
-            "dose": 0.79,
-            "datetime_micro": "2024-05-12T13:19:49.030141"
-        },
-        {
-            "id": 17,
-            "filename": "micrograph_16.png",
-            "sampling": 0.46,
-            "dose": 0.68,
-            "datetime_micro": "2024-09-16T13:19:49.030144"
-        },
-        {
-            "id": 18,
-            "filename": "micrograph_17.png",
-            "sampling": 0.23,
-            "dose": 0.16,
-            "datetime_micro": "2025-04-13T13:19:49.030147"
-        },
-        {
-            "id": 19,
-            "filename": "micrograph_18.png",
-            "sampling": 1.56,
             "dose": 0.3,
-            "datetime_micro": "2025-02-04T13:19:49.030150"
+            "datetime_micro": "2025-03-06T05:58:20"
         },
         {
-            "id": 20,
-            "filename": "micrograph_19.png",
-            "sampling": 0.18,
-            "dose": 0.85,
-            "datetime_micro": "2024-12-07T13:19:49.030153"
-        },
-        {
-            "id": 21,
-            "filename": "micrograph_20.png",
+            "id": 14,
+            "filename": "micrograph_13.png",
             "sampling": 0.14,
-            "dose": 0.12,
-            "datetime_micro": "2024-11-16T13:19:49.030155"
+            "dose": 0.58,
+            "datetime_micro": "2025-03-06T05:59:27"
         },
         {
-            "id": 22,
-            "filename": "micrograph_21.png",
-            "sampling": 1.53,
-            "dose": 0.49,
-            "datetime_micro": "2024-06-15T13:19:49.030158"
-        },
-        {
-            "id": 23,
-            "filename": "micrograph_22.png",
-            "sampling": 0.14,
-            "dose": 0.66,
-            "datetime_micro": "2024-12-22T13:19:49.030161"
-        },
-        {
-            "id": 24,
-            "filename": "micrograph_23.png",
-            "sampling": 1.82,
-            "dose": 0.64,
-            "datetime_micro": "2025-03-26T13:19:49.030164"
-        },
-        {
-            "id": 25,
-            "filename": "micrograph_24.png",
-            "sampling": 0.65,
-            "dose": 0.42,
-            "datetime_micro": "2024-09-13T13:19:49.030167"
-        },
-        {
-            "id": 26,
-            "filename": "micrograph_25.png",
-            "sampling": 1.22,
-            "dose": 0.54,
-            "datetime_micro": "2024-08-13T13:19:49.030170"
-        },
-        {
-            "id": 27,
-            "filename": "micrograph_26.png",
-            "sampling": 1.36,
-            "dose": 0.24,
-            "datetime_micro": "2024-12-12T13:19:49.030173"
-        },
-        {
-            "id": 28,
-            "filename": "micrograph_27.png",
-            "sampling": 1.95,
-            "dose": 0.45,
-            "datetime_micro": "2024-11-24T13:19:49.030176"
-        },
-        {
-            "id": 29,
-            "filename": "micrograph_28.png",
-            "sampling": 0.1,
+            "id": 13,
+            "filename": "micrograph_12.png",
+            "sampling": 1.26,
             "dose": 0.68,
-            "datetime_micro": "2024-09-10T13:19:49.030179"
-        },
-        {
-            "id": 30,
-            "filename": "micrograph_29.png",
-            "sampling": 0.72,
-            "dose": 0.71,
-            "datetime_micro": "2025-04-23T13:19:49.030181"
-        },
-        {
-            "id": 31,
-            "filename": "micrograph_30.png",
-            "sampling": 0.76,
-            "dose": 0.11,
-            "datetime_micro": "2024-08-04T13:19:49.030184"
+            "datetime_micro": "2025-03-06T06:07:06"
         },
         {
             "id": 32,
             "filename": "micrograph_31.png",
-            "sampling": 0.41,
-            "dose": 0.76,
-            "datetime_micro": "2025-04-01T13:19:49.030187"
+            "sampling": 0.66,
+            "dose": 0.9,
+            "datetime_micro": "2025-03-06T06:07:49"
         },
         {
-            "id": 33,
-            "filename": "micrograph_32.png",
-            "sampling": 0.18,
+            "id": 10,
+            "filename": "micrograph_9.png",
+            "sampling": 1.9,
+            "dose": 0.28,
+            "datetime_micro": "2025-03-06T06:13:34"
+        },
+        {
+            "id": 29,
+            "filename": "micrograph_28.png",
+            "sampling": 0.92,
             "dose": 0.5,
-            "datetime_micro": "2024-06-28T13:19:49.030190"
+            "datetime_micro": "2025-03-06T06:15:55"
         },
         {
-            "id": 34,
-            "filename": "micrograph_33.png",
-            "sampling": 0.21,
-            "dose": 0.36,
-            "datetime_micro": "2025-02-20T13:19:49.030193"
+            "id": 5,
+            "filename": "micrograph_4.png",
+            "sampling": 0.86,
+            "dose": 0.48,
+            "datetime_micro": "2025-03-06T06:18:28"
         },
         {
-            "id": 35,
-            "filename": "micrograph_34.png",
-            "sampling": 1.98,
-            "dose": 0.78,
-            "datetime_micro": "2025-04-11T13:19:49.030196"
-        },
-        {
-            "id": 36,
-            "filename": "micrograph_35.png",
-            "sampling": 1.63,
-            "dose": 0.76,
-            "datetime_micro": "2024-12-21T13:19:49.030198"
-        },
-        {
-            "id": 37,
-            "filename": "micrograph_36.png",
-            "sampling": 1.61,
-            "dose": 0.41,
-            "datetime_micro": "2025-02-04T13:19:49.030201"
-        },
-        {
-            "id": 38,
-            "filename": "micrograph_37.png",
-            "sampling": 0.65,
-            "dose": 0.89,
-            "datetime_micro": "2025-04-03T13:19:49.030204"
-        },
-        {
-            "id": 39,
-            "filename": "micrograph_38.png",
-            "sampling": 0.85,
-            "dose": 0.74,
-            "datetime_micro": "2024-11-07T13:19:49.030207"
-        },
-        {
-            "id": 40,
-            "filename": "micrograph_39.png",
-            "sampling": 0.42,
-            "dose": 0.51,
-            "datetime_micro": "2024-12-24T13:19:49.030210"
-        },
-        {
-            "id": 41,
-            "filename": "micrograph_40.png",
-            "sampling": 1.38,
-            "dose": 0.82,
-            "datetime_micro": "2024-06-23T13:19:49.030214"
-        },
-        {
-            "id": 42,
-            "filename": "micrograph_41.png",
-            "sampling": 0.39,
-            "dose": 0.35,
-            "datetime_micro": "2024-11-08T13:19:49.030217"
-        },
-        {
-            "id": 43,
-            "filename": "micrograph_42.png",
-            "sampling": 0.89,
-            "dose": 0.36,
-            "datetime_micro": "2024-12-28T13:19:49.030220"
-        },
-        {
-            "id": 44,
-            "filename": "micrograph_43.png",
-            "sampling": 1.97,
-            "dose": 0.63,
-            "datetime_micro": "2024-06-22T13:19:49.030222"
-        },
-        {
-            "id": 45,
-            "filename": "micrograph_44.png",
-            "sampling": 1.95,
-            "dose": 0.95,
-            "datetime_micro": "2025-02-24T13:19:49.030227"
-        },
-        {
-            "id": 46,
-            "filename": "micrograph_45.png",
-            "sampling": 1.68,
-            "dose": 0.45,
-            "datetime_micro": "2024-05-15T13:19:49.030229"
-        },
-        {
-            "id": 47,
-            "filename": "micrograph_46.png",
-            "sampling": 0.75,
-            "dose": 0.72,
-            "datetime_micro": "2024-05-15T13:19:49.030232"
-        },
-        {
-            "id": 48,
-            "filename": "micrograph_47.png",
-            "sampling": 1.22,
-            "dose": 0.16,
-            "datetime_micro": "2024-11-14T13:19:49.030235"
+            "id": 21,
+            "filename": "micrograph_20.png",
+            "sampling": 1.8,
+            "dose": 0.84,
+            "datetime_micro": "2025-03-06T06:22:01"
         },
         {
             "id": 49,
             "filename": "micrograph_48.png",
-            "sampling": 1.53,
-            "dose": 0.48,
-            "datetime_micro": "2024-12-14T13:19:49.030238"
+            "sampling": 0.39,
+            "dose": 0.69,
+            "datetime_micro": "2025-03-06T06:25:07"
         },
         {
-            "id": 50,
-            "filename": "micrograph_49.png",
-            "sampling": 1.03,
-            "dose": 0.6,
-            "datetime_micro": "2024-05-02T13:19:49.030241"
+            "id": 22,
+            "filename": "micrograph_21.png",
+            "sampling": 0.78,
+            "dose": 0.32,
+            "datetime_micro": "2025-03-06T06:25:30"
+        },
+        {
+            "id": 27,
+            "filename": "micrograph_26.png",
+            "sampling": 1.27,
+            "dose": 0.94,
+            "datetime_micro": "2025-03-06T06:26:08"
+        },
+        {
+            "id": 6,
+            "filename": "micrograph_5.png",
+            "sampling": 1.49,
+            "dose": 0.84,
+            "datetime_micro": "2025-03-06T06:26:30"
+        },
+        {
+            "id": 37,
+            "filename": "micrograph_36.png",
+            "sampling": 0.59,
+            "dose": 0.45,
+            "datetime_micro": "2025-03-06T06:32:57"
+        },
+        {
+            "id": 47,
+            "filename": "micrograph_46.png",
+            "sampling": 1.78,
+            "dose": 0.52,
+            "datetime_micro": "2025-03-06T06:34:06"
+        },
+        {
+            "id": 28,
+            "filename": "micrograph_27.png",
+            "sampling": 0.11,
+            "dose": 0.88,
+            "datetime_micro": "2025-03-06T06:46:08"
+        },
+        {
+            "id": 26,
+            "filename": "micrograph_25.png",
+            "sampling": 0.72,
+            "dose": 0.72,
+            "datetime_micro": "2025-03-06T06:46:10"
+        },
+        {
+            "id": 20,
+            "filename": "micrograph_19.png",
+            "sampling": 1.91,
+            "dose": 0.27,
+            "datetime_micro": "2025-03-06T06:55:35"
+        },
+        {
+            "id": 35,
+            "filename": "micrograph_34.png",
+            "sampling": 0.39,
+            "dose": 0.7,
+            "datetime_micro": "2025-03-06T06:58:08"
+        },
+        {
+            "id": 1,
+            "filename": "micrograph_0.png",
+            "sampling": 1.89,
+            "dose": 0.15,
+            "datetime_micro": "2025-03-06T06:58:22"
         }
     ],
     "ctfs": [
         {
-            "id": 1,
-            "micrographId": 18,
-            "defocusu": 3.86,
-            "defocusv": 1.13,
-            "phaseshift": 62.97,
-            "datetime_ctf": "2025-01-04T13:19:49.032215",
-            "resolution": 4.33,
-            "psd": "psd_0.png"
-        },
-        {
-            "id": 2,
-            "micrographId": 28,
-            "defocusu": 0.91,
-            "defocusv": 2.04,
-            "phaseshift": 75.75,
-            "datetime_ctf": "2024-08-23T13:19:49.032241",
-            "resolution": 3.84,
-            "psd": "psd_1.png"
-        },
-        {
-            "id": 3,
-            "micrographId": 8,
-            "defocusu": 4.56,
-            "defocusv": 2.16,
-            "phaseshift": 62.89,
-            "datetime_ctf": "2024-10-15T13:19:49.032249",
-            "resolution": 4.13,
-            "psd": "psd_2.png"
-        },
-        {
-            "id": 4,
-            "micrographId": 37,
-            "defocusu": 0.17,
-            "defocusv": 3.22,
-            "phaseshift": 98.73,
-            "datetime_ctf": "2025-04-03T13:19:49.032254",
-            "resolution": 3.14,
-            "psd": "psd_3.png"
-        },
-        {
-            "id": 5,
-            "micrographId": 32,
-            "defocusu": 0.88,
-            "defocusv": 4.08,
-            "phaseshift": 31.14,
-            "datetime_ctf": "2024-11-25T13:19:49.032259",
-            "resolution": 3.51,
-            "psd": "psd_4.png"
-        },
-        {
-            "id": 6,
-            "micrographId": 50,
-            "defocusu": 0.76,
-            "defocusv": 0.25,
-            "phaseshift": 30.48,
-            "datetime_ctf": "2025-01-02T13:19:49.032264",
-            "resolution": 4.91,
-            "psd": "psd_5.png"
-        },
-        {
-            "id": 7,
-            "micrographId": 17,
-            "defocusu": 0.04,
-            "defocusv": 3.67,
-            "phaseshift": 64.19,
-            "datetime_ctf": "2025-01-20T13:19:49.032268",
-            "resolution": 3.11,
-            "psd": "psd_6.png"
-        },
-        {
-            "id": 8,
-            "micrographId": 8,
-            "defocusu": 2.44,
-            "defocusv": 2.51,
-            "phaseshift": 2.41,
-            "datetime_ctf": "2025-03-07T13:19:49.032273",
-            "resolution": 2.75,
-            "psd": "psd_7.png"
-        },
-        {
-            "id": 9,
-            "micrographId": 34,
-            "defocusu": 2.56,
-            "defocusv": 2.95,
-            "phaseshift": 36.43,
-            "datetime_ctf": "2024-04-30T13:19:49.032277",
-            "resolution": 4.53,
-            "psd": "psd_8.png"
-        },
-        {
-            "id": 10,
-            "micrographId": 18,
-            "defocusu": 0.12,
-            "defocusv": 3.35,
-            "phaseshift": 39.45,
-            "datetime_ctf": "2024-11-12T13:19:49.032282",
-            "resolution": 3.52,
-            "psd": "psd_9.png"
-        },
-        {
-            "id": 11,
-            "micrographId": 3,
-            "defocusu": 3.52,
-            "defocusv": 1.67,
-            "phaseshift": 44.07,
-            "datetime_ctf": "2024-07-12T13:19:49.032286",
-            "resolution": 2.17,
-            "psd": "psd_10.png"
-        },
-        {
-            "id": 12,
-            "micrographId": 32,
-            "defocusu": 3.27,
-            "defocusv": 4.45,
-            "phaseshift": 74.32,
-            "datetime_ctf": "2024-10-17T13:19:49.032291",
-            "resolution": 3.44,
-            "psd": "psd_11.png"
-        },
-        {
-            "id": 13,
-            "micrographId": 42,
-            "defocusu": 0.49,
-            "defocusv": 4.73,
-            "phaseshift": 98.04,
-            "datetime_ctf": "2024-05-07T13:19:49.032295",
-            "resolution": 2.55,
-            "psd": "psd_12.png"
-        },
-        {
-            "id": 14,
-            "micrographId": 42,
-            "defocusu": 0.52,
-            "defocusv": 2.64,
-            "phaseshift": 12.64,
-            "datetime_ctf": "2024-12-27T13:19:49.032299",
-            "resolution": 3.52,
-            "psd": "psd_13.png"
-        },
-        {
-            "id": 15,
-            "micrographId": 9,
-            "defocusu": 2.45,
-            "defocusv": 4.75,
-            "phaseshift": 96.07,
-            "datetime_ctf": "2024-10-09T13:19:49.032303",
-            "resolution": 2.18,
-            "psd": "psd_14.png"
-        },
-        {
-            "id": 16,
-            "micrographId": 19,
-            "defocusu": 4.85,
-            "defocusv": 2.27,
-            "phaseshift": 23.23,
-            "datetime_ctf": "2025-02-20T13:19:49.032307",
-            "resolution": 4.76,
-            "psd": "psd_15.png"
-        },
-        {
-            "id": 17,
-            "micrographId": 44,
-            "defocusu": 2.07,
-            "defocusv": 0.51,
-            "phaseshift": 58.46,
-            "datetime_ctf": "2024-12-01T13:19:49.032312",
-            "resolution": 3.86,
-            "psd": "psd_16.png"
-        },
-        {
-            "id": 18,
-            "micrographId": 44,
-            "defocusu": 1.28,
-            "defocusv": 3.99,
-            "phaseshift": 30.24,
-            "datetime_ctf": "2025-01-16T13:19:49.032316",
-            "resolution": 3.59,
-            "psd": "psd_17.png"
-        },
-        {
-            "id": 19,
-            "micrographId": 10,
-            "defocusu": 1.69,
-            "defocusv": 0.99,
-            "phaseshift": 70.28,
-            "datetime_ctf": "2024-08-17T13:19:49.032320",
-            "resolution": 2.74,
-            "psd": "psd_18.png"
-        },
-        {
-            "id": 20,
-            "micrographId": 30,
-            "defocusu": 4.19,
-            "defocusv": 3.13,
-            "phaseshift": 13.16,
-            "datetime_ctf": "2024-09-15T13:19:49.032324",
-            "resolution": 3.27,
-            "psd": "psd_19.png"
-        },
-        {
-            "id": 21,
-            "micrographId": 20,
-            "defocusu": 0.11,
-            "defocusv": 1.73,
-            "phaseshift": 28.82,
-            "datetime_ctf": "2024-04-30T13:19:49.032328",
-            "resolution": 4.01,
-            "psd": "psd_20.png"
-        },
-        {
             "id": 22,
-            "micrographId": 4,
-            "defocusu": 1.46,
-            "defocusv": 2.2,
-            "phaseshift": 24.7,
-            "datetime_ctf": "2024-11-10T13:19:49.032332",
-            "resolution": 3.75,
+            "micrographId": 41,
+            "defocusu": 2.55,
+            "defocusv": 2.68,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T04:41:35",
+            "resolution": 1.79,
             "psd": "psd_21.png"
-        },
-        {
-            "id": 23,
-            "micrographId": 33,
-            "defocusu": 3.07,
-            "defocusv": 3.4,
-            "phaseshift": 82.45,
-            "datetime_ctf": "2024-08-09T13:19:49.032336",
-            "resolution": 3.89,
-            "psd": "psd_22.png"
-        },
-        {
-            "id": 24,
-            "micrographId": 33,
-            "defocusu": 1.16,
-            "defocusv": 3.9,
-            "phaseshift": 72.84,
-            "datetime_ctf": "2025-02-01T13:19:49.032340",
-            "resolution": 2.8,
-            "psd": "psd_23.png"
         },
         {
             "id": 25,
             "micrographId": 12,
-            "defocusu": 3.08,
-            "defocusv": 1.78,
-            "phaseshift": 56.76,
-            "datetime_ctf": "2025-04-01T13:19:49.032345",
-            "resolution": 2.91,
+            "defocusu": 2.31,
+            "defocusv": 0.12,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T04:49:18",
+            "resolution": 3.9,
             "psd": "psd_24.png"
         },
         {
-            "id": 26,
-            "micrographId": 12,
-            "defocusu": 4.24,
-            "defocusv": 1.84,
-            "phaseshift": 15.86,
-            "datetime_ctf": "2024-05-17T13:19:49.032349",
-            "resolution": 2.43,
-            "psd": "psd_25.png"
+            "id": 3,
+            "micrographId": 41,
+            "defocusu": 2.24,
+            "defocusv": 0.18,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T04:49:37",
+            "resolution": 3.49,
+            "psd": "psd_2.png"
         },
         {
-            "id": 27,
-            "micrographId": 27,
-            "defocusu": 0.87,
-            "defocusv": 2.5,
-            "phaseshift": 87.13,
-            "datetime_ctf": "2024-05-11T13:19:49.032353",
-            "resolution": 3.0,
-            "psd": "psd_26.png"
+            "id": 16,
+            "micrographId": 23,
+            "defocusu": 1.75,
+            "defocusv": 2.89,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T04:54:00",
+            "resolution": 3.47,
+            "psd": "psd_15.png"
+        },
+        {
+            "id": 9,
+            "micrographId": 24,
+            "defocusu": 0.07,
+            "defocusv": 1.9,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T05:00:39",
+            "resolution": 0.96,
+            "psd": "psd_8.png"
+        },
+        {
+            "id": 10,
+            "micrographId": 41,
+            "defocusu": 2.16,
+            "defocusv": 0.56,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T05:01:12",
+            "resolution": 2.28,
+            "psd": "psd_9.png"
         },
         {
             "id": 28,
-            "micrographId": 50,
-            "defocusu": 3.76,
-            "defocusv": 1.51,
-            "phaseshift": 24.24,
-            "datetime_ctf": "2025-02-17T13:19:49.032358",
-            "resolution": 2.25,
+            "micrographId": 46,
+            "defocusu": 1.43,
+            "defocusv": 2.09,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T05:10:22",
+            "resolution": 1.38,
             "psd": "psd_27.png"
         },
         {
-            "id": 29,
+            "id": 30,
+            "micrographId": 41,
+            "defocusu": 2.48,
+            "defocusv": 2.65,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T05:12:58",
+            "resolution": 2.3,
+            "psd": "psd_29.png"
+        },
+        {
+            "id": 12,
+            "micrographId": 23,
+            "defocusu": 0.3,
+            "defocusv": 1.02,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T05:15:34",
+            "resolution": 2.56,
+            "psd": "psd_11.png"
+        },
+        {
+            "id": 6,
+            "micrographId": 25,
+            "defocusu": 1.29,
+            "defocusv": 2.89,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T05:18:29",
+            "resolution": 2.82,
+            "psd": "psd_5.png"
+        },
+        {
+            "id": 20,
+            "micrographId": 24,
+            "defocusu": 0.55,
+            "defocusv": 1.71,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T05:24:29",
+            "resolution": 0.48,
+            "psd": "psd_19.png"
+        },
+        {
+            "id": 1,
+            "micrographId": 2,
+            "defocusu": 1.26,
+            "defocusv": 0.45,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T05:33:02",
+            "resolution": 1.97,
+            "psd": "psd_0.png"
+        },
+        {
+            "id": 14,
+            "micrographId": 33,
+            "defocusu": 2.09,
+            "defocusv": 1.4,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T05:38:16",
+            "resolution": 1.23,
+            "psd": "psd_13.png"
+        },
+        {
+            "id": 2,
+            "micrographId": 9,
+            "defocusu": 2.67,
+            "defocusv": 2.9,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T05:52:56",
+            "resolution": 2.64,
+            "psd": "psd_1.png"
+        },
+        {
+            "id": 13,
+            "micrographId": 43,
+            "defocusu": 0.57,
+            "defocusv": 2.03,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T05:55:16",
+            "resolution": 0.68,
+            "psd": "psd_12.png"
+        },
+        {
+            "id": 24,
+            "micrographId": 18,
+            "defocusu": 0.22,
+            "defocusv": 1.02,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T05:56:12",
+            "resolution": 2.43,
+            "psd": "psd_23.png"
+        },
+        {
+            "id": 4,
+            "micrographId": 17,
+            "defocusu": 2.12,
+            "defocusv": 0.54,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T06:02:36",
+            "resolution": 0.14,
+            "psd": "psd_3.png"
+        },
+        {
+            "id": 23,
+            "micrographId": 19,
+            "defocusu": 2.01,
+            "defocusv": 0.42,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T06:04:02",
+            "resolution": 3.94,
+            "psd": "psd_22.png"
+        },
+        {
+            "id": 15,
+            "micrographId": 17,
+            "defocusu": 2.34,
+            "defocusv": 2.09,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T06:10:48",
+            "resolution": 0.95,
+            "psd": "psd_14.png"
+        },
+        {
+            "id": 11,
             "micrographId": 15,
-            "defocusu": 0.64,
-            "defocusv": 2.04,
-            "phaseshift": 46.19,
-            "datetime_ctf": "2024-07-19T13:19:49.032362",
-            "resolution": 3.84,
+            "defocusu": 0.13,
+            "defocusv": 2.71,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T06:15:57",
+            "resolution": 0.76,
+            "psd": "psd_10.png"
+        },
+        {
+            "id": 8,
+            "micrographId": 16,
+            "defocusu": 2.24,
+            "defocusv": 2.96,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T06:18:42",
+            "resolution": 3.65,
+            "psd": "psd_7.png"
+        },
+        {
+            "id": 18,
+            "micrographId": 45,
+            "defocusu": 1.89,
+            "defocusv": 2.78,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T06:25:54",
+            "resolution": 2.03,
+            "psd": "psd_17.png"
+        },
+        {
+            "id": 5,
+            "micrographId": 13,
+            "defocusu": 2.44,
+            "defocusv": 1.48,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T06:31:27",
+            "resolution": 2.73,
+            "psd": "psd_4.png"
+        },
+        {
+            "id": 26,
+            "micrographId": 27,
+            "defocusu": 1.15,
+            "defocusv": 2.62,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T06:35:47",
+            "resolution": 0.81,
+            "psd": "psd_25.png"
+        },
+        {
+            "id": 7,
+            "micrographId": 18,
+            "defocusu": 0.83,
+            "defocusv": 1.48,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T06:36:43",
+            "resolution": 0.82,
+            "psd": "psd_6.png"
+        },
+        {
+            "id": 17,
+            "micrographId": 32,
+            "defocusu": 0.26,
+            "defocusv": 2.38,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T06:49:17",
+            "resolution": 0.6,
+            "psd": "psd_16.png"
+        },
+        {
+            "id": 27,
+            "micrographId": 32,
+            "defocusu": 1.89,
+            "defocusv": 2.99,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T06:50:13",
+            "resolution": 1.19,
+            "psd": "psd_26.png"
+        },
+        {
+            "id": 19,
+            "micrographId": 13,
+            "defocusu": 2.87,
+            "defocusv": 1.41,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T06:51:27",
+            "resolution": 1.02,
+            "psd": "psd_18.png"
+        },
+        {
+            "id": 29,
+            "micrographId": 29,
+            "defocusu": 2.4,
+            "defocusv": 0.63,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T06:52:12",
+            "resolution": 3.35,
             "psd": "psd_28.png"
         },
         {
-            "id": 30,
-            "micrographId": 30,
-            "defocusu": 0.58,
-            "defocusv": 1.44,
-            "phaseshift": 60.73,
-            "datetime_ctf": "2024-09-11T13:19:49.032366",
-            "resolution": 2.44,
-            "psd": "psd_29.png"
+            "id": 21,
+            "micrographId": 35,
+            "defocusu": 1.66,
+            "defocusv": 0.38,
+            "phaseshift": 0,
+            "datetime_ctf": "2025-03-06T07:14:33",
+            "resolution": 1.66,
+            "psd": "psd_20.png"
         }
     ]
 }

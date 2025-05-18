@@ -21,11 +21,23 @@ const CTFTimeChart = ({ graphData, isDark, getThemeOptions }) => {
     const colorDefocus = config.color_defocusu;
     const colorPhase = config.color_phaseshift;
 
+    // sort the data by datetime_ctf before mapping
+    const sortedData = [...graphData].sort((a, b) =>
+        new Date(a.datetime_ctf) - new Date(b.datetime_ctf)
+    );
+
+
     // convert datetime_ctf to timestamp and map to [x, y] format 
     // map over graphData to create arrays of [x, y] pairs for each parameter
-    const defocusuData = graphData.map(ctf => [new Date(ctf.datetime_ctf).getTime(), ctf.defocusu]);
-    const pahseShiftData = graphData.map(ctf => [new Date(ctf.datetime_ctf).getTime(), ctf.phaseshift]);
-    const resolutionData = graphData.map(ctf => [new Date(ctf.datetime_ctf).getTime(), ctf.resolution]);
+    const defocusuData = sortedData.map(ctf => [
+        new Date(ctf.datetime_ctf).getTime(), ctf.defocusu ]);
+    
+    const phaseShiftData = sortedData.map(ctf => [
+        new Date(ctf.datetime_ctf).getTime(), ctf.phaseshift ]);
+    
+    const resolutionData = sortedData.map(ctf => [
+        new Date(ctf.datetime_ctf).getTime(), ctf.resolution ]);
+
 
     const myOptions = getThemeOptions(isDark, {
         chart: {
@@ -76,7 +88,10 @@ const CTFTimeChart = ({ graphData, isDark, getThemeOptions }) => {
         },
         plotOptions: {
             spline: {
-                marker: { radius: 5 },
+                marker: { 
+                    radius: 5,
+                    enabled: true
+                },
                 lineWidth: 0,
                 states: { hover: { lineWidth: 1.5 } },
                 threshold: null
@@ -97,7 +112,7 @@ const CTFTimeChart = ({ graphData, isDark, getThemeOptions }) => {
             },
             {
                 name: 'Phase Shift',
-                data: pahseShiftData,
+                data: phaseShiftData,
                 yAxis: 'phase-axis',
                 color: colorPhase  //'#00e272'
 

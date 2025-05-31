@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import CTF, Micrograph, Config
+from .models import CTF, Micrograph, Config, Particle, Class2D, Coordinate2D
 
 # convert django objects into JSON and viceversa
 
@@ -30,6 +30,25 @@ class CTFSerializer(serializers.ModelSerializer):
         model = CTF
         fields = '__all__'
 
+# Serialize Coordinate2D
+class Coordinate2DSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Coordinate2D
+        fields = '__all__'
+
+# Serialize Class2D
+class Class2DSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Class2D
+        fields = '__all__'
+
+# Serialize Particle
+class ParticleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Particle
+        fields = '__all__'
+
+# Serialize Config
 class ConfigSerializer(serializers.ModelSerializer):
     # avoid 0 or negative values
     maxres_interval = serializers.FloatField(min_value=0.01)  

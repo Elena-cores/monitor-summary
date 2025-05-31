@@ -4,10 +4,14 @@ from rest_framework import routers
 from cryoem_app import views
 from .views import ConfigViewSet
 
-# generate routes automatically
+# generate routes automatically (using ModelViewSet, which provides CRUD operations)
+# routes for CTF, Micrograph, Coordinate2D, Class2D, and Particle models
 router = routers.DefaultRouter()
-router.register(r'ctf', views.CTFViewSet)  # Route for CTF
-router.register(r'micrograph', views.MicrographViewSet) # Route for micrograph
+router.register(r'ctf', views.CTFViewSet)  
+router.register(r'micrograph', views.MicrographViewSet) 
+router.register(r'coordinate', views.Coordinate2DViewSet)  
+router.register(r'class2d', views.Class2DViewSet)
+router.register(r'particle', views.ParticleViewSet)   
 
 # include all routes from router 
 urlpatterns = [

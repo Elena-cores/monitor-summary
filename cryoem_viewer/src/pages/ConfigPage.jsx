@@ -16,7 +16,7 @@ const ConfigPage = () => {
         }
     }, [config]);
 
-    // Handle standard input changes (both numbers and colors)
+    // Handle standard input changes (both numbers and colors)   
     const handleChange = (e) => {
         const { name, value } = e.target;
         setLocalConfig(prev => ({
@@ -32,7 +32,7 @@ const ConfigPage = () => {
         setError(""); // reset error message
         setSuccess(""); // reset success message
         try {
-            // Validation: min value must be less than max value
+            // Validation 1: min value must be less than max value
             if (localConfig.maxres_min >= localConfig.maxres_max) {       // check if min is less than max
                 throw new Error("The minimum value must be less than maximum velue for resolution range.");
             }

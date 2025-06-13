@@ -32,7 +32,7 @@ const Sidebar = () => {
           */}
          
           <li>
-            <Link to="/">ALL</Link>
+            <Link to="/all">ALL</Link>
           </li>
           <li>
             <Link to="/config">CONFIGURE</Link>

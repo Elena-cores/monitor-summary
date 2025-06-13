@@ -1,11 +1,11 @@
-import axios from 'axios';
+import api from './api';
 
 const API_URL = 'http://localhost:8000/api/ctf/';
 
 // GET all data from CTF
 export const getCTFData = async () => {
     try {
-        const response = await axios.get(API_URL);
+        const response = await api.get(API_URL);
         return response.data;
     } catch (error) {
         if (error.response) {

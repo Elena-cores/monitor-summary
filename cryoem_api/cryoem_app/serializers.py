@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import CTF, Micrograph, Config, Particle, Class2D, Coordinate2D
+from django.contrib.auth.models import User     # User model from Django's auth system
 
 # convert django objects into JSON and viceversa
 
@@ -56,3 +57,25 @@ class ConfigSerializer(serializers.ModelSerializer):
     class Meta:
         model = Config
         fields = '__all__'
+        
+        
+# Serializers for User registration and login
+# # UserRegisterSerializer is used to create a new user with username, password, and email.
+class UserRegisterSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True)
+    
+    class Meta:
+        model = User
+        fields = ['username', 'password', 'email']
+    
+    def create(self, validated_data):
+        user = User.objects.create_user(
+            username=validated_data['username'],
+            password=validated_data['password'],
+            email=validated_data.get('email', '')
+        )
+        return user
+# UserLoginSerializer to authenticate a user with username and password.
+class UserLoginSerializer(serializers.Serializer):
+    username = serializers.CharField()
+    password = serializers.CharField(write_only=True)

@@ -10,7 +10,7 @@ const LoginPage = () => {
         username: '',
         password: ''
     });
-    const [errors, setErrors] = useState({});
+    const [error, setError] = useState({});
     const { login } = useAuth();
 
     // update the formData state with the input values
@@ -25,7 +25,7 @@ const LoginPage = () => {
         e.preventDefault();
         const result = await login(formData);
         if (!result.success) {
-            setErrors(result.error);
+            setError(result.error);
          } else {
             navigate('/'); // redirect to home page on successful login
         }
@@ -33,7 +33,7 @@ const LoginPage = () => {
 
     return (
         <div className="login-container">
-            <h2 className="login-title">Iniciar Sesión</h2>
+            <h2 className="login-title">Login</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label className="form-label">User</label>
@@ -45,7 +45,7 @@ const LoginPage = () => {
                         className="form-input"
                         required
                     />
-                    {errors.username && <p className="form-error">{errors.username}</p>}
+                    {error.username && <p className="form-error">{error.username}</p>}
                 </div>
                 <div className="form-group">
                     <label className="form-label">Password</label>
@@ -57,13 +57,13 @@ const LoginPage = () => {
                         className="form-input"
                         required
                     />
-                    {errors.password && <p className="form-error">{errors.password}</p>}
+                    {error.password && <p className="form-error">{error.password}</p>}
                 </div>
                 <button type="submit" className="form-button">
-                    Iniciar Sesión
+                    Login
                 </button>
             </form>
-             <p className="form-switch">¿No tienes cuenta? <Link to="/register">Regístrate</Link></p>
+             <p className="form-switch">¿You don't have an account? <Link to="/register">Register</Link></p>
         </div>
     );
 };

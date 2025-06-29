@@ -76,7 +76,7 @@ const RegisterPage = () => {
                     Register
                 </button>
             </form> 
-            <p className="form-switch">¿Ya tienes cuenta? <Link to="/login">Inicia sesión</Link></p>
+            <p className="form-switch">Already have an account? <Link to="/login"></Link></p>
         </div>
     );
 };

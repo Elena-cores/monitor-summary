@@ -5,6 +5,12 @@ import OfflineExporting from 'highcharts/modules/offline-exporting';
 import ExportData from 'highcharts/modules/export-data';
 import { useEffect, useState } from 'react';
 
+/**
+ * Generates a Highcharts-compatible theme configuration based on the current color mode.
+ *
+ * @param {boolean} isDark - Indicates whether dark mode is active.
+ * @param {object} customOptions - Optional additional chart configuration to merge with the theme.
+ */
 const getThemeOptions = (isDark, customOptions = {}) => {
   const baseOptions = {
     chart: {
@@ -36,6 +42,12 @@ const getThemeOptions = (isDark, customOptions = {}) => {
   return Highcharts.merge(baseOptions, customOptions);
 };
 
+/**
+ * Higher-Order Component (HOC) that injects theming support into wrapped Highcharts components.
+ *
+ * It observes changes to the <body> element's class list to detect dark/light mode and passes
+ * `isDark` and `getThemeOptions` as props to the wrapped chart component.
+ */
 export const withChartTheme = (WrappedChart) => {
   return function ThemedChart(props) {
     const [isDark, setIsDark] = useState(document.body.classList.contains('dark'));

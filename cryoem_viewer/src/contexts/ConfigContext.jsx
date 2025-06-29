@@ -18,7 +18,7 @@ export const ConfigProvider = ({ children }) => {
                 setConfig(data);
                 setError(null);
             } catch (error) {
-                setError(err.message)
+                setError(error.message)
                 console.error("Error loading config data:", error);
             } finally {
                 setLoading(false);
@@ -33,9 +33,9 @@ export const ConfigProvider = ({ children }) => {
             
             setConfig(updatedConfig); // update local state with new config
             return updatedConfig;
-        } catch (err) {
-            console.error("Error updating config:", err);
-            throw err;
+        } catch (error) {
+            console.error("Error updating config:", error);
+            throw error;
         }
     };
 
@@ -50,7 +50,7 @@ export const ConfigProvider = ({ children }) => {
             error,
             updateConfig, 
             refreshConfig: loadConfig,
-            defocusParameter, 
+            defocusParameter,  
             setDefocusParameter}}>
             {children}
         </ConfigContext.Provider>

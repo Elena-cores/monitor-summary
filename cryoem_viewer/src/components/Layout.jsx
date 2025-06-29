@@ -1,12 +1,23 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import { useConfig } from '../contexts/ConfigContext';
+import { useAuth } from '../contexts/AuthContext';
+import { Link } from 'react-router-dom';
 
 const Layout = ({ children, customBar }) => {
+  const { isAuthenticated, logout } = useAuth();
+  
   return (
     <div className="app-container">
       <header className='header'>
         <h1>Monitor summary</h1>
+        {isAuthenticated && (
+          <div className="auth-actions">
+            <button onClick={logout} className="logout-button">
+              Logout
+            </button>
+          </div>
+        )}
       </header>
 
       <div className="main-layout">

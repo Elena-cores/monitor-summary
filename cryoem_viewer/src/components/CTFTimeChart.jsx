@@ -4,16 +4,19 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { withChartTheme } from '../hocs/withChartTheme';    // import the HOC for theming
 import { useConfig } from '../contexts/ConfigContext'; // import the context for configuration
+import { useAuth } from '../contexts/AuthContext'; // import the context for authentication
+
 
 const CTFTimeChart = ({ graphData, isDark, getThemeOptions }) => {
-    if (!graphData || graphData.length === 0) {
-        return <p>No data available</p>;
-    }
+    const { isLoading, isAuthenticated } = useAuth();
+    const { config, loading: configLoading, error: configError } = useConfig();
 
-    // get the configuration from context
-    const { config, loading, error } = useConfig();
-    if (loading) return <p>Loading configuration...</p>;
-    if (error) return <p>Error loading configuration: {error}</p>;
+    // Mostrar estados de carga/error
+    if (isLoading) return <p>Verifying authentication...</p>;
+    if (!isAuthenticated) return <p>Please login to view this content</p>;
+    if (configLoading) return <p>Loading configuration...</p>;
+    if (configError) return <p>Error loading configuration: {configError}</p>;
+    if (!graphData || graphData.length === 0) return <p>No data available for histogram</p>;
     if (!config) return <p>No configuration available</p>;
 
     // get the configuration from context

@@ -1,14 +1,16 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import getCTFData from '../api/ctfApi'; // import API functions to fetch data
+import { useAuth } from './AuthContext'; // import Auth context to check authentication
 
 
-const DataContext = createContext(); 
+const DataContext = createContext();
 
 // use children prop to wrap around components
-export const DataProvider = ({ children }) => { 
+export const DataProvider = ({ children }) => {
     // ** IN THE FUTURE, WE CAN ADD MORE STATES FOR OTHER DATA TYPES **
     const [ctfData, setCtfData] = useState([]); // manage CTF data state
     const [error, setError] = useState(null);
+    const { isAuthenticated } = useAuth(); // get authentication status from AuthContext
 
     // load CTF data
     const loadCTFData = async () => {
@@ -22,17 +24,21 @@ export const DataProvider = ({ children }) => {
         }
     };
 
-    // useEffect to load data when component mounts
+    // useEffect to load data when component mounts 
     useEffect(() => {
+        // ONLY LOAD DATA IF USER IS AUTHENTICATED
+        if (!isAuthenticated) {
+            setCtfData([]); // clear CTF data if not authenticated
+            return;
+        }
+
         loadCTFData();
-        // set up interval to refresh data every 6 seconds
         const interval = setInterval(() => {
             loadCTFData();
-        }, 6000);  //every 6 seconds update
+        }, 6000);
 
         return () => clearInterval(interval);
-
-    }, []);
+    }, [isAuthenticated]); // depend on authentication status
 
     return (
         <DataContext.Provider value={{ ctfData, error }}>

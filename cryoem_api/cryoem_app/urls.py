@@ -4,7 +4,7 @@ from rest_framework import routers
 from rest_framework.authtoken import views as auth_views
 from rest_framework.permissions import AllowAny
 from cryoem_app import views
-from .views import ConfigViewSet, RegisterView, LoginView
+from .views import ConfigViewSet, RegisterView, LoginView, VerifyTokenView
 
 
 # generate routes automatically (using ModelViewSet, which provides CRUD operations)
@@ -25,5 +25,6 @@ urlpatterns = [
         path('login/', LoginView.as_view(), name='login'),
         ])),
     path('api/config/', ConfigViewSet.as_view(), name='config'), # manual route for config
+    path('api/auth/verify-token/', VerifyTokenView.as_view(), name='verify-token'),
     path('docs/', include_docs_urls(title="Cyroem API", permission_classes=[AllowAny])),    # automatic API documentation and find routes: http://127.0.0.1:8000/docs/
 ]

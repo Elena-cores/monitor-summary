@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
-import '../assets/loginPage.css'; 
+import '../assets/loginPage.css';
 
 const LoginPage = () => {
     const navigate = useNavigate();
@@ -25,8 +25,10 @@ const LoginPage = () => {
         e.preventDefault();
         const result = await login(formData);
         if (!result.success) {
-            setError(result.error);
-         } else {
+            const msg = typeof result.error === 'string' ? result.error : 'Username or password is incorrect';
+            setError(msg);
+        } else {
+            setError(null);
             navigate('/'); // redirect to home page on successful login
         }
     };
@@ -63,7 +65,12 @@ const LoginPage = () => {
                     Login
                 </button>
             </form>
-             <p className="form-switch">¿You don't have an account? <Link to="/register">Register</Link></p>
+            <p className="form-switch">
+                Don't have an account? <Link to="/register">Register</Link>
+            </p>
+            {error && typeof error === 'string' && (
+                <p className="form-error global-error">{error}</p>
+            )}
         </div>
     );
 };

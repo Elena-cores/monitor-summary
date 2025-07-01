@@ -1,47 +1,49 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-import { register as apiRegister, login as apiLogin, verifyToken } from '../api/authApi';
+import axios from 'axios';
+import { register as apiRegister } from '../api/authApi';
 
 const AuthContext = createContext();
 
-// This component provides authentication context to the application
 export const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState(() => {
+        const storedUser = localStorage.getItem('user');    // Retrieve user data from localStorage
+        return storedUser ? JSON.parse(storedUser) : null;  // Initialize user state from localStorage
+    });
     const [token, setToken] = useState(localStorage.getItem('token'));
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const [isLoading, setIsLoading] = useState(true); // to manage loading state
-    const [isApiReady, setIsApiReady] = useState(false);    // to manage API readiness state
+    const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem('token'));
+    const [isLoading, setIsLoading] = useState(true);
 
-    // Initialize user state if token exists
-    useEffect(() => {
-        const checkAuth = async () => {
-            if (token) {
-                try {
-                    const isValid = await verifyToken(token);
-                    if (isValid) {
-                        setIsAuthenticated(true);
-                        setIsApiReady(true);
-                    } else {
-                        logout();
-                    }
-                } catch (error) {
-                    logout();
-                }
-            } else {
-                setIsApiReady(true); // If no token, set API as ready
-            }
-            setIsLoading(false);
-        };
-        checkAuth();
-    }, [token]);
+    const setAuthToken = (newToken) => {
+        if (newToken) {
+            localStorage.setItem('token', newToken);
+            axios.defaults.headers.common['Authorization'] = `Token ${newToken}`;
+            setToken(newToken);
+            setIsAuthenticated(true);
+        } else {
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            delete axios.defaults.headers.common['Authorization'];
+            setToken(null);
+            setIsAuthenticated(false);
+        }
+    };
 
-    // Function to register a new user
+    const setUserData = (userData) => {
+        if (userData) {
+            localStorage.setItem('user', JSON.stringify(userData));
+            setUser(userData);
+        } else {
+            localStorage.removeItem('user');
+            setUser(null);
+        }
+    };
+
+    // Register a new user
     const register = async (userData) => {
         try {
             const data = await apiRegister(userData);
-            localStorage.setItem('token', data.token);
-            setToken(data.token);
+            setAuthToken(data.token);
             setUser({ id: data.user_id, username: data.username });
-            setIsAuthenticated(true);
             return { success: true };
         } catch (error) {
             let errorMessage = 'Registration failed';
@@ -52,39 +54,65 @@ export const AuthProvider = ({ children }) => {
                 else if (errorData.email) errorMessage = `Email: ${errorData.email.join(' ')}`;
                 else if (errorData.non_field_errors) errorMessage = errorData.non_field_errors.join(' ');
             }
-            return { success: false,  error: errorMessage  };
+            return { success: false, error: errorMessage };
         }
     };
 
-    // Function to log in an existing user
+    // Login an existing user
     const login = async (credentials) => {
         try {
-            const data = await apiLogin(credentials);
-            localStorage.setItem('token', data.token);  // Store token in local storage
-            setToken(data.token);
-            setUser({ id: data.user_id, username: data.username });
+            const response = await axios.post('http://localhost:8000/api/auth/login/', credentials);
+            const { token, user_id, username } = response.data;
+
+            setAuthToken(token);
+            setUser({ id: user_id, username });
             setIsAuthenticated(true);
             return { success: true };
         } catch (error) {
-            let errorMessage = 'Login failed';
-            if (error.response) {
-                if (error.response.status === 400) {
-                    errorMessage = 'Username or password is incorrect';
-                } else if (error.response.data && error.response.data.non_field_errors) {
-                    errorMessage = error.response.data.non_field_errors.join(' ');
-                }
-            }
-            return { success: false,  error: errorMessage  };
+            // You can enhance error handling here as needed
+            return { success: false, error: 'Username or password is incorrect' };
         }
     };
 
-    // Function to log out the current user
+    // Logout the user
     const logout = () => {
-        localStorage.removeItem('token');
-        setToken(null);
-        setUser(null);
-        setIsAuthenticated(false);
+        setAuthToken(null);
+        setUserData(null);
     };
+
+    // Verify token on app load to restore session if token valid
+    useEffect(() => {
+        const verifyAuth = async () => {
+            const localToken = localStorage.getItem('token');
+            if (localToken) {
+                try {
+                    // Verificar el token con el backend
+                    const response = await axios.get('http://localhost:8000/api/auth/verify-token/', {
+                        headers: { 'Authorization': `Token ${localToken}` }
+                    });
+
+                    if (response.status === 200) {
+                        setAuthToken(localToken);
+                        const storedUser = localStorage.getItem('user');
+                        if (storedUser) {
+                            setUser(JSON.parse(storedUser));
+                        }
+                    } else {
+                        logout();
+                    }
+                } catch (error) {
+                    logout();
+                }
+            }
+            setIsLoading(false);
+        };
+
+        verifyAuth();
+    }, []);
+
+    if (isLoading) {
+        return <p>Loading authentication...</p>; // avoid loading the app before token verification
+    }
 
     return (
         <AuthContext.Provider value={{ user, token, isAuthenticated, isLoading, register, login, logout }}>

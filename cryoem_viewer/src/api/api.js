@@ -8,9 +8,9 @@ const api = axios.create({
 // This assumes the token is stored in localStorage after login
 api.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('token'); // Retrieve token from localStorage
     if (token) {
-      config.headers.Authorization = `Token ${token}`;  // Token auth
+      config.headers.Authorization = `Token ${token}`;  // add token to headers
     }
     return config;
   },

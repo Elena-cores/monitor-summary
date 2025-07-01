@@ -15,17 +15,20 @@ import PrivateRoute from './components/PrivateRoute';
 import './index.css'  // global format
 
 const App = () => {
-  // Import the user from AuthContext
-  const { user } = useAuth();
+  // Import the user and isLoading from AuthContext
+  const { user, isLoading } = useAuth();
   const defocusParameters = ['DefocusU', 'DefocusV'];
+
+  // If the authentication state is still loading, show the loading message
+  if (isLoading) return <p>Loading...</p>;
 
   return (
     <Router>
       <DataProvider>
         <ConfigProvider>
-          <Layout customBar={user ? <CTFCustomBar options={defocusParameters} /> : null}>
+          <Layout>
             <Routes>
-              <Route path="/login" element={!user ? <LoginPage /> : <Navigate to="/" />} />
+              <Route path="/login" element={user ? <Navigate to="/" /> : <LoginPage />} />
               <Route path="/register" element={!user ? <RegisterPage /> : <Navigate to="/" />} />
 
               {/* Protected routes */}

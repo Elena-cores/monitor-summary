@@ -2,6 +2,7 @@ from rest_framework import viewsets, status, generics
 from django.contrib.auth import authenticate, login
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.models import Token
 from .serializers import CTFSerializer, MicrographSerializer, ConfigSerializer, ParticleSerializer, Class2DSerializer, Coordinate2DSerializer, UserRegisterSerializer, UserLoginSerializer
@@ -94,4 +95,11 @@ class LoginView(generics.GenericAPIView):
                 'username': user.username
             })
         return Response({'error': 'Invalid credentials'}, status=status.HTTP_400_BAD_REQUEST)
-    
+
+# Endpoint to verify if the token is valid
+class VerifyTokenView(APIView):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        return Response({'status': 'Valid token'}, status=200)

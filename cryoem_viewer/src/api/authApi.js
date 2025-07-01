@@ -44,20 +44,6 @@ export const login = async (credentials) => {
     }
 };
 
-// Logout the current user
-// 
-export const verifyToken = async (token) => {
-    try {
-        // endpoint that requires authentication
-        const response = await api.get('http://localhost:8000/api/config/', {
-            headers: { 'Authorization': `Token ${token}` }
-        });
-        return true;
-    } catch (error) {
-        return false;
-    }
-};
-
 // Reusable error handler for API calls
 const handleApiError = (error, context) => {
     if (error.response) {

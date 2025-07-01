@@ -27,12 +27,42 @@ body, html {
 /* Header */
 .header {
   background-color: #f0f0f0;
-  padding: 1rem;
-  text-align: center;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #c1bfbf;
-  transition: background-color 0.1s ease, 
-              color 0.1s ease;
+  transition: background-color 0.1s ease, color 0.1s ease;
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  flex: 1; /* allow title to take available space */
+  text-align: center;
+}
+
+/* Header title*/
+.auth-actions {
+  margin-left: auto;
+}
+
+/* Button logout to the right */
+
+.logout-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
 }
 
 /* sidebar + main content */
@@ -69,6 +99,29 @@ main {
   scrollbar-width: none;
 }
 
+/* form errors and successes */
+.form-error {
+  color: red;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.global-error {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.form-success {
+  color: green;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.global-success {
+  text-align: center;
+  margin-top: 1rem;
+}
+
 /* Dark mode styles */
 .dark {
   background-color: #121212;
@@ -102,3 +155,4 @@ main {
 .dark .hint {
   color: #f8f9fa;  /* Override text color in dark mode */
 }
+

@@ -50,6 +50,45 @@ The goal is to provide a structured summary of the acquisition status, allowing 
 3. **Start the development server**
     ```bash
     npm run dev
+
+
+## Importing Fake Data
+To populate the database with automatically generated test data (useful for charts, views, and debugging), run one of the following scripts:
+# Option 1: Run using Django shell
+   ```bash
+    python manage.py shell < cryoem_app/fake_data.py
+```
+### Option 2: Use standalone script (if available)
+   ```bash
+    python load_data.py
+```
+
+## Tests are available for both the backend (Django + DRF) and frontend (React + Vitest).
+
+🔹 Backend (Django)
+
+To run unit tests and API integration tests located in cryoem_app/tests/, use:
+```bash
+python manage.py test cryoem_app/tests
+```
+These tests cover the key models: Micrograph, CTF, and Config, and validate expected API behaviors.
+
+🔹 Frontend (React + Vitest)
+
+Inside the /frontend directory, run:
+```bash
+npm test
+```
+This will launch the component tests written using vitest and @testing-library/react.
+
+### API Testing with Postman
+
+- Testing collection: `/docs/postman/cryoem_api_tests.postman_collection.json`
+- Import the file into Postman.
+- Make sure the backend is running at `http://127.0.0.1:8000`.
+- Remember to include your authentication token in the headers.
+
+
 ## Credits
 
 This project was inspired by and developed in collaboration with the **Scipion team** and the **cryo-EM facility** at the Spanish National Centre for Biotechnology (CNB-CSIC) where I worked at.

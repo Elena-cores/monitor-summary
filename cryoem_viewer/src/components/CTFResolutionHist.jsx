@@ -28,19 +28,20 @@ const CTFResolutionHist = ({ graphData, isDark, getThemeOptions }) => {
     graphData.forEach(ctf => {
         const resolution = ctf.resolution;
         // use Math.floor here if you want to round down to the nearest 0.5 Å
-        const binKey = (Math.round(resolution / interval) * interval).toFixed(1);  // group by resolution and round to nearest 0.5 Å
+        const bin = Math.floor((resolution - minRange) / interval) * interval + minRange; // calculate the bin for the resolution
+        const binKey = bin.toFixed(1);
         resolutionBins[binKey] = (resolutionBins[binKey] || 0) + 1;
     });
 
     // Generate categories from 0-10 Å with intervals of 0.5
-    const categories = [] 
+    const categories = []
     for (let i = minRange; i <= maxRange; i += interval) {
         categories.push(i.toFixed(1));
     }
 
     // convert to Highcharts format
     const histogramData = categories.map(bin => ({  // Turn the object into an array of [key, value] pairs
-        name: `${bin} Å`,  
+        name: `${bin} Å`,
         y: resolutionBins[bin] || 0, // count of micrographs in this bin
     }));
 
@@ -48,7 +49,7 @@ const CTFResolutionHist = ({ graphData, isDark, getThemeOptions }) => {
     const options = getThemeOptions(isDark, {
         chart: {
             type: 'column',
-             zooming: {
+            zooming: {
                 type: 'x',
                 mouseWheel: true
             }
@@ -57,7 +58,7 @@ const CTFResolutionHist = ({ graphData, isDark, getThemeOptions }) => {
             text: 'Max. Resolution',
         },
         xAxis: {
-            type: 'category', 
+            type: 'category',
             categories, // resolution ranges
             title: {
                 text: 'Resolution (Å)',

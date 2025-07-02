@@ -2,6 +2,7 @@ from rest_framework import viewsets, status, generics
 from django.contrib.auth import authenticate, login
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from django.contrib.auth.models import User
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.models import Token
@@ -103,3 +104,14 @@ class VerifyTokenView(APIView):
 
     def get(self, request):
         return Response({'status': 'Valid token'}, status=200)
+    
+class UserMeView(APIView):
+    permission_classes = [IsAuthenticated]
+    # This view returns the authenticated user's information
+    def get(self, request):
+        user = request.user
+        return Response({
+            "id": user.id,
+            "username": user.username,
+            "email": user.email,
+        }, status=status.HTTP_200_OK)

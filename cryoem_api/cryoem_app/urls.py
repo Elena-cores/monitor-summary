@@ -4,7 +4,7 @@ from rest_framework import routers
 from rest_framework.authtoken import views as auth_views
 from rest_framework.permissions import AllowAny
 from cryoem_app import views
-from .views import ConfigViewSet, RegisterView, LoginView, VerifyTokenView
+from .views import ConfigViewSet, RegisterView, LoginView, VerifyTokenView, UserMeView
 
 
 # generate routes automatically (using ModelViewSet, which provides CRUD operations)
@@ -23,6 +23,7 @@ urlpatterns = [
         path('token/', auth_views.obtain_auth_token),
         path('register/', RegisterView.as_view(), name='register'),
         path('login/', LoginView.as_view(), name='login'),
+         path('me/', UserMeView.as_view(), name='user-me'),
         ])),
     path('api/config/', ConfigViewSet.as_view(), name='config'), # manual route for config
     path('api/auth/verify-token/', VerifyTokenView.as_view(), name='verify-token'),
